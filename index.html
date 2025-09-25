@@ -9,15 +9,16 @@
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
-      background: url('https://images.unsplash.com/photo-1587502537745-84c4e1d7b8a0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed;
+      background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed;
       background-size: cover;
+      color: #e0e0e0;
       height: 100vh;
-      color: #ffffff;
       display: flex;
       justify-content: center;
       align-items: center;
       text-align: center;
       position: relative;
+      overflow: hidden;
     }
 
     .overlay {
@@ -25,61 +26,63 @@
       top: 0; left: 0;
       width: 100%;
       height: 100%;
-      background-color: rgba(0, 0, 0, 0.75);
+      background: rgba(10, 10, 10, 0.7);
       z-index: 0;
-      backdrop-filter: blur(2px);
     }
 
     .container {
       position: relative;
       z-index: 1;
-      max-width: 900px;
-      padding: 60px 40px;
-      background-color: rgba(0, 0, 0, 0.6);
+      max-width: 800px;
+      background-color: rgba(20, 20, 20, 0.75);
+      padding: 50px 40px;
       border-radius: 15px;
-      box-shadow: 0 0 25px rgba(0, 255, 255, 0.2);
+      box-shadow: 0 0 30px rgba(0, 255, 180, 0.7);
     }
 
     h1 {
-      font-size: 3em;
+      font-size: 3.5rem;
       margin-bottom: 25px;
-      color: #00ffe7;
+      color: #00f2a9;
+      text-shadow: 0 0 8px #00f2a9;
     }
 
     p {
-      font-size: 1.2em;
+      font-size: 1.25rem;
       line-height: 1.8;
       margin-bottom: 40px;
-      color: #e0f7fa;
+      color: #cceeea;
     }
 
     .cta-button {
       display: inline-block;
       padding: 16px 40px;
-      background: #00ffe7;
+      background-color: #00f2a9;
       color: #000;
-      font-weight: 600;
-      font-size: 1.1em;
-      border-radius: 30px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      border-radius: 8px;
       text-decoration: none;
-      transition: all 0.3s ease;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 0 10px #00f2a9;
     }
 
     .cta-button:hover {
-      background: #00ccbb;
-      transform: translateY(-3px);
-      box-shadow: 0 8px 16px rgba(0, 255, 255, 0.3);
+      background-color: #00b386;
+      box-shadow: 0 0 20px #00b386;
     }
 
     @media (max-width: 768px) {
       .container {
-        padding: 40px 20px;
+        padding: 35px 20px;
       }
+
       h1 {
-        font-size: 2.2em;
+        font-size: 2.6rem;
       }
+
       p {
-        font-size: 1em;
+        font-size: 1rem;
       }
     }
   </style>
@@ -89,13 +92,11 @@
   <div class="container">
     <h1>PulseMetaHub.com</h1>
     <p>
-      This premium domain is your gateway to a powerful digital identity.<br><br>
-      <strong>PulseMetaHub.com</strong> is perfect for companies in AI, Web3, HealthTech, or any data-driven innovation space.<br><br>
-      Memorable, scalable, and future-proof — a name ready to lead in the digital world.
+      Unlock the power of a premium domain that blends innovation, technology, and community.<br><br>
+      <strong>PulseMetaHub.com</strong> is ideal for future-forward brands in AI, Web3, HealthTech, or data ecosystems.<br><br>
+      A bold, brandable name that communicates authority, relevance, and scalability — perfect for platforms, products, or ventures shaping the digital future.
     </p>
-    <a class="cta-button" href="https://www.afternic.com/domain/pulsemetahub.com" target="_blank" rel="noopener noreferrer">
-      Buy on Afternic
-    </a>
+    <a class="cta-button" href="https://www.afternic.com/domain/pulsemetahub.com" target="_blank" rel="noopener noreferrer">Buy on Afternic</a>
   </div>
 </body>
 </html>
