@@ -1,24 +1,23 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>PulseMetaHub.com - Premium domena na sprzedaż</title>
+  <title>PulseMetaHub.com - Premium Domain For Sale</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <style>
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
-      background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed;
+      background: url('https://images.unsplash.com/photo-1587502537745-84c4e1d7b8a0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed;
       background-size: cover;
-      color: #fff;
       height: 100vh;
+      color: #ffffff;
       display: flex;
       justify-content: center;
       align-items: center;
       text-align: center;
       position: relative;
-      padding: 20px;
     }
 
     .overlay {
@@ -26,66 +25,61 @@
       top: 0; left: 0;
       width: 100%;
       height: 100%;
-      background-color: rgba(0, 0, 0, 0.7);
+      background-color: rgba(0, 0, 0, 0.75);
       z-index: 0;
+      backdrop-filter: blur(2px);
     }
 
     .container {
       position: relative;
       z-index: 1;
-      max-width: 700px;
-      background-color: rgba(0, 0, 0, 0.65);
-      padding: 40px;
-      border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+      max-width: 900px;
+      padding: 60px 40px;
+      background-color: rgba(0, 0, 0, 0.6);
+      border-radius: 15px;
+      box-shadow: 0 0 25px rgba(0, 255, 255, 0.2);
     }
 
     h1 {
       font-size: 3em;
       margin-bottom: 25px;
-      font-weight: 600;
-      color: #00f260;
-      text-shadow: 0 0 10px #00f260;
+      color: #00ffe7;
     }
 
     p {
-      font-size: 1.25em;
-      line-height: 1.6;
+      font-size: 1.2em;
+      line-height: 1.8;
       margin-bottom: 40px;
-      color: #eee;
+      color: #e0f7fa;
     }
 
-    .btn {
+    .cta-button {
       display: inline-block;
-      background: linear-gradient(90deg, #00f260 0%, #0575e6 100%);
+      padding: 16px 40px;
+      background: #00ffe7;
       color: #000;
       font-weight: 600;
-      font-size: 1.2em;
-      padding: 16px 40px;
-      border-radius: 8px;
+      font-size: 1.1em;
+      border-radius: 30px;
       text-decoration: none;
-      box-shadow: 0 0 15px rgba(0, 242, 96, 0.7);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transition: all 0.3s ease;
     }
 
-    .btn:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 0 25px rgba(0, 242, 96, 1);
+    .cta-button:hover {
+      background: #00ccbb;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 16px rgba(0, 255, 255, 0.3);
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
+      .container {
+        padding: 40px 20px;
+      }
       h1 {
-        font-size: 2em;
+        font-size: 2.2em;
       }
       p {
         font-size: 1em;
-      }
-      .container {
-        padding: 25px 20px;
-      }
-      .btn {
-        font-size: 1em;
-        padding: 14px 30px;
       }
     }
   </style>
@@ -95,11 +89,13 @@
   <div class="container">
     <h1>PulseMetaHub.com</h1>
     <p>
-      Odkryj moc premium domeny, która łączy innowację, technologię i społeczność.<br><br>
-      PulseMetaHub.com jest idealna dla przyszłościowych marek działających w obszarach AI, Web3, HealthTech czy ekosystemów danych.<br><br>
-      To odważna, łatwa do budowania marka, która komunikuje autorytet, aktualność i skalowalność — doskonała dla platform, produktów lub przedsięwzięć kształtujących cyfrową przyszłość.
+      This premium domain is your gateway to a powerful digital identity.<br><br>
+      <strong>PulseMetaHub.com</strong> is perfect for companies in AI, Web3, HealthTech, or any data-driven innovation space.<br><br>
+      Memorable, scalable, and future-proof — a name ready to lead in the digital world.
     </p>
-    <a href="https://www.afternic.com/domain/pulsemetahub.com" target="_blank" class="btn">Kup na Afternic</a>
+    <a class="cta-button" href="https://www.afternic.com/domain/pulsemetahub.com" target="_blank" rel="noopener noreferrer">
+      Buy on Afternic
+    </a>
   </div>
 </body>
 </html>
