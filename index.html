@@ -1,52 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>pulsemetahub.com - for sale</title>
-<style>
-  /* video tło na całą stronę */
-  #bg-video {
-    position: fixed;
-    top: 0; left: 0;
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-    z-index: -1;
-  }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>pulsemetahub.com – for sale</title>
+  <style>
+    /* Styl tła wideo */
+    #bg-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: -1;
+    }
 
-  /* link na środku */
-  .link-box {
-    position: fixed;
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
-    background: rgba(0,0,0,0.7);
-    padding: 15px 30px;
-    border-radius: 10px;
-    font-size: 24px;
-  }
-  .link-box a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  .link-box a:hover {
-    text-decoration: underline;
-  }
-</style>
+    /* Link na środku */
+    .link-box {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(0, 0, 0, 0.6);
+      padding: 20px 30px;
+      border-radius: 10px;
+      font-size: 22px;
+      text-align: center;
+    }
+
+    .link-box a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      font-family: Arial, sans-serif;
+    }
+
+    .link-box a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
 
-<video autoplay muted loop playsinline id="bg-video">
-  <source src="pulsemetahub.mp4" type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
+  <!-- Wideo jako tło -->
+  <video autoplay muted loop playsinline id="bg-video">
+    <source src="pulsemetahub.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
 
-<div class="link-box">
-  <a href="https://www.afternic.com/domain/pulsemetahub.com" target="_blank" rel="noopener noreferrer">
-    Buy pulsemetahub.com on Afternic
-  </a>
-</div>
+  <!-- Link na środek -->
+  <div class="link-box">
+    <a href="https://www.afternic.com/domain/pulsemetahub.com" target="_blank" rel="noopener noreferrer">
+      Buy pulsemetahub.com on Afternic
+    </a>
+  </div>
 
 </body>
 </html>
