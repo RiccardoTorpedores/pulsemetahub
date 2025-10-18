@@ -32,12 +32,51 @@
     </a>
   </div>
 
-  <!-- Przycisk otwierający film w osobnej karcie z tłem -->
+  <!-- Przycisk otwierający film w osobnej karcie -->
   <div class="promo-video">
     <a href="https://twojanazwa.github.io/pulsemetahub/video-background.html" class="promo-link" target="_blank">
       <span>🔥 Watch the "Good Weapon = Good Domain" Promo Video 🔥</span>
     </a>
   </div>
+
+</body>
+</html>
+
+Krok 2: Upewnij się, że wideo w video-background.html jest poprawnie wstawione
+
+Kod w video-background.html będzie zawierał wideo w tle na pełnym ekranie, ale nie będzie bezpośrednio próbował pobierać pliku wideo.
+
+Plik video-background.html:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Promo Video Background</title>
+
+  <style>
+    /* Wideo jako tło */
+    #bg-video {
+      position: fixed;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      object-fit: cover; /* Wideo wypełnia ekran */
+      object-position: center center; /* Ustala punkt początkowy wyświetlania */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Wideo jako tło -->
+  <video autoplay muted loop playsinline id="bg-video">
+    <source src="https://raw.githubusercontent.com/RiccardoTorpedores/pulsemetahub/main/pulsemetahub2.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
 
 </body>
 </html>
