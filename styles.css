@@ -23,8 +23,6 @@
   font-size: 22px;
   text-align: center;
   z-index: 1;
-  white-space: nowrap; /* Zapewnia, że tekst w linku nie będzie się łamał */
-  overflow: hidden; /* Ukrywa nadmiarowy tekst, jeśli nie zmieści się w jednym wierszu */
 }
 
 .link-box a {
@@ -32,7 +30,6 @@
   text-decoration: none;
   font-weight: bold;
   font-family: Arial, sans-serif;
-  white-space: nowrap; /* Zapewnia, że link będzie w jednym wierszu */
 }
 
 .link-box a:hover {
