@@ -24,6 +24,7 @@
   font-size: 22px;
   font-weight: bold;
   text-align: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Cień */
   z-index: 1;
 }
 
@@ -40,6 +41,7 @@
   font-size: 22px;
   font-weight: bold;
   text-align: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Cień */
   z-index: 1;
 }
 
