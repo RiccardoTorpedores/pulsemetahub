@@ -13,75 +13,53 @@
 
 /* Link główny (Afternic) */
 .link-box {
-  position: fixed;
-  top: 50%;
+  position: absolute;
+  top: 0; /* Górny pasek */
   left: 50%;
-  transform: translate(-50%, -50%);
-  background: rgba(0, 0, 0, 0.6);
-  padding: 20px 30px;
+  transform: translateX(-50%);
+  background: #fff; /* Białe tło */
+  color: #000; /* Czarny tekst */
+  padding: 15px 30px;
   border-radius: 10px;
   font-size: 22px;
   text-align: center;
   z-index: 1;
 }
 
-.link-box a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  font-family: Arial, sans-serif;
-}
-
-.link-box a:hover {
-  text-decoration: underline;
-}
-
-/* Drugi link - do filmu */
+/* Link do filmu */
 .promo-link-box {
-  position: fixed;
-  bottom: 0;
+  position: absolute;
+  bottom: 0; /* Dolny pasek */
   left: 50%;
   transform: translateX(-50%);
-  background: rgba(0, 0, 0, 0.6);
-  padding: 20px 30px;
+  background: #fff; /* Białe tło */
+  color: #000; /* Czarny tekst */
+  padding: 15px 30px;
   border-radius: 10px;
   font-size: 22px;
-  font-weight: bold;
-  color: white;
-  text-decoration: none;
-  font-family: Arial, sans-serif;
   text-align: center;
+  z-index: 1;
 }
 
-/* Stylizacja na telefonach */
+/* Responsywność */
 @media (max-width: 768px) {
   #bg-video {
     object-fit: contain; /* Na urządzeniach mobilnych film nie będzie przycięty */
   }
 
-  /* Zmieniamy pozycję linków na pasy białe */
   .link-box, .promo-link-box {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    background: #fff; /* Białe tło */
-    color: #000; /* Czarny tekst */
-    padding: 15px 30px;
-    border-radius: 10px;
     font-size: 18px;
-    font-weight: bold;
-    text-align: center;
-    z-index: 1;
+    padding: 15px 25px;
+    border-radius: 10px;
   }
 
-  /* Link na górze – górny pasek */
+  /* Zmniejszenie odległości od góry i dołu */
   .link-box {
-    top: 0; /* Górny pasek */
+    top: 0;
   }
 
-  /* Link na dole – dolny pasek */
   .promo-link-box {
-    bottom: 0; /* Dolny pasek */
+    bottom: 0;
   }
 }
 
