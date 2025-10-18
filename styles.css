@@ -38,36 +38,58 @@
 
 /* Drugi link – do filmu */
 .promo-link-box {
-  top: 65%; /* niżej niż link Afternic, ale ten sam wygląd */
+  position: fixed;
+  bottom: 10%; /* Ustawiamy na 10% od dołu */
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px 30px;
+  border-radius: 10px;
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  text-align: center;
 }
 
-/* Responsywność */
+/* Dostosowanie na telefonach (mobile) */
 @media (max-width: 768px) {
   #bg-video {
-    object-fit: contain;
+    object-fit: contain; /* Na urządzeniach mobilnych zmieniamy na 'contain' */
+  }
+
+  /* Linki na telefonie wyświetlają się na białych pasach nad i pod filmem */
+  .link-box, .promo-link-box {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff; /* Biały pasek tła */
+    color: #000; /* Czarne teksty */
+    padding: 15px 25px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    z-index: 1;
   }
 
   .link-box {
-    font-size: 18px;
-    padding: 15px 25px;
+    top: 10%; /* Górny pasek */
   }
 
   .promo-link-box {
-    top: 70%;
+    bottom: 10%; /* Dolny pasek */
   }
 }
 
 @media (max-width: 480px) {
   #bg-video {
-    object-fit: contain;
+    object-fit: contain; /* Na małych ekranach również 'contain' */
   }
 
-  .link-box {
+  .link-box, .promo-link-box {
     font-size: 16px;
     padding: 10px 20px;
-  }
-
-  .promo-link-box {
-    top: 75%;
   }
 }
