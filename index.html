@@ -14,7 +14,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>pulsemetahub.com – for sale</title>
   <style>
-    /* Styl tła z wideo */
+    /* Wideo jako tło */
     #bg-video {
       position: fixed;
       top: 0;
@@ -23,8 +23,8 @@
       width: 100%;
       height: 100%;
       z-index: -1;
-      object-fit: cover;
-      background-color: black;
+      object-fit: cover; /* Wideo wypełnia ekran */
+      object-position: center center; /* Ustala punkt początkowy wyświetlania */
     }
 
     /* Link na środku */
@@ -54,6 +54,10 @@
 
     /* Responsywność dla urządzeń mobilnych */
     @media (max-width: 768px) {
+      #bg-video {
+        object-fit: contain; /* Na urządzeniach mobilnych zmieniamy na 'contain', by nie przycinać filmu */
+      }
+
       .link-box {
         font-size: 18px;
         padding: 15px 25px;
@@ -61,6 +65,10 @@
     }
 
     @media (max-width: 480px) {
+      #bg-video {
+        object-fit: contain; /* Na małych ekranach również 'contain', żeby film nie był przycinany */
+      }
+
       .link-box {
         font-size: 16px;
         padding: 10px 20px;
