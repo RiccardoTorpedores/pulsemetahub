@@ -36,10 +36,10 @@
   text-decoration: underline;
 }
 
-/* Drugi link – do filmu */
+/* Drugi link - do filmu */
 .promo-link-box {
   position: fixed;
-  bottom: 10%; /* Ustawiamy na 10% od dołu */
+  bottom: 0;
   left: 50%;
   transform: translateX(-50%);
   background: rgba(0, 0, 0, 0.6);
@@ -53,20 +53,20 @@
   text-align: center;
 }
 
-/* Dostosowanie na telefonach (mobile) */
+/* Stylizacja na telefonach */
 @media (max-width: 768px) {
   #bg-video {
-    object-fit: contain; /* Na urządzeniach mobilnych zmieniamy na 'contain' */
+    object-fit: contain; /* Na urządzeniach mobilnych film nie będzie przycięty */
   }
 
-  /* Linki na telefonie wyświetlają się na białych pasach nad i pod filmem */
+  /* Zmieniamy pozycję linków na pasy białe */
   .link-box, .promo-link-box {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    background: #fff; /* Biały pasek tła */
-    color: #000; /* Czarne teksty */
-    padding: 15px 25px;
+    background: #fff; /* Białe tło */
+    color: #000; /* Czarny tekst */
+    padding: 15px 30px;
     border-radius: 10px;
     font-size: 18px;
     font-weight: bold;
@@ -74,12 +74,14 @@
     z-index: 1;
   }
 
+  /* Link na górze – górny pasek */
   .link-box {
-    top: 10%; /* Górny pasek */
+    top: 0; /* Górny pasek */
   }
 
+  /* Link na dole – dolny pasek */
   .promo-link-box {
-    bottom: 10%; /* Dolny pasek */
+    bottom: 0; /* Dolny pasek */
   }
 }
 
