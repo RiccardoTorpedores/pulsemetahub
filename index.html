@@ -14,16 +14,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>pulsemetahub.com – for sale</title>
   <style>
-    /* Styl tła wideo */
+    /* Styl tła z wideo */
     #bg-video {
-      position: absolute;
+      position: fixed;
       top: 0;
       left: 50%;
       transform: translateX(-50%);
       width: 100%;
-      min-height: 100vh; /* Ustalamy minimalną wysokość na 100vh, aby pokryło cały ekran */
-      object-fit: cover;
+      height: 100%;
       z-index: -1;
+      object-fit: cover;
+      background-color: black;
     }
 
     /* Link na środku */
@@ -51,12 +52,8 @@
       text-decoration: underline;
     }
 
-    /* Responsywność */
+    /* Responsywność dla urządzeń mobilnych */
     @media (max-width: 768px) {
-      #bg-video {
-        object-fit: contain; /* Na urządzeniach mobilnych zmienia się na 'contain', by wideo nie było przycinane */
-      }
-
       .link-box {
         font-size: 18px;
         padding: 15px 25px;
@@ -64,10 +61,6 @@
     }
 
     @media (max-width: 480px) {
-      #bg-video {
-        object-fit: contain; /* Wciąż używamy 'contain' na mniejszych telefonach */
-      }
-
       .link-box {
         font-size: 16px;
         padding: 10px 20px;
@@ -83,7 +76,7 @@
     Your browser does not support the video tag.
   </video>
 
-  <!-- Link na środek -->
+  <!-- Link na środku -->
   <div class="link-box">
     <a href="https://www.afternic.com/domain/pulsemetahub.com" target="_blank" rel="noopener noreferrer">
       Buy pulsemetahub.com on Afternic
