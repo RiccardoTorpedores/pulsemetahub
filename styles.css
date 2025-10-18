@@ -11,7 +11,7 @@
   object-position: center center; /* Ustala punkt początkowy wyświetlania */
 }
 
-/* Link na środku */
+/* Link na środku (Afternic) */
 .link-box {
   position: fixed;
   top: 50%;
@@ -36,10 +36,18 @@
   text-decoration: underline;
 }
 
-/* Styl przycisku z linkiem do filmu */
+/* Styl przycisku do filmu (promo-video) */
+.promo-video {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
 .promo-link {
   display: inline-block;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.6);  /* Tło, jak w przypadku Afternic */
   padding: 20px 30px;
   border-radius: 10px;
   font-size: 22px;
@@ -48,7 +56,6 @@
   text-decoration: none;
   font-family: Arial, sans-serif;
   text-align: center;
-  z-index: 1;
 }
 
 /* Efekt po najechaniu */
@@ -67,7 +74,6 @@
     padding: 15px 25px;
   }
 
-  /* Styl linku do filmu na telefonach */
   .promo-link {
     font-size: 18px;
     padding: 15px 25px;
@@ -84,7 +90,6 @@
     padding: 10px 20px;
   }
 
-  /* Styl linku do filmu na telefonach */
   .promo-link {
     font-size: 16px;
     padding: 10px 20px;
