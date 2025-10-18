@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-CZTYMJWQZQ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CZTYMJWQZQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-CZTYMJWQZQ');
+  </script>
 
-  gtag('config', 'G-CZTYMJWQZQ');
-</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>pulsemetahub.com – for sale</title>
@@ -19,9 +19,9 @@
       position: fixed;
       top: 0;
       left: 0;
-      width: 100vw;
-      height: 100vh;
-      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Dostosowuje proporcje i wypełnia cały ekran */
       z-index: -1;
     }
 
@@ -36,6 +36,7 @@
       border-radius: 10px;
       font-size: 22px;
       text-align: center;
+      z-index: 1;
     }
 
     .link-box a {
@@ -48,13 +49,28 @@
     .link-box a:hover {
       text-decoration: underline;
     }
+
+    /* Responsywność */
+    @media (max-width: 768px) {
+      .link-box {
+        font-size: 18px;
+        padding: 15px 25px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .link-box {
+        font-size: 16px;
+        padding: 10px 20px;
+      }
+    }
   </style>
 </head>
 <body>
 
   <!-- Wideo jako tło -->
   <video autoplay muted loop playsinline id="bg-video">
-    <source src="pulsemetahub1.mp4" type="video/mp4" />
+    <source src="pulsemetahub.mp4" type="video/mp4" />
     Your browser does not support the video tag.
   </video>
 
@@ -67,4 +83,3 @@
 
 </body>
 </html>
-
