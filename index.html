@@ -14,14 +14,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>pulsemetahub.com – for sale</title>
   <style>
-    /* Styl tła wideo */
+    /* Styl wideo */
     #bg-video {
-      position: fixed;
+      position: absolute;
       top: 0;
-      left: 0;
+      left: 50%;
+      transform: translateX(-50%);
       width: 100%;
-      height: 100%;
-      object-fit: cover; /* Dostosowuje proporcje i wypełnia cały ekran */
+      min-height: 100%;
+      object-fit: cover;
       z-index: -1;
     }
 
