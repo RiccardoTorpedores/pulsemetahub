@@ -15,8 +15,15 @@
       width: 100%;
       height: 100%;
       z-index: -1;
-      object-fit: cover; /* Wideo wypełnia ekran */
+      object-fit: cover; /* Wideo wypełnia ekran na desktopie */
       object-position: center center; /* Ustala punkt początkowy wyświetlania */
+    }
+
+    /* Styl na urządzenia mobilne (do 768px szerokości ekranu) */
+    @media (max-width: 768px) {
+      #bg-video {
+        object-fit: contain; /* Wideo nie będzie przycinane na telefonach */
+      }
     }
   </style>
 </head>
