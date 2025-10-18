@@ -14,10 +14,72 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>pulsemetahub.com – for sale</title>
 
-  <!-- Link do zewnętrznego pliku CSS -->
-  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Wideo jako tło */
+    #bg-video {
+      position: fixed;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      object-fit: cover; /* Wideo wypełnia ekran */
+      object-position: center center; /* Ustala punkt początkowy wyświetlania */
+    }
 
+    /* Link na środku */
+    .link-box {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(0, 0, 0, 0.6);
+      padding: 20px 30px;
+      border-radius: 10px;
+      font-size: 22px;
+      text-align: center;
+      z-index: 1;
+      white-space: nowrap; /* Zapewnia, że tekst w linku nie będzie się łamał */
+    }
+
+    .link-box a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      font-family: Arial, sans-serif;
+      white-space: nowrap; /* Zapewnia, że link będzie w jednym wierszu */
+    }
+
+    .link-box a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsywność dla urządzeń mobilnych */
+    @media (max-width: 768px) {
+      #bg-video {
+        object-fit: contain; /* Na urządzeniach mobilnych zmieniamy na 'contain', by nie przycinać filmu */
+      }
+
+      .link-box {
+        font-size: 18px;
+        padding: 15px 25px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      #bg-video {
+        object-fit: contain; /* Na małych ekranach również 'contain', żeby film nie był przycinany */
+      }
+
+      .link-box {
+        font-size: 16px;
+        padding: 10px 20px;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
   <!-- Wideo jako tło -->
@@ -33,8 +95,14 @@
     </a>
   </div>
 
-  <!-- Dodanie skryptów, jeśli są wymagane -->
-  <script src="script.js"></script>
-  
+  <!-- Skrypt JavaScript -->
+  <script>
+    // Możesz dodać tu skrypty JavaScript, jeśli potrzebujesz jakiejkolwiek interakcji
+    // Na przykład, logowanie kliknięcia na link:
+    document.querySelector('.link-box a').addEventListener('click', function() {
+      console.log('Kliknięto w link do Afternic');
+    });
+  </script>
+
 </body>
 </html>
