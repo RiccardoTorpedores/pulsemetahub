@@ -1,49 +1,33 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>pulsemetahub.com – for sale</title>
-
+  
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
   <!-- Wideo jako tło -->
-  <video id="bg-video" autoplay muted loop playsinline>
+  <video autoplay muted loop playsinline id="bg-video">
     <source src="https://raw.githubusercontent.com/RiccardoTorpedores/pulsemetahub/main/pulsemetahub1.mp4" type="video/mp4" />
-    Twoja przeglądarka nie obsługuje tagu wideo.
+    Your browser does not support the video tag.
   </video>
 
-  <!-- Przycisk Play with Sound -->
-  <div class="play-with-sound" onclick="toggleSound()">Play with Sound</div>
-
-  <!-- Link do Afternic (na górze strony, na urządzeniach mobilnych) -->
+  <!-- Link do Afternic -->
   <div class="link-box">
     <a href="https://www.afternic.com/domain/pulsemetahub.com" target="_blank" rel="noopener noreferrer">
       Buy on Afternic
     </a>
   </div>
 
-  <!-- Link do Video Promotion (na dole strony, na urządzeniach mobilnych) -->
+  <!-- Link do Video Promotion -->
   <div class="promo-link-box">
-    <a href="video-background.html" target="_blank" rel="noopener noreferrer">
+    <a href="https://RiccardoTorpedores.github.io/pulsemetahub/video-background.html" target="_blank" rel="noopener noreferrer">
       Video Promotion
     </a>
   </div>
 
-  <script>
-    // Funkcja do przełączania dźwięku wideo
-    function toggleSound() {
-      const video = document.getElementById("bg-video");
-      video.muted = !video.muted;
-      const button = document.querySelector('.play-with-sound');
-      if (video.muted) {
-        button.innerHTML = "Play with Sound"; // Zmieniamy tekst przycisku
-      } else {
-        button.innerHTML = "Mute Video"; // Zmieniamy tekst przycisku
-      }
-    }
-  </script>
 </body>
 </html>
