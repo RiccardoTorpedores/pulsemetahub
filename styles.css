@@ -7,79 +7,94 @@
   width: 100%;
   height: 100%;
   z-index: -1;
-  object-fit: cover;
+  object-fit: cover; /* Na desktopie wideo wypełnia cały ekran */
   object-position: center center;
 }
 
-/* Link główny (Afternic) */
-.link-box {
-  position: fixed;
-  top: 5%; /* 5% od góry ekranu */
-  left: 50%;
-  transform: translateX(-50%);
-  background: rgba(0, 0, 0, 0.6); /* Tło półprzezroczyste */
-  padding: 20px 30px;
-  border-radius: 10px;
-  font-size: 22px;
-  text-align: center;
-  z-index: 1;
-}
-
-.link-box a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  font-family: Arial, sans-serif;
-}
-
-.link-box a:hover {
-  text-decoration: underline;
-}
-
-/* Link Video Promotion */
-.promo-link-box {
-  position: fixed;
-  bottom: 5%; /* 5% od dołu ekranu */
-  left: 50%;
-  transform: translateX(-50%);
-  background: rgba(0, 0, 0, 0.6); /* Tło półprzezroczyste */
-  padding: 20px 30px;
-  border-radius: 10px;
-  font-size: 22px;
-  text-align: center;
-  z-index: 1;
-}
-
-.promo-link-box a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  font-family: Arial, sans-serif;
-}
-
-.promo-link-box a:hover {
-  text-decoration: underline;
-}
-
-/* Responsywność */
+/* Na telefonach film ma się wyświetlać bez przycinania */
 @media (max-width: 768px) {
   #bg-video {
-    object-fit: contain; /* Na telefonach wideo nie będzie przycinane */
+    object-fit: contain; /* Na telefonach wideo będzie zawierać się w ekranie */
   }
+}
 
+/* Przycisk Play with Sound */
+.play-with-sound {
+  position: fixed;
+  top: 50%; /* Pozycjonowanie na środku strony */
+  left: 50%;
+  transform: translate(-50%, -50%); /* Wyśrodkowanie w pionie i poziomie */
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-size: 22px;
+  padding: 15px 30px;
+  border-radius: 10px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  z-index: 2;
+  cursor: pointer;
+  white-space: nowrap; /* Zmiana, aby tekst nie zawijał się */
+}
+
+.play-with-sound:hover {
+  text-decoration: underline;
+}
+
+/* Linki na urządzeniach mobilnych */
+.link-box, .promo-link-box {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  padding: 20px 30px;
+  border-radius: 10px;
+  font-size: 22px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  z-index: 2;
+}
+
+.link-box a, .promo-link-box a {
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.link-box a:hover, .promo-link-box a:hover {
+  text-decoration: underline;
+}
+
+/* Responsywność dla urządzeń mobilnych */
+@media (max-width: 768px) {
   .link-box, .promo-link-box {
     font-size: 18px;
     padding: 15px 25px;
   }
+
+  .play-with-sound {
+    font-size: 18px;
+    padding: 12px 25px;
+  }
 }
 
 @media (max-width: 480px) {
-  #bg-video {
-    object-fit: contain; /* Na małych ekranach również 'contain' */
-  }
-
   .link-box, .promo-link-box {
     font-size: 16px;
     padding: 10px 20px;
   }
+
+  .play-with-sound {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+}
+
+/* Link Afternic (na górze) */
+.link-box {
+  top: 5%;
+}
+
+/* Link Promotion Video (na dole) */
+.promo-link-box {
+  bottom: 5%;
 }
