@@ -116,7 +116,7 @@
 
   /* Usunięcie przycisku "Play with Sound" na stronie głównej */
   .play-with-sound {
-    display: none;
+    display: block; /* Zawsze wyświetlaj przycisk na stronie z filmem */
   }
 
   /* Zmniejszamy odległość między linkami w wersji mobilnej */
