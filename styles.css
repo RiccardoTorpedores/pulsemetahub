@@ -14,50 +14,45 @@
 /* Link do Afternic */
 .link-box {
   position: fixed;
-  top: 5%; /* Link na górnym białym pasie */
-  left: 50%; /* Wyśrodkowanie linku na szerokość */
-  transform: translateX(-50%) translateY(-50%); /* Wyśrodkowanie na szerokość i wysokość */
+  top: 5%; /* Ustawiamy link na górnym białym pasie */
+  left: 50%; /* Wyśrodkowanie na szerokość */
+  transform: translateX(-50%); /* Wyśrodkowanie na szerokość */
   background: rgba(0, 0, 0, 0.6); /* Przezroczyste tło */
   padding: 20px 30px;
   border-radius: 10px;
   font-size: 22px;
   text-align: center;
   z-index: 1;
-}
-
-.link-box a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  font-family: Arial, sans-serif;
-}
-
-.link-box a:hover {
-  text-decoration: underline;
+  height: 50px; /* Dodajemy wysokość do górnego białego pasa */
+  display: flex;
+  align-items: center; /* Wyśrodkowanie w pionie */
 }
 
 /* Link do Video Promotion */
 .promo-link-box {
-  position: absolute;
-  top: 90%; /* Na dolnym białym pasie */
-  left: 50%;
-  transform: translateX(-50%); /* Wyśrodkowanie linku */
-  background: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  bottom: 5%; /* Link na dolnym białym pasie */
+  left: 50%; /* Wyśrodkowanie na szerokość */
+  transform: translateX(-50%); /* Wyśrodkowanie na szerokość */
+  background: rgba(0, 0, 0, 0.6); /* Przezroczyste tło */
   padding: 20px 30px;
   border-radius: 10px;
   font-size: 22px;
   text-align: center;
   z-index: 1;
+  height: 50px; /* Dodajemy wysokość do dolnego białego pasa */
+  display: flex;
+  align-items: center; /* Wyśrodkowanie w pionie */
 }
 
-.promo-link-box a {
+.link-box a, .promo-link-box a {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
   font-family: Arial, sans-serif;
 }
 
-.promo-link-box a:hover {
+.link-box a:hover, .promo-link-box a:hover {
   text-decoration: underline;
 }
 
@@ -73,7 +68,8 @@
   }
 
   .promo-link-box {
-    top: 70%; /* Adjust to lower position on mobile */
+    font-size: 18px;
+    padding: 15px 25px;
   }
 }
 
@@ -88,6 +84,7 @@
   }
 
   .promo-link-box {
-    top: 75%; /* Adjust to lower position on smaller mobile screens */
+    font-size: 16px;
+    padding: 10px 20px;
   }
 }
