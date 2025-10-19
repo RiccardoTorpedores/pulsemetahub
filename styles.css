@@ -7,14 +7,14 @@
   width: 100%;
   height: 100%;
   z-index: -1;
-  object-fit: cover;
+  object-fit: cover; /* Na desktopie wideo wypełnia cały ekran */
   object-position: center center;
 }
 
 /* Link główny (Afternic) */
 .link-box {
   position: fixed;
-  top: 50%;
+  top: 50%; /* Środek ekranu dla desktop */
   left: 50%;
   transform: translate(-50%, -50%);
   background: rgba(0, 0, 0, 0.6);
@@ -38,7 +38,27 @@
 
 /* Drugi link – do filmu */
 .promo-link-box {
+  position: fixed;
   top: 65%; /* niżej niż link Afternic, ale ten sam wygląd */
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px 30px;
+  border-radius: 10px;
+  font-size: 22px;
+  text-align: center;
+  z-index: 1;
+}
+
+.promo-link-box a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+}
+
+.promo-link-box a:hover {
+  text-decoration: underline;
 }
 
 /* Responsywność */
@@ -50,10 +70,13 @@
   .link-box {
     font-size: 18px;
     padding: 15px 25px;
+    top: 10%; /* Zmieniamy, aby link pojawił się na białym pasie nad filmem */
   }
 
   .promo-link-box {
-    top: 70%;
+    font-size: 18px;
+    padding: 15px 25px;
+    top: 70%; /* Pozostawiamy ten sam offset dla linku do filmu */
   }
 }
 
@@ -65,9 +88,12 @@
   .link-box {
     font-size: 16px;
     padding: 10px 20px;
+    top: 10%; /* Zmieniamy, aby link pojawił się na białym pasie nad filmem */
   }
 
   .promo-link-box {
-    top: 75%;
+    font-size: 16px;
+    padding: 10px 20px;
+    top: 75%; /* Pozostawiamy ten sam offset dla linku do filmu */
   }
 }
