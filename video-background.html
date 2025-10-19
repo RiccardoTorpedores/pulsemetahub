@@ -3,63 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Promotion Video with Sound</title>
-
-  <style>
-    /* Wideo jako tło */
-    #bg-video {
-      position: fixed;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      object-fit: cover; /* Na desktopie wideo wypełnia cały ekran */
-      object-position: center center;
-    }
-
-    /* Na telefonach film ma się wyświetlać bez przycinania */
-    @media (max-width: 768px) {
-      #bg-video {
-        object-fit: contain; /* Na telefonach wideo będzie zawierać się w ekranie */
-      }
-    }
-
-    /* Przycisk do uruchomienia dźwięku */
-    #play-button {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-color: rgba(0, 0, 0, 0.7);
-      color: white;
-      font-size: 20px;
-      padding: 20px 30px;
-      border-radius: 10px;
-      cursor: pointer;
-      z-index: 1;
-    }
-  </style>
+  <title>Promo Video Background</title>
+  
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
   <!-- Wideo jako tło -->
-  <video id="bg-video" autoplay muted loop playsinline>
+  <video autoplay muted loop playsinline id="bg-video">
     <source src="https://raw.githubusercontent.com/RiccardoTorpedores/pulsemetahub/main/pulsemetahub2.mp4" type="video/mp4" />
     Your browser does not support the video tag.
   </video>
 
-  <!-- Przycisk do uruchomienia dźwięku -->
-  <div id="play-button" onclick="enableSound()">Play with Sound</div>
+  <!-- Przycisk Play with Sound -->
+  <a href="#" class="sound-link" onclick="toggleSound()">Play with Sound</a>
 
+  <!-- JavaScript -->
   <script>
-    // Funkcja uruchamiająca dźwięk po kliknięciu w przycisk
-    function enableSound() {
-      var video = document.getElementById("bg-video");
-      video.muted = false; // Wyłączenie wyciszenia
-      video.play(); // Rozpoczęcie odtwarzania wideo
-      document.getElementById("play-button").style.display = 'none'; // Ukrycie przycisku
+    function toggleSound() {
+      var video = document.getElementById('bg-video');
+      if (video.muted) {
+        video.muted = false;  // Włącz dźwięk
+      } else {
+        video.muted = true;   // Wyłącz dźwięk
+      }
     }
   </script>
 
