@@ -7,7 +7,7 @@
   width: 100%;
   height: 100%;
   z-index: -1;
-  object-fit: cover; /* Na desktopie wideo wypełnia cały ekran */
+  object-fit: cover;
   object-position: center center;
 }
 
@@ -37,12 +37,12 @@
 
 /* Link do Afternic na górnym białym pasku */
 .afternic-link {
-  top: 5%;
+  top: 5%; /* Zmieniona pozycja */
 }
 
 /* Drugi link – do filmu */
 .promo-link-box {
-  top: 85%; /* Link do filmu na dolnym białym pasku */
+  top: 75%; /* Zmieniona pozycja */
 }
 
 /* Responsywność */
@@ -55,14 +55,14 @@
   .afternic-link {
     font-size: 18px;
     padding: 15px 25px;
-    top: 5%; /* Zmieniamy pozycję na górnym pasku */
+    top: 5%; /* Przeniesienie na górny pasek */
   }
 
   /* Link do Video Promotion na dolnym pasku na urządzeniach mobilnych */
   .promo-link-box {
     font-size: 18px;
     padding: 15px 25px;
-    top: 75%; /* Zmieniamy pozycję na dolnym pasku */
+    top: 75%; /* Przeniesienie na dolny pasek */
   }
 }
 
