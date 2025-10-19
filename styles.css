@@ -20,28 +20,6 @@
   }
 }
 
-/* Przycisk Play with Sound */
-.play-with-sound {
-  position: fixed;
-  top: 50%; /* Pozycjonowanie na środku strony */
-  left: 50%;
-  transform: translate(-50%, -50%); /* Wyśrodkowanie w pionie i poziomie */
-  background-color: rgba(0, 0, 0, 0.6);
-  color: #fff;
-  font-size: 22px;
-  padding: 15px 30px;
-  border-radius: 10px;
-  text-align: center;
-  font-family: Arial, sans-serif;
-  z-index: 2;
-  cursor: pointer;
-  white-space: nowrap; /* Zmiana, aby tekst nie zawijał się */
-}
-
-.play-with-sound:hover {
-  text-decoration: underline;
-}
-
 /* Linki na urządzeniach mobilnych */
 .link-box, .promo-link-box {
   position: fixed;
@@ -74,9 +52,9 @@
     padding: 15px 25px;
   }
 
+  /* Usunięcie przycisku "Play with Sound" na stronie głównej */
   .play-with-sound {
-    font-size: 18px;
-    padding: 12px 25px;
+    display: none;
   }
 
   /* Zmniejszamy odległość między linkami w wersji mobilnej */
@@ -109,4 +87,14 @@
 /* Link Promotion Video (na dole) */
 .promo-link-box {
   bottom: 5%;
+}
+
+/* Linki na wersji desktopowej */
+@media (min-width: 769px) {
+  .link-box, .promo-link-box {
+    width: auto; /* Zmniejszamy szerokość, żeby nie były rozciągnięte na całą stronę */
+    font-size: 22px;
+    padding: 15px 30px;
+    margin: 0 auto;
+  }
 }
