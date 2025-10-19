@@ -14,9 +14,9 @@
 /* Link główny (Afternic) */
 .link-box {
   position: fixed;
-  top: 50%; /* Środek ekranu dla desktop */
+  top: 5%; /* Ustawiamy górny pasek linku Afternic */
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
   background: rgba(0, 0, 0, 0.6);
   padding: 20px 30px;
   border-radius: 10px;
@@ -39,7 +39,7 @@
 /* Drugi link – do filmu */
 .promo-link-box {
   position: fixed;
-  top: 65%; /* niżej niż link Afternic, ale ten sam wygląd */
+  top: 80%; /* Pozostawiamy ten sam offset dla linku do filmu */
   left: 50%;
   transform: translateX(-50%);
   background: rgba(0, 0, 0, 0.6);
@@ -70,13 +70,13 @@
   .link-box {
     font-size: 18px;
     padding: 15px 25px;
-    top: 10%; /* Zmieniamy, aby link pojawił się na białym pasie nad filmem */
+    top: 5%; /* Ustawiamy link do Afternic na górnym pasku */
   }
 
   .promo-link-box {
     font-size: 18px;
     padding: 15px 25px;
-    top: 70%; /* Pozostawiamy ten sam offset dla linku do filmu */
+    top: 75%; /* Ustawiamy link do Video promotion na dole */
   }
 }
 
@@ -88,12 +88,12 @@
   .link-box {
     font-size: 16px;
     padding: 10px 20px;
-    top: 10%; /* Zmieniamy, aby link pojawił się na białym pasie nad filmem */
+    top: 5%; /* Ustawiamy link do Afternic na górnym pasku */
   }
 
   .promo-link-box {
     font-size: 16px;
     padding: 10px 20px;
-    top: 75%; /* Pozostawiamy ten sam offset dla linku do filmu */
+    top: 70%; /* Ustawiamy link do Video promotion na dole */
   }
 }
