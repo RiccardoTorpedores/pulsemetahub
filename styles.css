@@ -44,7 +44,7 @@
   position: fixed;
   left: 50%;
   transform: translateX(-50%);
-  background-color: rgba(0, 0, 0, 0.6); /* Szare tło */
+  background-color: rgba(169, 169, 169, 0.8); /* Szare tło, zmieniłem na odcień szarości */
   padding: 20px 30px;
   border-radius: 10px;
   font-size: 22px;
@@ -119,7 +119,7 @@
     font-size: 22px;
     padding: 15px 30px;
     margin: 0 auto;
-    background-color: rgba(0, 0, 0, 0.6); /* Szare tło */
+    background-color: rgba(169, 169, 169, 0.8); /* Szare tło */
     border-radius: 10px;
     text-align: center;
   }
@@ -142,7 +142,7 @@
   top: 50%; /* Pozycjonowanie na środku strony */
   left: 50%;
   transform: translate(-50%, -50%); /* Wyśrodkowanie w pionie i poziomie */
-  background-color: rgba(0, 0, 0, 0.6); /* Szare tło */
+  background-color: rgba(169, 169, 169, 0.8); /* Szare tło */
   color: #fff;
   font-size: 22px;
   padding: 15px 30px;
@@ -154,4 +154,13 @@
   white-space: nowrap;
 }
 
-/* Hover dla przyc
+/* Hover dla przycisku Play with Sound */
+.play-with-sound:hover {
+  text-decoration: underline;
+}
+
+/* Styl dla urządzeń mobilnych */
+@media (max-width: 768px) {
+  .play-with-sound {
+    font-size: 18px; /* Zmniejszenie czcionki na urządzeniach mobilnych */
+    padding: 12px
