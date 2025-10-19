@@ -11,13 +11,13 @@
   object-position: center center;
 }
 
-/* Link główny (Afternic) */
+/* Link do Afternic */
 .link-box {
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: rgba(0, 0, 0, 0.6);
+  top: 5%; /* Link na górnym białym pasie */
+  left: 50%; /* Wyśrodkowanie linku na szerokość */
+  transform: translateX(-50%) translateY(-50%); /* Wyśrodkowanie na szerokość i wysokość */
+  background: rgba(0, 0, 0, 0.6); /* Przezroczyste tło */
   padding: 20px 30px;
   border-radius: 10px;
   font-size: 22px;
@@ -36,12 +36,12 @@
   text-decoration: underline;
 }
 
-/* Drugi link – do filmu */
+/* Link do Video Promotion */
 .promo-link-box {
   position: absolute;
-  top: 5%; /* Ustawiłem górną krawędź na 5% wysokości okna */
+  top: 90%; /* Na dolnym białym pasie */
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%); /* Wyśrodkowanie linku */
   background: rgba(0, 0, 0, 0.6);
   padding: 20px 30px;
   border-radius: 10px;
@@ -73,9 +73,7 @@
   }
 
   .promo-link-box {
-    top: 5%; /* Na urządzenia mobilne również ustawiamy link do filmu w górnej części */
-    font-size: 18px;
-    padding: 15px 25px;
+    top: 70%; /* Adjust to lower position on mobile */
   }
 }
 
@@ -90,8 +88,6 @@
   }
 
   .promo-link-box {
-    top: 5%; /* Dla mniejszych urządzeń również górna krawędź */
-    font-size: 16px;
-    padding: 10px 20px;
+    top: 75%; /* Adjust to lower position on smaller mobile screens */
   }
 }
