@@ -37,6 +37,45 @@
     top: 50%;
     transform: translate(-50%, -50%);
   }
+
+  /* Przycisk Play with Sound */
+  .play-with-sound {
+    position: fixed;
+    top: 50%; /* Pozycjonowanie na środku strony */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Wyśrodkowanie w pionie i poziomie */
+    background-color: rgba(169, 169, 169, 0.8); /* Szare tło */
+    color: #fff;
+    font-size: 22px;
+    padding: 15px 30px;
+    border-radius: 10px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    z-index: 2;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+
+  /* Styl hover dla przycisku */
+  .play-with-sound:hover {
+    text-decoration: underline;
+  }
+
+  /* Linki na urządzeniach mobilnych */
+  .link-box, .promo-link-box {
+    font-size: 18px;
+    padding: 15px 25px;
+    width: 80%;
+    max-width: 350px;
+  }
+
+  .link-box {
+    top: 5%;
+  }
+
+  .promo-link-box {
+    bottom: 5%;
+  }
 }
 
 /* Linki (Afternic i Video Promotion) na urządzeniach mobilnych i desktop */
@@ -44,7 +83,7 @@
   position: fixed;
   left: 50%;
   transform: translateX(-50%);
-  background-color: rgba(169, 169, 169, 0.8); /* Szare tło, zmieniłem na odcień szarości */
+  background-color: rgba(169, 169, 169, 0.8); /* Szare tło */
   padding: 20px 30px;
   border-radius: 10px;
   font-size: 22px;
@@ -135,32 +174,3 @@
     bottom: 20px; /* Link Video Promotion na dole */
   }
 }
-
-/* Przycisk Play with Sound na stronie video-background (druga strona) */
-.play-with-sound {
-  position: fixed;
-  top: 50%; /* Pozycjonowanie na środku strony */
-  left: 50%;
-  transform: translate(-50%, -50%); /* Wyśrodkowanie w pionie i poziomie */
-  background-color: rgba(169, 169, 169, 0.8); /* Szare tło */
-  color: #fff;
-  font-size: 22px;
-  padding: 15px 30px;
-  border-radius: 10px;
-  text-align: center;
-  font-family: Arial, sans-serif;
-  z-index: 2;
-  cursor: pointer;
-  white-space: nowrap;
-}
-
-/* Hover dla przycisku Play with Sound */
-.play-with-sound:hover {
-  text-decoration: underline;
-}
-
-/* Styl dla urządzeń mobilnych */
-@media (max-width: 768px) {
-  .play-with-sound {
-    font-size: 18px; /* Zmniejszenie czcionki na urządzeniach mobilnych */
-    padding: 12px
