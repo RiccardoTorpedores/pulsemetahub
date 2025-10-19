@@ -14,8 +14,9 @@
 /* Link główny (Afternic) */
 .link-box {
   position: fixed;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
   background: rgba(0, 0, 0, 0.6);
   padding: 20px 30px;
   border-radius: 10px;
@@ -35,22 +36,29 @@
   text-decoration: underline;
 }
 
-/* Link Afternic na urządzenia mobilne */
-.afternic-link-box {
-  position: absolute; /* Używamy absolute, aby pozycjonować go dokładnie */
-  top: 50%;  /* Ustawiamy go w poziomie na środku */
-  left: 50%;
-  transform: translate(-50%, -50%); /* Centrujemy go dokładnie w pionie i poziomie */
-  width: auto;
-  padding: 15px 30px; /* Dodano padding dla lepszej widoczności */
-}
-
-/* Link do filmu promocji */
+/* Drugi link – do filmu */
 .promo-link-box {
   position: absolute;
-  top: 80%; /* Na dole ekranu, pod filmem */
+  top: 5%; /* Ustawiłem górną krawędź na 5% wysokości okna */
   left: 50%;
   transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px 30px;
+  border-radius: 10px;
+  font-size: 22px;
+  text-align: center;
+  z-index: 1;
+}
+
+.promo-link-box a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+}
+
+.promo-link-box a:hover {
+  text-decoration: underline;
 }
 
 /* Responsywność */
@@ -64,14 +72,10 @@
     padding: 15px 25px;
   }
 
-  /* Link Afternic na urządzenia mobilne */
-  .afternic-link-box {
-    top: 8%;  /* Zmiana, żeby na górnym białym pasku był dokładnie na środku */
-  }
-
-  /* Link do filmu promocji */
   .promo-link-box {
-    top: 75%; /* Pozostaje w tym samym miejscu pod filmem */
+    top: 5%; /* Na urządzenia mobilne również ustawiamy link do filmu w górnej części */
+    font-size: 18px;
+    padding: 15px 25px;
   }
 }
 
@@ -85,13 +89,9 @@
     padding: 10px 20px;
   }
 
-  /* Link Afternic na urządzenia mobilne */
-  .afternic-link-box {
-    top: 8%;  /* Na górze, dokładnie na środku białego paska */
-  }
-
-  /* Link do filmu promocji */
   .promo-link-box {
-    top: 80%;  /* Pozostaje w tym samym miejscu pod filmem */
+    top: 5%; /* Dla mniejszych urządzeń również górna krawędź */
+    font-size: 16px;
+    padding: 10px 20px;
   }
 }
