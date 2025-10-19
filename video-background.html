@@ -1,17 +1,18 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Video Background</title>
+  <title>Video Background – Play with Sound</title>
+  
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <!-- Wideo jako tło dla drugiej strony -->
-  <video id="bg-video" autoplay muted loop playsinline>
+  <!-- Wideo jako tło na drugiej stronie -->
+  <video id="bg-video-second" autoplay muted loop playsinline>
     <source src="https://raw.githubusercontent.com/RiccardoTorpedores/pulsemetahub/main/pulsemetahub2.mp4" type="video/mp4" />
-    Twoja przeglądarka nie obsługuje tagu wideo.
+    Your browser does not support the video tag.
   </video>
 
   <!-- Przycisk Play with Sound -->
@@ -20,7 +21,7 @@
   <script>
     // Funkcja do przełączania dźwięku wideo
     function toggleSound() {
-      const video = document.getElementById("bg-video");
+      const video = document.getElementById("bg-video-second");
       video.muted = !video.muted;
       const button = document.querySelector('.play-with-sound');
       if (video.muted) {
@@ -30,6 +31,6 @@
       }
     }
   </script>
-
+  
 </body>
 </html>
