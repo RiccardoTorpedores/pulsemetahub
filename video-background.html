@@ -1,13 +1,35 @@
-<script>
-  // Funkcja do przełączania dźwięku wideo
-  function toggleSound() {
-    const video = document.getElementById("bg-video");
-    video.muted = !video.muted;
-    const button = document.querySelector('.play-with-sound');
-    if (video.muted) {
-      button.innerHTML = "Play with Sound"; // Zmieniamy tekst przycisku
-    } else {
-      button.innerHTML = "Mute Video"; // Zmieniamy tekst przycisku
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Video Background</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Wideo jako tło -->
+  <video id="bg-video" autoplay muted loop playsinline>
+    <source src="https://raw.githubusercontent.com/RiccardoTorpedores/pulsemetahub/main/pulsemetahub1.mp4" type="video/mp4" />
+    Twoja przeglądarka nie obsługuje tagu wideo.
+  </video>
+
+  <!-- Przycisk Play with Sound -->
+  <div class="play-with-sound" onclick="toggleSound()">Play with Sound</div>
+
+  <script>
+    // Funkcja do przełączania dźwięku wideo
+    function toggleSound() {
+      const video = document.getElementById("bg-video");
+      video.muted = !video.muted;
+      const button = document.querySelector('.play-with-sound');
+      if (video.muted) {
+        button.innerHTML = "Play with Sound"; // Zmieniamy tekst przycisku
+      } else {
+        button.innerHTML = "Mute Video"; // Zmieniamy tekst przycisku
+      }
     }
-  }
-</script>
+  </script>
+
+</body>
+</html>
