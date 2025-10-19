@@ -35,14 +35,21 @@
   text-decoration: underline;
 }
 
-/* Link Afternic na urządzenia mobilne - przeniesiony na biały pas nad filmem */
+/* Link Afternic na urządzenia mobilne */
 .afternic-link-box {
-  top: 10%; /* Na urządzeniach mobilnych link Afternic pojawi się na górze ekranu */
+  top: 5%;  /* Przenosimy link Afternic na biały pasek nad filmem */
+  position: absolute;  /* Używamy absolute, żeby wymusić pozycjonowanie w obrębie strony */
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
 }
 
 /* Link do filmu promocji */
 .promo-link-box {
-  top: 65%; /* niżej niż link Afternic */
+  top: 75%; /* niżej niż link Afternic */
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 /* Responsywność */
@@ -56,13 +63,14 @@
     padding: 15px 25px;
   }
 
-  /* Link Afternic - pozycjonowanie na białym pasku nad filmem */
+  /* Link Afternic na urządzeniach mobilnych - przeniesiony na biały pasek nad filmem */
   .afternic-link-box {
-    top: 5%;  /* Link Afternic bliżej góry ekranu */
+    top: 5%;
   }
 
+  /* Link do filmu promocji */
   .promo-link-box {
-    top: 75%;
+    top: 75%; /* pozostaje w tej samej lokalizacji */
   }
 }
 
@@ -76,11 +84,12 @@
     padding: 10px 20px;
   }
 
-  /* Link Afternic na urządzeniach mobilnych - na górze */
+  /* Link Afternic na urządzeniach mobilnych */
   .afternic-link-box {
-    top: 5%;  /* Link Afternic nadal na górze */
+    top: 5%;  /* Na górze ekranu, na białym pasku */
   }
 
+  /* Link do filmu promocji */
   .promo-link-box {
     top: 80%;
   }
