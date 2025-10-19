@@ -1,3 +1,16 @@
+/* Wideo jako tło na stronie głównej */
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  object-fit: cover;
+  object-position: center center;
+}
+
 /* Wideo na stronie drugiej (video-background) */
 #bg-video-second {
   position: fixed;
@@ -11,12 +24,124 @@
   object-position: center center;
 }
 
-/* Przycisk Play with Sound */
+/* Na telefonach film ma się wyświetlać bez przycinania i być wyśrodkowane */
+@media (max-width: 768px) {
+  #bg-video {
+    object-fit: contain; /* Na telefonach wideo będzie zawierać się w ekranie */
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  #bg-video-second {
+    object-fit: contain;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* Linki (Afternic i Video Promotion) na urządzeniach mobilnych i desktop */
+.link-box, .promo-link-box {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(169, 169, 169, 0.8); /* Szare tło, zmieniłem na odcień szarości */
+  padding: 20px 30px;
+  border-radius: 10px;
+  font-size: 22px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  z-index: 2;
+  width: auto;
+  max-width: 400px;
+}
+
+/* Styl linków */
+.link-box a, .promo-link-box a {
+  color: #fff; /* Biały tekst na szarym tle */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.link-box a:hover, .promo-link-box a:hover {
+  text-decoration: underline;
+}
+
+/* Responsywność dla urządzeń mobilnych */
+@media (max-width: 768px) {
+  .link-box, .promo-link-box {
+    font-size: 18px;
+    padding: 15px 25px;
+    width: 80%; /* Linki na urządzeniach mobilnych będą miały 80% szerokości */
+    max-width: 350px;
+  }
+
+  /* Usunięcie przycisku "Play with Sound" na stronie głównej */
+  .play-with-sound {
+    display: none;
+  }
+
+  /* Zmniejszamy odległość między linkami w wersji mobilnej */
+  .link-box {
+    top: 5%; /* Link Afternic na górze */
+  }
+
+  .promo-link-box {
+    bottom: 5%; /* Link Video Promotion na dole */
+  }
+}
+
+@media (max-width: 480px) {
+  .link-box, .promo-link-box {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+
+  .play-with-sound {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+}
+
+/* Link Afternic (na górze) */
+.link-box {
+  top: 5%;
+}
+
+/* Link Promotion Video (na dole) */
+.promo-link-box {
+  bottom: 5%;
+}
+
+/* Linki na wersji desktopowej */
+@media (min-width: 769px) {
+  .link-box, .promo-link-box {
+    width: auto; /* Zmniejszamy szerokość, żeby nie były rozciągnięte na całą stronę */
+    font-size: 22px;
+    padding: 15px 30px;
+    margin: 0 auto;
+    background-color: rgba(169, 169, 169, 0.8); /* Szare tło */
+    border-radius: 10px;
+    text-align: center;
+  }
+
+  /* Linki na stronie głównej */
+  .link-box {
+    position: absolute;
+    top: 20px; /* Link Afternic na górze */
+  }
+
+  .promo-link-box {
+    position: absolute;
+    bottom: 20px; /* Link Video Promotion na dole */
+  }
+}
+
+/* Przycisk Play with Sound na stronie video-background (druga strona) */
 .play-with-sound {
   position: fixed;
-  top: 50%; /* Wyśrodkowanie przycisku w pionie */
-  left: 50%; /* Wyśrodkowanie przycisku w poziomie */
-  transform: translate(-50%, -50%); /* Przesunięcie o 50% szerokości i wysokości */
+  top: 50%; /* Pozycjonowanie na środku strony */
+  left: 50%;
+  transform: translate(-50%, -50%); /* Wyśrodkowanie w pionie i poziomie */
   background-color: rgba(169, 169, 169, 0.8); /* Szare tło */
   color: #fff;
   font-size: 22px;
@@ -24,31 +149,18 @@
   border-radius: 10px;
   text-align: center;
   font-family: Arial, sans-serif;
-  z-index: 2; /* Ważne, aby przycisk był nad filmem */
+  z-index: 2;
   cursor: pointer;
   white-space: nowrap;
 }
 
-/* Responsywność dla urządzeń mobilnych */
+/* Hover dla przycisku Play with Sound */
+.play-with-sound:hover {
+  text-decoration: underline;
+}
+
+/* Styl dla urządzeń mobilnych */
 @media (max-width: 768px) {
-  /* Przycisk Play with Sound */
   .play-with-sound {
-    display: block; /* Zawsze wyświetlaj przycisk */
-    font-size: 18px; /* Nieco mniejsza czcionka na telefonach */
-    padding: 12px 25px;
-  }
-
-  /* Wideo na telefonach */
-  #bg-video-second {
-    object-fit: contain; /* Zapewnia, że film nie jest przycinany */
-    top: 50%;
-    transform: translate(-50%, -50%); /* Wyśrodkowanie wideo */
-  }
-}
-
-/* Zwiększenie z-index przycisku na urządzeniach mobilnych */
-@media (max-width: 480px) {
-  .play-with-sound {
-    z-index: 9999; /* Gwarantuje, że przycisk będzie nad innymi elementami */
-  }
-}
+    font-size: 18px; /* Zmniejszenie czcionki na urządzeniach mobilnych */
+    padding: 12px
