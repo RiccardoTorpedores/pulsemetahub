@@ -22,7 +22,7 @@
     </a>
   </div>
 
-  <!-- Link do filmu promocyjnego -->
+  <!-- Link do filmu promocyjnego (tylko zmieniony wygląd) -->
   <div class="link-box promo-link-box">
     <a href="https://RiccardoTorpedores.github.io/pulsemetahub/video-background.html" target="_blank" rel="noopener noreferrer">
       Video promotion
@@ -49,7 +49,7 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      background: rgba(0, 0, 0, 0.6); /* Efekt przeźroczystości */
+      background: rgba(0, 0, 0, 0.6); /* Przeźroczyste tło */
       padding: 20px 30px;
       border-radius: 10px;
       font-size: 22px;
@@ -68,13 +68,29 @@
       text-decoration: underline;
     }
 
-    /* Drugi link – do filmu (identyczny wygląd jak Afternic) */
+    /* Link do filmu promocyjnego (teraz ma taki sam wygląd jak Afternic) */
     .promo-link-box {
-      background: rgba(0, 0, 0, 0.6); /* Zmieniam na ten sam efekt przeźroczystości */
-      font-size: 22px;
+      position: fixed;
+      top: 65%; /* Niżej niż Afternic */
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0, 0, 0, 0.6); /* Przeźroczyste tło */
       padding: 20px 30px;
       border-radius: 10px;
+      font-size: 22px;
       text-align: center;
+      z-index: 1;
+    }
+
+    .promo-link-box a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      font-family: Arial, sans-serif;
+    }
+
+    .promo-link-box a:hover {
+      text-decoration: underline;
     }
 
     /* Responsywność */
@@ -91,6 +107,7 @@
       .promo-link-box {
         font-size: 18px;
         padding: 15px 25px;
+        top: 70%; /* Ustawienie niżej na telefonach */
       }
     }
 
@@ -107,6 +124,7 @@
       .promo-link-box {
         font-size: 16px;
         padding: 10px 20px;
+        top: 75%; /* Ustawienie niżej na telefonach */
       }
     }
   </style>
