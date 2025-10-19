@@ -11,10 +11,12 @@
   object-position: center center;
 }
 
-/* Na telefonach film ma się wyświetlać bez przycinania */
+/* Na telefonach film ma się wyświetlać bez przycinania i być wyśrodkowane */
 @media (max-width: 768px) {
   #bg-video {
     object-fit: contain; /* Na telefonach wideo będzie zawierać się w ekranie */
+    top: 50%;  /* Wyśrodkowanie wideo na osi pionowej */
+    transform: translate(-50%, -50%); /* Wyśrodkowanie wideo na osi poziomej */
   }
 }
 
@@ -52,6 +54,7 @@
   text-align: center;
   font-family: Arial, sans-serif;
   z-index: 2;
+  width: 80%; /* Zmniejszamy szerokość linków, by lepiej pasowały na urządzeniach mobilnych */
 }
 
 .link-box a, .promo-link-box a {
@@ -74,6 +77,15 @@
   .play-with-sound {
     font-size: 18px;
     padding: 12px 25px;
+  }
+
+  /* Zmniejszamy odległość między linkami w wersji mobilnej */
+  .link-box {
+    top: 5%; /* Link Afternic na górze */
+  }
+
+  .promo-link-box {
+    bottom: 5%; /* Link Video Promotion na dole */
   }
 }
 
