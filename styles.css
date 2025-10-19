@@ -14,7 +14,6 @@
 /* Link główny (Afternic) */
 .link-box {
   position: fixed;
-  top: 5%; /* Ustawiamy górny pasek linku Afternic */
   left: 50%;
   transform: translateX(-50%);
   background: rgba(0, 0, 0, 0.6);
@@ -36,29 +35,14 @@
   text-decoration: underline;
 }
 
+/* Link do Afternic na górnym białym pasku */
+.afternic-link {
+  top: 5%;
+}
+
 /* Drugi link – do filmu */
 .promo-link-box {
-  position: fixed;
-  top: 80%; /* Pozostawiamy ten sam offset dla linku do filmu */
-  left: 50%;
-  transform: translateX(-50%);
-  background: rgba(0, 0, 0, 0.6);
-  padding: 20px 30px;
-  border-radius: 10px;
-  font-size: 22px;
-  text-align: center;
-  z-index: 1;
-}
-
-.promo-link-box a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  font-family: Arial, sans-serif;
-}
-
-.promo-link-box a:hover {
-  text-decoration: underline;
+  top: 85%; /* Link do filmu na dolnym białym pasku */
 }
 
 /* Responsywność */
@@ -67,16 +51,18 @@
     object-fit: contain;
   }
 
-  .link-box {
+  /* Link do Afternic na górnym pasku na urządzeniach mobilnych */
+  .afternic-link {
     font-size: 18px;
     padding: 15px 25px;
-    top: 5%; /* Ustawiamy link do Afternic na górnym pasku */
+    top: 5%; /* Zmieniamy pozycję na górnym pasku */
   }
 
+  /* Link do Video Promotion na dolnym pasku na urządzeniach mobilnych */
   .promo-link-box {
     font-size: 18px;
     padding: 15px 25px;
-    top: 75%; /* Ustawiamy link do Video promotion na dole */
+    top: 75%; /* Zmieniamy pozycję na dolnym pasku */
   }
 }
 
@@ -85,15 +71,17 @@
     object-fit: contain;
   }
 
-  .link-box {
+  /* Link do Afternic na górnym pasku na urządzeniach mobilnych */
+  .afternic-link {
     font-size: 16px;
     padding: 10px 20px;
-    top: 5%; /* Ustawiamy link do Afternic na górnym pasku */
+    top: 5%;
   }
 
+  /* Link do Video Promotion na dolnym pasku na urządzeniach mobilnych */
   .promo-link-box {
     font-size: 16px;
     padding: 10px 20px;
-    top: 70%; /* Ustawiamy link do Video promotion na dole */
+    top: 70%;
   }
 }
