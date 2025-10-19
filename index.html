@@ -1,10 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CZTYMJWQZQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-CZTYMJWQZQ');
+  </script>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>pulsemetahub.com – for sale</title>
 
+  <!-- Link do zewnętrznego pliku CSS -->
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -22,116 +32,12 @@
     </a>
   </div>
 
-  <!-- Link do filmu promocyjnego (tylko zmieniony wygląd) -->
+  <!-- Drugi link – do filmu promocyjnego -->
   <div class="link-box promo-link-box">
     <a href="https://RiccardoTorpedores.github.io/pulsemetahub/video-background.html" target="_blank" rel="noopener noreferrer">
-      Promotion Video
+      Video promotion
     </a>
   </div>
 
-  <style>
-    /* Wideo jako tło */
-    #bg-video {
-      position: fixed;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      object-fit: cover;
-      object-position: center center;
-    }
-
-    /* Link główny (Afternic) */
-    .link-box {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background: rgba(0, 0, 0, 0.6); /* Przeźroczyste tło */
-      padding: 20px 30px;
-      border-radius: 10px;
-      font-size: 22px;
-      text-align: center;
-      z-index: 1;
-    }
-
-    .link-box a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-      font-family: Arial, sans-serif;
-    }
-
-    .link-box a:hover {
-      text-decoration: underline;
-    }
-
-    /* Link do filmu promocyjnego (teraz ma taki sam wygląd jak Afternic) */
-    .promo-link-box {
-      position: fixed;
-      top: 65%; /* Niżej niż Afternic */
-      left: 50%;
-      transform: translateX(-50%);
-      background: rgba(0, 0, 0, 0.6); /* Przeźroczyste tło */
-      padding: 20px 30px;
-      border-radius: 10px;
-      font-size: 22px;
-      text-align: center;
-      z-index: 1;
-    }
-
-    .promo-link-box a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-      font-family: Arial, sans-serif;
-    }
-
-    .promo-link-box a:hover {
-      text-decoration: underline;
-    }
-
-    /* Responsywność */
-    @media (max-width: 768px) {
-      #bg-video {
-        object-fit: contain;
-      }
-
-      .link-box {
-        font-size: 18px;
-        padding: 15px 25px;
-      }
-
-      .promo-link-box {
-        font-size: 18px;
-        padding: 15px 25px;
-        top: 70%; /* Ustawienie niżej na telefonach */
-      }
-    }
-
-    @media (max-width: 480px) {
-      #bg-video {
-        object-fit: contain;
-      }
-
-      .link-box {
-        font-size: 16px;
-        padding: 10px 20px;
-      }
-
-      .promo-link-box {
-        font-size: 16px;
-        padding: 10px 20px;
-        top: 75%; /* Ustawienie niżej na telefonach */
-      }
-    }
-  </style>
-
 </body>
 </html>
-
-
-
-
