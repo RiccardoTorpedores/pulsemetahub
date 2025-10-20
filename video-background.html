@@ -7,9 +7,8 @@
 
   <link rel="stylesheet" href="styles.css" />
 
-  <!-- Styl licznika + tylko niezbędne poprawki -->
   <style>
-    /* Domyślne (dla mobile): pełnoekranowe wideo jak w oryginale */
+    /* 🔹 Domyślnie (mobile) – pełnoekranowe, jak w Twoim oryginalnym kodzie */
     #bg-video-second {
       position: fixed;
       top: 0;
@@ -19,24 +18,11 @@
       object-fit: cover;
       z-index: -1;
       background-color: black;
+      transform: none;
     }
 
-    /* Licznik odwiedzin */
-    #visitor-counter {
-      position: absolute;
-      top: 0;
-      left: 0;
-      background-color: white;
-      color: black;
-      padding: 10px 15px;
-      font-family: sans-serif;
-      font-size: 14px;
-      z-index: 10;
-      border-bottom-right-radius: 5px;
-    }
-
-    /* Tylko dla desktopu – pomniejszone, wycentrowane wideo */
-    @media screen and (min-width: 768px) {
+    /* 🔹 Tylko na desktop (powyżej 1024px) – zmniejszone i wyśrodkowane */
+    @media screen and (min-width: 1024px) {
       #bg-video-second {
         width: 66.66vw;
         height: auto;
@@ -51,20 +37,34 @@
         background-color: white;
       }
     }
+
+    /* 🔹 Licznik odwiedzin */
+    #visitor-counter {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: white;
+      color: black;
+      padding: 10px 15px;
+      font-family: sans-serif;
+      font-size: 14px;
+      z-index: 10;
+      border-bottom-right-radius: 5px;
+    }
   </style>
 </head>
 <body>
 
-  <!-- Wideo jako tło -->
+  <!-- 🎥 Wideo jako tło -->
   <video id="bg-video-second" autoplay muted loop playsinline>
     <source src="https://raw.githubusercontent.com/RiccardoTorpedores/pulsemetahub/main/pulsemetahub2.mp4" type="video/mp4" />
     Your browser does not support the video tag.
   </video>
 
-  <!-- Przycisk Play with Sound -->
+  <!-- 🔈 Przycisk Play with Sound -->
   <div class="play-with-sound" onclick="toggleSound()">Play with Sound</div>
 
-  <!-- Licznik odwiedzin -->
+  <!-- 📈 Licznik odwiedzin -->
   <div id="visitor-counter">Visits: loading...</div>
 
   <script>
@@ -81,8 +81,8 @@
       }
     }
 
-    // Licznik odwiedzin – działający endpoint
-    fetch('https://api.countapi.xyz/hit/pulsemetahub-2025-corrected/final-counter')
+    // Licznik odwiedzin (działający unikalny identyfikator)
+    fetch('https://api.countapi.xyz/hit/pulsemetahub-2025/final-video-counter')
       .then(res => res.json())
       .then(data => {
         document.getElementById('visitor-counter').innerText = 'Visits: ' + data.value;
