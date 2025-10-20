@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="styles.css" />
 
   <style>
-    /* 🔹 Wideo – mobilnie i desktopowo */
+    /* 🔹 Wideo – domyślnie (mobile) */
     #bg-video-second {
       position: fixed;
       top: 0;
@@ -21,7 +21,7 @@
       transform: none;
     }
 
-    /* 🔹 Desktop – wideo pomniejszone */
+    /* 🔹 Wideo – desktop (zmniejszony, wyśrodkowany) */
     @media screen and (min-width: 1024px) {
       #bg-video-second {
         width: 66.66vw;
@@ -38,9 +38,9 @@
       }
     }
 
-    /* 🔹 Przycisk "Play with Sound" – wspólny styl */
+    /* 🔹 Przycisk Play with Sound – zawsze wyśrodkowany */
     .play-with-sound {
-      position: absolute;
+      position: fixed;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
@@ -52,34 +52,29 @@
       font-family: sans-serif;
       font-size: 16px;
       cursor: pointer;
-      z-index: 5;
+      z-index: 10;
       text-align: center;
+      display: block;
     }
   </style>
 </head>
 <body>
 
-  <!-- 🎥 Wideo jako tło -->
+  <!-- 🎥 Wideo -->
   <video id="bg-video-second" autoplay muted loop playsinline>
     <source src="https://raw.githubusercontent.com/RiccardoTorpedores/pulsemetahub/main/pulsemetahub2.mp4" type="video/mp4" />
     Your browser does not support the video tag.
   </video>
 
-  <!-- 🔈 Przycisk Play with Sound -->
+  <!-- 🔈 Przycisk -->
   <div class="play-with-sound" onclick="toggleSound()">Play with Sound</div>
 
   <script>
-    // Przełączanie dźwięku
     function toggleSound() {
       const video = document.getElementById("bg-video-second");
       const button = document.querySelector('.play-with-sound');
       video.muted = !video.muted;
-
-      if (video.muted) {
-        button.innerHTML = "Play with Sound";
-      } else {
-        button.innerHTML = "Mute Video";
-      }
+      button.innerHTML = video.muted ? "Play with Sound" : "Mute Video";
     }
   </script>
 
