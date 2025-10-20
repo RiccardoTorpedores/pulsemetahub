@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="styles.css" />
 
   <style>
-    /* 🔹 Domyślnie (mobile) – film w całości, z białymi pasami */
+    /* 🔹 Wideo – mobilnie i desktopowo */
     #bg-video-second {
       position: fixed;
       top: 0;
@@ -21,7 +21,7 @@
       transform: none;
     }
 
-    /* 🔹 Tylko na desktop – pomniejszony film, wyśrodkowany */
+    /* 🔹 Desktop – wideo pomniejszone */
     @media screen and (min-width: 1024px) {
       #bg-video-second {
         width: 66.66vw;
@@ -38,18 +38,22 @@
       }
     }
 
-    /* 🔹 Licznik odwiedzin */
-    #visitor-counter {
+    /* 🔹 Przycisk "Play with Sound" – wspólny styl */
+    .play-with-sound {
       position: absolute;
-      top: 0;
-      left: 0;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       background-color: white;
       color: black;
-      padding: 10px 15px;
+      padding: 12px 20px;
+      border: 2px solid black;
+      border-radius: 5px;
       font-family: sans-serif;
-      font-size: 14px;
-      z-index: 10;
-      border-bottom-right-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      z-index: 5;
+      text-align: center;
     }
   </style>
 </head>
@@ -64,9 +68,6 @@
   <!-- 🔈 Przycisk Play with Sound -->
   <div class="play-with-sound" onclick="toggleSound()">Play with Sound</div>
 
-  <!-- 📈 Licznik odwiedzin -->
-  <div id="visitor-counter">Visits: loading...</div>
-
   <script>
     // Przełączanie dźwięku
     function toggleSound() {
@@ -80,21 +81,6 @@
         button.innerHTML = "Mute Video";
       }
     }
-
-    // 📊 Licznik odwiedzin lokalny (działa niezależnie od internetu)
-    (function () {
-      const counterKey = 'pulsemetahub-visit-count';
-      let visits = localStorage.getItem(counterKey);
-
-      if (!visits) {
-        visits = 1;
-      } else {
-        visits = parseInt(visits, 10) + 1;
-      }
-
-      localStorage.setItem(counterKey, visits);
-      document.getElementById('visitor-counter').innerText = 'Visits: ' + visits;
-    })();
   </script>
 
 </body>
