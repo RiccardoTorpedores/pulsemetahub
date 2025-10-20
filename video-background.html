@@ -7,7 +7,7 @@
 
   <link rel="stylesheet" href="styles.css" />
 
-  <!-- Lokalne poprawki tylko dla tej strony -->
+  <!-- Dodatkowe style tylko dla tej strony -->
   <style>
     /* Domyślnie: pełnoekranowe tło wideo */
     #bg-video-second {
@@ -20,7 +20,7 @@
       z-index: -1 !important;
     }
 
-    /* Desktop: pomniejszamy i wycentrowujemy */
+    /* Desktop: pomniejszone, wycentrowane wideo */
     @media (min-width: 768px) {
       #bg-video-second {
         width: 66.66vw !important;
@@ -35,25 +35,6 @@
       body {
         background-color: white !important;
       }
-    }
-
-    /* Styl przycisku (jeśli potrzebujesz lekkiego dopasowania) */
-    .play-with-sound {
-      position: absolute;
-      bottom: 20px;
-      right: 20px;
-      background: rgba(0, 0, 0, 0.6);
-      color: white;
-      padding: 10px 15px;
-      border: none;
-      cursor: pointer;
-      font-size: 16px;
-      border-radius: 5px;
-      z-index: 10;
-    }
-
-    .play-with-sound:hover {
-      background: rgba(0, 0, 0, 0.8);
     }
   </style>
 </head>
