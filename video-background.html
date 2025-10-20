@@ -4,12 +4,62 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Video Background – Play with Sound</title>
-  
+
   <link rel="stylesheet" href="styles.css" />
+
+  <!-- Lokalne poprawki tylko dla tej strony -->
+  <style>
+    /* Domyślnie: pełnoekranowe tło wideo */
+    #bg-video-second {
+      position: fixed !important;
+      top: 0 !important;
+      left: 0 !important;
+      width: 100vw !important;
+      height: 100vh !important;
+      object-fit: cover !important;
+      z-index: -1 !important;
+    }
+
+    /* Desktop: pomniejszamy i wycentrowujemy */
+    @media (min-width: 768px) {
+      #bg-video-second {
+        width: 66.66vw !important;
+        height: auto !important;
+        left: 50% !important;
+        top: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        object-fit: contain !important;
+        background-color: white !important;
+      }
+
+      body {
+        background-color: white !important;
+      }
+    }
+
+    /* Styl przycisku (jeśli potrzebujesz lekkiego dopasowania) */
+    .play-with-sound {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      border-radius: 5px;
+      z-index: 10;
+    }
+
+    .play-with-sound:hover {
+      background: rgba(0, 0, 0, 0.8);
+    }
+  </style>
 </head>
 <body>
 
-  <!-- Wideo jako tło na drugiej stronie -->
+  <!-- Wideo jako tło -->
   <video id="bg-video-second" autoplay muted loop playsinline>
     <source src="https://raw.githubusercontent.com/RiccardoTorpedores/pulsemetahub/main/pulsemetahub2.mp4" type="video/mp4" />
     Your browser does not support the video tag.
@@ -19,15 +69,16 @@
   <div class="play-with-sound" onclick="toggleSound()">Play with Sound</div>
 
   <script>
-    // Funkcja do przełączania dźwięku wideo
+    // Przełączanie dźwięku wideo
     function toggleSound() {
       const video = document.getElementById("bg-video-second");
-      video.muted = !video.muted;
       const button = document.querySelector('.play-with-sound');
+      video.muted = !video.muted;
+
       if (video.muted) {
-        button.innerHTML = "Play with Sound"; // Zmieniamy tekst przycisku
+        button.innerHTML = "Play with Sound";
       } else {
-        button.innerHTML = "Mute Video"; // Zmieniamy tekst przycisku
+        button.innerHTML = "Mute Video";
       }
     }
   </script>
