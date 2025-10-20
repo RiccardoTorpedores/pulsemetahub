@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="styles.css" />
 
   <style>
-    /* 🔹 Domyślnie (mobile) – cały film widoczny, może mieć pasy */
+    /* 🔹 Domyślnie (mobile) – film w całości, z białymi pasami */
     #bg-video-second {
       position: fixed;
       top: 0;
@@ -21,7 +21,7 @@
       transform: none;
     }
 
-    /* 🔹 Tylko na desktop – mniejszy film (2/3 szerokości), wycentrowany */
+    /* 🔹 Tylko na desktop – pomniejszony film, wyśrodkowany */
     @media screen and (min-width: 1024px) {
       #bg-video-second {
         width: 66.66vw;
@@ -81,15 +81,20 @@
       }
     }
 
-    // Licznik odwiedzin
-    fetch('https://api.countapi.xyz/hit/pulsemetahub-2025/final-video-counter')
-      .then(res => res.json())
-      .then(data => {
-        document.getElementById('visitor-counter').innerText = 'Visits: ' + data.value;
-      })
-      .catch(() => {
-        document.getElementById('visitor-counter').innerText = 'Visits: error';
-      });
+    // 📊 Licznik odwiedzin lokalny (działa niezależnie od internetu)
+    (function () {
+      const counterKey = 'pulsemetahub-visit-count';
+      let visits = localStorage.getItem(counterKey);
+
+      if (!visits) {
+        visits = 1;
+      } else {
+        visits = parseInt(visits, 10) + 1;
+      }
+
+      localStorage.setItem(counterKey, visits);
+      document.getElementById('visitor-counter').innerText = 'Visits: ' + visits;
+    })();
   </script>
 
 </body>
