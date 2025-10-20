@@ -8,27 +8,24 @@
   <link rel="stylesheet" href="styles.css" />
 
   <style>
-    /* 🔹 Wideo – domyślnie (mobile) */
+    /* 🔹 Wideo – wspólne */
     #bg-video-second {
       position: fixed;
-      top: 0;
-      left: 0;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       width: 100vw;
       height: 100vh;
       object-fit: contain;
-      z-index: -1;
       background-color: white;
-      transform: none;
+      z-index: -1;
     }
 
-    /* 🔹 Wideo – desktop (zmniejszony, wyśrodkowany) */
+    /* 🔹 Desktop – film 2/3 szerokości, środek ekranu */
     @media screen and (min-width: 1024px) {
       #bg-video-second {
         width: 66.66vw;
         height: auto;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
         object-fit: contain;
         background-color: white;
       }
@@ -38,16 +35,16 @@
       }
     }
 
-    /* 🔹 Przycisk Play with Sound – zawsze wyśrodkowany */
+    /* 🔹 Przycisk – wyśrodkowany, z szarym półprzezroczystym tłem */
     .play-with-sound {
       position: fixed;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      background-color: white;
-      color: black;
+      background-color: rgba(128, 128, 128, 0.5); /* szary z przezroczystością */
+      color: white;
       padding: 12px 20px;
-      border: 2px solid black;
+      border: 2px solid white;
       border-radius: 5px;
       font-family: sans-serif;
       font-size: 16px;
