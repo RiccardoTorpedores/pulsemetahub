@@ -4,8 +4,100 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>pulsemetahub.com – for sale</title>
-  
-  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    /* Reset i podstawowy styl */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      color: white;
+      background-color: black;
+      overflow: hidden;
+    }
+
+    video#bg-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      z-index: -1;
+      object-fit: cover;
+    }
+
+    .link-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      position: absolute;
+      top: 5%;
+      width: 100%;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    .link-box,
+    .promo-link-box,
+    .support-link-box {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 14px 28px;
+      border: 2px solid #00ffe1;
+      border-radius: 8px;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    .link-box a,
+    .promo-link-box a,
+    .support-link-box a {
+      color: #00ffe1;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    /* Styl tylko dla urządzeń mobilnych */
+    @media (max-width: 768px) {
+      .link-container {
+        flex-direction: column;
+        gap: 16px;
+        top: 3%;
+      }
+
+      .mobile-support {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        text-align: center;
+        padding: 12px 0;
+        box-shadow: 0 -2px 10px rgba(0,0,0,0.5);
+      }
+
+      .mobile-support a {
+        color: #00ffe1;
+        font-weight: bold;
+        text-decoration: none;
+        font-size: 16px;
+      }
+
+      /* Ukryj support-link-box na mobile */
+      .support-link-box {
+        display: none;
+      }
+    }
+
+    /* Ukryj dolne pole na desktopie */
+    @media (min-width: 769px) {
+      .mobile-support {
+        display: none;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -15,17 +107,34 @@
     Your browser does not support the video tag.
   </video>
 
-  <!-- Link do Afternic -->
-  <div class="link-box">
-    <a href="https://www.afternic.com/domain/pulsemetahub.com" target="_blank" rel="noopener noreferrer">
-      Buy on Afternic
-    </a>
+  <!-- Kontener z linkami (na desktop i mobilne górne) -->
+  <div class="link-container">
+    <!-- Link do Afternic -->
+    <div class="link-box">
+      <a href="https://www.afternic.com/domain/pulsemetahub.com" target="_blank" rel="noopener noreferrer">
+        Buy on Afternic
+      </a>
+    </div>
+
+    <!-- Link do Video Promotion -->
+    <div class="promo-link-box">
+      <a href="https://RiccardoTorpedores.github.io/pulsemetahub/video-background.html" target="_blank" rel="noopener noreferrer">
+        Video Promotion
+      </a>
+    </div>
+
+    <!-- Link do Zrzutki (dla desktopu) -->
+    <div class="support-link-box">
+      <a href="https://zrzutka.pl/u3cdea" target="_blank" rel="noopener noreferrer">
+        Support the Project
+      </a>
+    </div>
   </div>
 
-  <!-- Link do Video Promotion -->
-  <div class="promo-link-box">
-    <a href="https://RiccardoTorpedores.github.io/pulsemetahub/video-background.html" target="_blank" rel="noopener noreferrer">
-      Video Promotion
+  <!-- Link do Zrzutki (dla urządzeń mobilnych – na dole strony) -->
+  <div class="mobile-support">
+    <a href="https://zrzutka.pl/u3cdea" target="_blank" rel="noopener noreferrer">
+      Support the Project
     </a>
   </div>
 
