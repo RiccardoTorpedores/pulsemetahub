@@ -24,23 +24,10 @@
   object-position: center center;
 }
 
-/* Na telefonach film ma się wyświetlać bez przycinania i być wyśrodkowane */
-@media (max-width: 768px) {
-  #bg-video {
-    object-fit: contain;
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  #bg-video-second {
-    object-fit: contain;
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
-}
-
-/* Linki (Afternic i Video Promotion) na urządzeniach mobilnych i desktop */
-.link-box, .promo-link-box, .support-link-box {
+/* Linki (Afternic, Video Promotion, Support the Project) */
+.link-box,
+.promo-link-box,
+.center-link-box {
   position: fixed;
   left: 50%;
   transform: translateX(-50%);
@@ -56,19 +43,39 @@
 }
 
 /* Styl linków */
-.link-box a, .promo-link-box a, .support-link-box a {
+.link-box a,
+.promo-link-box a,
+.center-link-box a {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
 }
 
-.link-box a:hover, .promo-link-box a:hover, .support-link-box a:hover {
+.link-box a:hover,
+.promo-link-box a:hover,
+.center-link-box a:hover {
   text-decoration: underline;
 }
 
-/* Responsywność dla urządzeń mobilnych */
+/* Pozycje */
+.link-box {
+  top: 5%;
+}
+
+.promo-link-box {
+  bottom: 5%;
+}
+
+.center-link-box {
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Responsywność */
 @media (max-width: 768px) {
-  .link-box, .promo-link-box, .support-link-box {
+  .link-box,
+  .promo-link-box,
+  .center-link-box {
     font-size: 18px;
     padding: 15px 25px;
     width: 80%;
@@ -78,23 +85,12 @@
   .play-with-sound {
     display: none;
   }
-
-  .link-box {
-    top: 5%;
-  }
-
-  .promo-link-box {
-    bottom: 5%;
-  }
-
-  .support-link-box {
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
 }
 
 @media (max-width: 480px) {
-  .link-box, .promo-link-box, .support-link-box {
+  .link-box,
+  .promo-link-box,
+  .center-link-box {
     font-size: 16px;
     padding: 10px 20px;
   }
@@ -105,25 +101,11 @@
   }
 }
 
-/* Link Afternic (na górze) */
-.link-box {
-  top: 5%;
-}
-
-/* Link Promotion Video (na dole) */
-.promo-link-box {
-  bottom: 5%;
-}
-
-/* Nowy link – Support the Project (na środku) */
-.support-link-box {
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-
-/* Linki na wersji desktopowej */
+/* Desktop poprawki */
 @media (min-width: 769px) {
-  .link-box, .promo-link-box, .support-link-box {
+  .link-box,
+  .promo-link-box,
+  .center-link-box {
     width: auto;
     font-size: 22px;
     padding: 15px 30px;
@@ -143,14 +125,14 @@
     bottom: 20px;
   }
 
-  .support-link-box {
+  .center-link-box {
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
   }
 }
 
-/* Przycisk Play with Sound na stronie video-background (druga strona) */
+/* Przycisk Play with Sound na stronie video-background */
 .play-with-sound {
   position: fixed;
   top: 50%;
@@ -168,12 +150,10 @@
   white-space: nowrap;
 }
 
-/* Hover dla przycisku Play with Sound */
 .play-with-sound:hover {
   text-decoration: underline;
 }
 
-/* Styl dla urządzeń mobilnych */
 @media (max-width: 768px) {
   .play-with-sound {
     font-size: 18px;
