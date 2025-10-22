@@ -1,4 +1,4 @@
-/* Wideo jako tło */
+/* Tło wideo */
 #bg-video {
   position: fixed;
   top: 0;
@@ -11,13 +11,10 @@
   object-position: center center;
 }
 
-/* Uniwersalny styl linków */
+/* Wspólny styl linków */
 .link-box,
 .promo-link-box,
 .center-link-box {
-  position: fixed;
-  left: 50%;
-  transform: translateX(-50%);
   background-color: rgba(169, 169, 169, 0.8);
   padding: 20px 30px;
   border-radius: 10px;
@@ -29,7 +26,6 @@
   max-width: 400px;
 }
 
-/* Styl tekstu linków */
 .link-box a,
 .promo-link-box a,
 .center-link-box a {
@@ -46,19 +42,27 @@
 
 /* Pozycje */
 .link-box {
+  position: fixed;
   top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .promo-link-box {
+  position: fixed;
   bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .center-link-box {
+  position: fixed;
   top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
 }
 
-/* Mobile responsiveness */
+/* Responsive - Tablet & Mobile */
 @media (max-width: 768px) {
   .link-box,
   .promo-link-box,
@@ -78,40 +82,3 @@
     padding: 10px 20px;
   }
 }
-
-/* Desktop tweaks */
-@media (min-width: 769px) {
-  .link-box,
-  .promo-link-box,
-  .center-link-box {
-    font-size: 22px;
-    padding: 15px 30px;
-  }
-
-  .link-box {
-    position: absolute;
-    top: 20px;
-  }
-
-  .promo-link-box {
-    position: absolute;
-    bottom: 20px;
-  }
-
-  .center-link-box {
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
-}
-
-✅ WIZUALNY UKŁAD STRONY (schemat)
-
-+--------------------------------------+
-| [ Buy on Afternic ]       ← top     |
-|                                      |
-|                                      |
-|      [ Support the Project ] ← center|
-|                                      |
-| [ Video Promotion ]        ← bottom  |
-+--------------------------------------+
