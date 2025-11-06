@@ -11,6 +11,19 @@
   object-position: center center;
 }
 
+/* Wideo na stronie drugiej (video-background) */
+#bg-video-second {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  object-fit: cover;
+  object-position: center center;
+}
+
 /* Linki wspólne style */
 .link-box, .promo-link-box, .center-link-box {
   background-color: rgba(169, 169, 169, 0.8);
@@ -35,10 +48,17 @@
   text-decoration: underline;
 }
 
-/* Pozycjonowanie linków na desktopie */
+/* Pozycjonowanie linków na desktop */
 .link-box {
   position: fixed;
   top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.promo-link-box {
+  position: fixed;
+  bottom: 5%;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -48,13 +68,6 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
-
-.promo-link-box {
-  position: fixed;
-  bottom: 5%;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 /* Ikony social na dole po lewej */
@@ -71,8 +84,40 @@
   height: 60px;
 }
 
-/* Responsywność linków i ikon */
+/* === RESPONSYWNOŚĆ MOBILE === */
 @media (max-width: 768px) {
+  /* Linki jeden pod drugim */
+  .link-box {
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .center-link-box {
+    position: fixed;
+    top: 22%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .promo-link-box {
+    position: fixed;
+    top: 34%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /* Zmniejszenie filmu, żeby linki nie były przykryte */
+  #bg-video {
+    height: 50vh;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    object-fit: cover;
+  }
+
+  /* Linki estetyczne i proporcje */
   .link-box, .promo-link-box, .center-link-box {
     font-size: 18px;
     padding: 15px 25px;
@@ -80,98 +125,37 @@
     max-width: 350px;
   }
 
-  /* 🔹 Przenosimy linki na górę w wersji mobilnej */
-  .link-box {
-    position: fixed;
-    top: 10%;  /* Pierwszy link */
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .center-link-box {
-    position: fixed;
-    top: 22%;  /* Drugi link */
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .promo-link-box {
-    position: fixed;
-    top: 34%;  /* Trzeci link */
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  /* Zmiana wysokości filmu, aby linki były widoczne */
-  #bg-video {
-    height: 60vh;
-  }
-
-  /* Zmniejszenie ikony YouTube na mobile */
   .social-icons img {
     width: 40px;
     height: 40px;
   }
 }
 
-/* Dostosowanie w wersji mobile - poniżej 480px */
+/* Dodatkowa poprawka dla bardzo małych ekranów */
 @media (max-width: 480px) {
-  .link-box, .promo-link-box, .center-link-box {
-    font-size: 16px;
-    padding: 10px 20px;
-  }
-
-  /* Linki przesuwamy wyżej */
   .link-box {
     top: 10%;
   }
 
   .center-link-box {
-    top: 18%;
+    top: 20%;
   }
 
   .promo-link-box {
-    top: 26%;
+    top: 30%;
   }
 
-  /* Zmniejszamy wysokość wideo */
   #bg-video {
-    height: 55vh;
+    height: 45vh;
   }
 
-  /* Zmiana ikony YouTube */
+  .link-box, .promo-link-box, .center-link-box {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+
   .social-icons img {
     width: 35px;
     height: 35px;
   }
 }
-
-Co zostało poprawione:
-
-    Na desktopie:
-
-        Linki pozostały w tych samych miejscach:
-
-            Pierwszy link na górze (top: 5%).
-
-            Środkowy link na środku (top: 50%).
-
-            Trzeci link na dole (bottom: 5%).
-
-        Ikona YouTube ma rozmiar 60px, nie zmienia się.
-
-    Na mobile:
-
-        Linki zostały przeniesione na górę strony, jeden pod drugim:
-
-            Pierwszy link (top: 10%),
-
-            Środkowy link (top: 22%),
-
-            Trzeci link (top: 34%).
-
-        Film zmienia wysokość na 60vh (aby nie zasłaniał linków).
-
-        Ikona YouTube zmniejsza się na 40px.
-
-Mam nadzieję, że teraz wszystko będzie działało zgodnie z oczekiwaniami. Jeśli coś wciąż nie działa jak powinno
