@@ -135,7 +135,18 @@
     font-size: 16px;
     padding: 10px 20px;
   }
+    /* 🔹 Ostateczne wymuszenie pozycji "Video Promotion" dla mobile */
+@media (max-width: 768px) {
+  .promo-link-box {
+    position: fixed !important;
+    bottom: 30px !important;  /* odległość od dołu */
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    z-index: 5 !important;
+  }
 }
+  
+
 
 
 
