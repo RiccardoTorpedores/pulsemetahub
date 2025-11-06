@@ -56,7 +56,7 @@
   text-decoration: underline;
 }
 
-/* === Pozycjonowanie linków === */
+/* === Pozycjonowanie linków (desktop) === */
 .link-box {
   position: fixed;
   top: 5%;
@@ -92,7 +92,7 @@
   height: 60px;
 }
 
-/* === Responsywność === */
+/* === Responsywność dla tabletów === */
 @media (max-width: 768px) {
   .link-box,
   .promo-link-box,
@@ -103,26 +103,50 @@
     max-width: 350px;
   }
 
-  /* 🔹 przesunięcie linku "Video Promotion" wyżej na ekranie */
   .promo-link-box {
     bottom: 30px !important;
   }
 }
 
+/* === Responsywność dla telefonów – nowy układ pionowy === */
 @media (max-width: 480px) {
-  .link-box,
-  .promo-link-box,
-  .center-link-box {
-    font-size: 16px;
-    padding: 10px 20px;
+  /* linki układają się pionowo na górze ekranu */
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    overflow: hidden;
+    padding-top: 20px;
   }
 
-  /* 🔹 ostateczne wymuszenie pozycji dla najmniejszych ekranów */
+  .link-box,
+  .center-link-box,
   .promo-link-box {
-    position: fixed !important;
-    bottom: 30px !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-    z-index: 5 !important;
+    position: static;      /* usuwa fixed */
+    display: block;
+    margin: 10px auto;     /* odstępy między linkami */
+    width: 80%;
+    max-width: 350px;
+  }
+
+  /* upewnia się, że wideo zostaje w tle */
+  #bg-video {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-fit: contain;
+  }
+
+  /* ikony społecznościowe nadal w lewym dolnym rogu */
+  .social-icons {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
   }
 }
