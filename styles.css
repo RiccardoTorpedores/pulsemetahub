@@ -115,6 +115,12 @@
     width: 80%;
     max-width: 350px;
   }
+  
+/* 🔹 podnosi link "Video Promotion" wyżej na ekranie w mobile */
+  .promo-link-box {
+    
+    bottom: 20%;
+  }
 
   .social-icons img {
     width: 60px;
@@ -130,6 +136,7 @@
     padding: 10px 20px;
   }
 }
+
 
 
 
