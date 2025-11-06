@@ -119,7 +119,7 @@
 /* 🔹 podnosi link "Video Promotion" wyżej na ekranie w mobile */
   .promo-link-box {
     
-    bottom: 30%;
+    bottom: 30% !important;
   }
 
   .social-icons img {
@@ -136,6 +136,7 @@
     padding: 10px 20px;
   }
 }
+
 
 
 
