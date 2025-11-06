@@ -26,8 +26,7 @@
 
 /* Responsywność wideo - MOBILE */
 @media (max-width: 768px) {
-  #bg-video,
-  #bg-video-second {
+  #bg-video, #bg-video-second {
     object-fit: contain;
     top: 50%;
     left: 50%;
@@ -112,7 +111,7 @@
   }
 }
 
-/* Przycisk Play with Sound na stronie video-background (druga strona) */
+/* Przycisk Play with Sound na stronie video-background */
 .play-with-sound {
   position: fixed;
   top: 50%;
@@ -134,7 +133,6 @@
   text-decoration: underline;
 }
 
-/* Styl dla urządzeń mobilnych */
 @media (max-width: 768px) {
   .play-with-sound {
     font-size: 18px;
@@ -142,7 +140,7 @@
   }
 }
 
-/* YouTube Icon - mała i po lewej na dole */
+/* YouTube Icon - mała, teraz po lewej na dole */
 .social-icons {
   position: fixed;
   bottom: 10px;
@@ -151,13 +149,14 @@
 }
 
 .social-icons img {
-  width: 60px; /* mała ikona dla desktop */
-  height: auto;
+  width: 60px;
+  height: 60px;
 }
 
+/* Mobile: zachowujemy dokładnie tę samą wielkość */
 @media (max-width: 768px) {
   .social-icons img {
-    width: 40px; /* mała ikona dla mobile */
-    height: auto;
+    width: 60px;
+    height: 60px;
   }
 }
