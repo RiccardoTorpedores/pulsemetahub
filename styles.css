@@ -11,22 +11,9 @@
   object-position: center center;
 }
 
-/* Wideo na stronie drugiej (video-background) */
-#bg-video-second {
-  position: fixed;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  object-fit: cover;
-  object-position: center center;
-}
-
 /* Responsywność wideo - MOBILE */
 @media (max-width: 768px) {
-  #bg-video, #bg-video-second {
+  #bg-video {
     object-fit: contain;
     top: 50%;
     left: 50%;
@@ -111,63 +98,41 @@
   }
 }
 
-/* ⚡ Ikony społecznościowe po lewej stronie u dołu */
-.social-icons {
-  position: fixed;
-  bottom: 20px;      /* Odległość od dołu */
-  left: 20px;        /* Odległość od lewej */
-  display: flex;
-  flex-direction: column; /* Kolumna ikon */
-  gap: 15px;         /* Odstęp między ikonami */
-  z-index: 3;        /* Nad wideo i innymi elementami */
+/* YouTube icon fixed at bottom center */
+.youtube-icon {
+  position: fixed !important;
+  bottom: 15px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  z-index: 1000 !important;
+  display: block !important;
 }
 
-.social-icons a img {
-  width: 50px;       /* Stała szerokość ikony */
-  height: 50px;      /* Stała wysokość ikony */
-  object-fit: contain;
+.youtube-icon img {
+  width: 50px !important;
+  height: 50px !important;
+  cursor: pointer !important;
+  display: block !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  transition: transform 0.2s ease !important;
 }
 
-/* Mobile */
+.youtube-icon img:hover {
+  transform: scale(1.2) !important;
+}
+
+/* Mobile responsywność YouTube icon */
 @media (max-width: 768px) {
-  .social-icons a img {
-    width: 40px;
-    height: 40px;
+  .youtube-icon img {
+    width: 40px !important;
+    height: 40px !important;
   }
 }
 
 @media (max-width: 480px) {
-  .social-icons a img {
-    width: 30px;
-    height: 30px;
-  }
-}
-
-/* Przycisk Play with Sound na stronie video-background */
-.play-with-sound {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: rgba(169, 169, 169, 0.8);
-  color: #fff;
-  font-size: 22px;
-  padding: 15px 30px;
-  border-radius: 10px;
-  text-align: center;
-  font-family: Arial, sans-serif;
-  z-index: 2;
-  cursor: pointer;
-  white-space: nowrap;
-}
-
-.play-with-sound:hover {
-  text-decoration: underline;
-}
-
-@media (max-width: 768px) {
-  .play-with-sound {
-    font-size: 18px;
-    padding: 12px 25px;
+  .youtube-icon img {
+    width: 30px !important;
+    height: 30px !important;
   }
 }
