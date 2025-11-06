@@ -11,6 +11,52 @@
   object-position: center center;
 }
 
+/* Linki wspólne style */
+.link-box, .promo-link-box, .center-link-box {
+  background-color: rgba(169, 169, 169, 0.8);
+  padding: 20px 30px;
+  border-radius: 10px;
+  font-size: 22px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  z-index: 2;
+  width: auto;
+  max-width: 400px;
+}
+
+/* Linki - tekst */
+.link-box a, .promo-link-box a, .center-link-box a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.link-box a:hover, .promo-link-box a:hover, .center-link-box a:hover {
+  text-decoration: underline;
+}
+
+/* Pozycjonowanie linków */
+.link-box {
+  position: fixed;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.center-link-box {
+  position: fixed;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.promo-link-box {
+  position: fixed;
+  top: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 /* Responsywność wideo - MOBILE */
 @media (max-width: 768px) {
   #bg-video {
@@ -24,91 +70,57 @@
     max-height: 100vh;
   }
 
-  /* Linki wspólne style */
+  /* Linki ustawione jeden pod drugim */
   .link-box, .promo-link-box, .center-link-box {
-    background-color: rgba(169, 169, 169, 0.8);
-    padding: 20px 30px;
-    border-radius: 10px;
-    font-size: 22px;
-    text-align: center;
-    font-family: Arial, sans-serif;
-    z-index: 2;
-    width: auto;
-    max-width: 400px;
-    margin: 10px auto; /* Centrujemy linki na ekranie */
-  }
-
-  /* Linki - tekst */
-  .link-box a, .promo-link-box a, .center-link-box a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-  }
-
-  .link-box a:hover, .promo-link-box a:hover, .center-link-box a:hover {
-    text-decoration: underline;
-  }
-
-  /* Pozycjonowanie linków */
-  .link-box, .promo-link-box, .center-link-box {
-    position: absolute;  /* Linki ustawione na górze ekranu */
+    position: fixed;
     left: 50%;
     transform: translateX(-50%);
     width: 90%;
     max-width: 400px;
     z-index: 3;  /* Gwarantujemy, że linki będą nad filmem */
+    padding: 15px 25px;
   }
 
-  /* Linki ustawione jeden pod drugim */
+  /* Ustawienie dla trzech linków */
   .link-box {
-    top: 10%;
+    top: 10%;  /* Góra */
   }
 
   .center-link-box {
-    top: 22%;
+    top: 22%;  /* Średnia wysokość */
   }
 
   .promo-link-box {
-    top: 34%;
+    top: 34%;  /* Dolna część */
   }
 
-  /* Upewniamy się, że film nie zasłania linków */
+  /* Dostosowanie rozmiaru wideo w mobile */
   #bg-video {
-    height: 60vh;  /* Skrócenie wysokości wideo, aby linki były widoczne */
+    height: 60vh;  /* Zmniejszamy wysokość wideo, by linki były widoczne */
   }
 }
 
+/* Dostosowanie w wersji mobile - poniżej 480px */
 @media (max-width: 480px) {
   .link-box, .promo-link-box, .center-link-box {
     font-size: 16px;
     padding: 10px 20px;
   }
 
-  /* Ostateczne ustawienie pozycji linków w mobile */
-  .link-box, .promo-link-box, .center-link-box {
-    position: absolute !important;
-    left: 50%;
-    transform: translateX(-50%) !important;
-    width: 80%;
-    max-width: 350px;
-  }
-
-  /* Pozycjonowanie w wersji mobile */
   .link-box {
     top: 10%;
   }
 
   .center-link-box {
-    top: 22%;
+    top: 20%;
   }
 
   .promo-link-box {
-    top: 34%;
-    bottom: auto;
+    top: 30%;
   }
 
-  /* Dostosowanie wideo */
+  /* Zmniejszenie wysokości wideo */
   #bg-video {
-    height: 60vh; /* Dostosowanie rozmiaru wideo */
+    height: 55vh;
   }
 }
