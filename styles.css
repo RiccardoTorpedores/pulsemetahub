@@ -65,7 +65,7 @@
 
 .promo-link-box {
   position: fixed;
-  bottom: 15%; /* dałem trochę wyżej żeby ikona nie nachodziła */
+  bottom: 5%;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -98,36 +98,22 @@
   }
 }
 
-/* YouTube icon fixed at bottom */
-.youtube-icon {
+/* YouTube Icon - mała i wyśrodkowana */
+.social-icons {
   position: fixed;
-  bottom: 10px;       /* odległość od dołu */
+  bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 5;          /* nad wideo i linkami */
+  z-index: 3;
 }
 
-.youtube-icon img {
-  width: 50px;         /* szerokość ikony */
+.social-icons img {
+  width: 60px; /* mała ikona */
   height: auto;
-  transition: transform 0.2s ease;
-  cursor: pointer;
 }
 
-/* Efekt hover */
-.youtube-icon img:hover {
-  transform: scale(1.2);
-}
-
-/* Responsywność na mobile */
 @media (max-width: 768px) {
-  .youtube-icon img {
-    width: 40px;
-  }
-}
-
-@media (max-width: 480px) {
-  .youtube-icon img {
-    width: 30px;
+  .social-icons img {
+    width: 40px; /* mniejsza na mobile */
   }
 }
