@@ -1,41 +1,37 @@
-/* Wideo jako tło */
-#bg-video {
-  position: fixed;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  object-fit: cover;
-  object-position: center center;
-}
-
-/* Wideo na stronie drugiej (video-background) */
-#bg-video-second {
-  position: fixed;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  object-fit: cover;
-  object-position: center center;
-}
-
-/* Responsywność wideo - MOBILE */
+/* Responsywność - MOBILE (max-width: 768px) */
 @media (max-width: 768px) {
-  #bg-video,
-  #bg-video-second {
-    object-fit: contain; /* wideo w całości, bez przycinania */
-    top: 50%;
+  /* Ustawienia dla wszystkich trzech linków */
+  .link-box,
+  .center-link-box,
+  .promo-link-box {
+    position: absolute;  /* Zmieniamy pozycję na absolute, żeby były nad wideo */
+    top: 10%;  /* Ustawiamy na górze strony */
     left: 50%;
-    transform: translate(-50%, -50%);
-    width: auto;
-    height: auto;
-    max-width: 100vw;
-    max-height: 100vh;
+    transform: translateX(-50%);
+    width: 90%;  /* Zwiększamy szerokość, by zajmowały większą część ekranu */
+    max-width: 400px;  /* Maksymalna szerokość */
+    font-size: 18px;  /* Zmniejszamy trochę czcionkę */
+    padding: 15px 25px;  /* Dopasowujemy padding */
+  }
+
+  /* Pozycjonowanie linków jeden pod drugim */
+  .link-box {
+    top: 10%;  /* Pierwszy link na górze */
+  }
+
+  .center-link-box {
+    top: 22%;  /* Drugi link nieco niżej */
+  }
+
+  .promo-link-box {
+    top: 34%;  /* Trzeci link jeszcze niżej */
+    bottom: auto;  /* Zmiana bottom na auto, żeby nie przyklejał się do dołu */
+  }
+
+  /* Zmiana wyglądu ikon social */
+  .social-icons img {
+    width: 50px;  /* Zmniejszamy rozmiar ikon */
+    height: 50px;
   }
 }
 
@@ -116,7 +112,6 @@
     max-width: 350px;
   }
   
-  /* 🔹 podnosi link "Video Promotion" wyżej na ekranie w mobile */
   .promo-link-box {
     bottom: 30px !important;
   }
@@ -133,16 +128,5 @@
   .center-link-box {
     font-size: 16px;
     padding: 10px 20px;
-  }
-  
-  /* 🔹 Ostateczne wymuszenie pozycji "Video Promotion" dla mobile */
-  @media (max-width: 768px) {
-    .promo-link-box {
-      position: fixed !important;
-      bottom: 30px !important;  /* odległość od dołu */
-      left: 50% !important;
-      transform: translateX(-50%) !important;
-      z-index: 5 !important;
-    }
   }
 }
