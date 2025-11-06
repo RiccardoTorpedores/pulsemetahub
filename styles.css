@@ -1,17 +1,5 @@
-/* Wideo jako tło */
-#bg-video {
-  position: fixed;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  object-fit: cover;
-  object-position: center center;
-}
-
-/* Wideo na stronie drugiej (video-background) */
+/* === Wideo jako tło === */
+#bg-video,
 #bg-video-second {
   position: fixed;
   top: 0;
@@ -24,11 +12,11 @@
   object-position: center center;
 }
 
-/* Responsywność wideo - MOBILE */
+/* === Responsywność wideo (mobile) === */
 @media (max-width: 768px) {
   #bg-video,
   #bg-video-second {
-    object-fit: contain; /* wideo w całości, bez przycinania */
+    object-fit: contain; /* pokazuje całe wideo bez przycinania */
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -39,7 +27,7 @@
   }
 }
 
-/* Linki wspólne style */
+/* === Linki – wspólne style === */
 .link-box,
 .promo-link-box,
 .center-link-box {
@@ -54,7 +42,6 @@
   max-width: 400px;
 }
 
-/* Linki - tekst */
 .link-box a,
 .promo-link-box a,
 .center-link-box a {
@@ -69,17 +56,10 @@
   text-decoration: underline;
 }
 
-/* Pozycjonowanie linków */
+/* === Pozycjonowanie linków === */
 .link-box {
   position: fixed;
   top: 5%;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.promo-link-box {
-  position: fixed;
-  bottom: 5%;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -91,12 +71,19 @@
   transform: translate(-50%, -50%);
 }
 
-/* Ikony social na dole po lewej */
+.promo-link-box {
+  position: fixed;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* === Ikony social === */
 .social-icons {
   position: fixed;
-  bottom: 0 !important;
-  left: 0 !important;
-  margin: 0 !important;
+  bottom: 0;
+  left: 0;
+  margin: 0;
   z-index: 3;
 }
 
@@ -105,7 +92,7 @@
   height: 60px;
 }
 
-/* Responsywność linków i ikon */
+/* === Responsywność === */
 @media (max-width: 768px) {
   .link-box,
   .promo-link-box,
@@ -115,16 +102,10 @@
     width: 80%;
     max-width: 350px;
   }
-  
-/* 🔹 podnosi link "Video Promotion" wyżej na ekranie w mobile */
-  .promo-link-box {
-    
-    bottom: 30px !important;
-  }
 
-  .social-icons img {
-    width: 60px;
-    height: 60px;
+  /* 🔹 przesunięcie linku "Video Promotion" wyżej na ekranie */
+  .promo-link-box {
+    bottom: 30px !important;
   }
 }
 
@@ -135,22 +116,13 @@
     font-size: 16px;
     padding: 10px 20px;
   }
-    /* 🔹 Ostateczne wymuszenie pozycji "Video Promotion" dla mobile */
-@media (max-width: 768px) {
+
+  /* 🔹 ostateczne wymuszenie pozycji dla najmniejszych ekranów */
   .promo-link-box {
     position: fixed !important;
-    bottom: 30px !important;  /* odległość od dołu */
+    bottom: 30px !important;
     left: 50% !important;
     transform: translateX(-50%) !important;
     z-index: 5 !important;
   }
 }
-  
-
-
-
-
-
-
-
-
