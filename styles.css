@@ -1,3 +1,103 @@
+/* Wideo jako tło */
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  object-fit: cover;
+  object-position: center center;
+}
+
+/* Responsywność wideo - MOBILE */
+@media (max-width: 768px) {
+  #bg-video {
+    object-fit: contain;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    height: auto;
+    max-width: 100vw;
+    max-height: 100vh;
+  }
+}
+
+/* Linki wspólne style */
+.link-box,
+.promo-link-box,
+.center-link-box {
+  background-color: rgba(169, 169, 169, 0.8);
+  padding: 20px 30px;
+  border-radius: 10px;
+  font-size: 22px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  z-index: 2;
+  width: auto;
+  max-width: 400px;
+}
+
+/* Linki - tekst */
+.link-box a,
+.promo-link-box a,
+.center-link-box a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.link-box a:hover,
+.promo-link-box a:hover,
+.center-link-box a:hover {
+  text-decoration: underline;
+}
+
+/* Pozycjonowanie linków */
+.link-box {
+  position: fixed;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.promo-link-box {
+  position: fixed;
+  bottom: 15%; /* dałem trochę wyżej żeby ikona nie nachodziła */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.center-link-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Responsywność linków */
+@media (max-width: 768px) {
+  .link-box,
+  .promo-link-box,
+  .center-link-box {
+    font-size: 18px;
+    padding: 15px 25px;
+    width: 80%;
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 480px) {
+  .link-box,
+  .promo-link-box,
+  .center-link-box {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+}
+
 /* YouTube icon fixed at bottom */
 .youtube-icon {
   position: fixed;
@@ -8,7 +108,7 @@
 }
 
 .youtube-icon img {
-  width: 50px;         /* szerokość ikony, możesz zmienić */
+  width: 50px;         /* szerokość ikony */
   height: auto;
   transition: transform 0.2s ease;
   cursor: pointer;
