@@ -11,6 +11,44 @@
   object-position: center center;
 }
 
+/* Wideo na stronie drugiej (video-background) */
+#bg-video-second {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  object-fit: cover;
+  object-position: center center;
+}
+
+/* Responsywność wideo - MOBILE */
+@media (max-width: 768px) {
+  #bg-video {
+    object-fit: contain; /* wideo w całości, bez przycinania */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    height: auto;
+    max-width: 100vw;
+    max-height: 100vh;
+  }
+
+  #bg-video-second {
+    object-fit: contain;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    height: auto;
+    max-width: 100vw;
+    max-height: 100vh;
+  }
+}
+
 /* Linki wspólne style */
 .link-box,
 .promo-link-box,
@@ -63,30 +101,21 @@
   transform: translate(-50%, -50%);
 }
 
-/* Ikona YouTube */
-.social-icon {
+/* Ikony social na dole po lewej */
+.social-icons {
   position: fixed;
-  bottom: 0; /* dokładnie przy samym dole */
-  left: 0;   /* lewy brzeg */
-  width: 50px;
-  height: auto;
+  bottom: 10px;
+  left: 10px;
   z-index: 3;
-  margin: 10px; /* minimalny odstęp od krawędzi */
 }
 
-/* Responsywność */
-@media (max-width: 768px) {
-  #bg-video {
-    object-fit: contain;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: auto;
-    height: auto;
-    max-width: 100vw;
-    max-height: 100vh;
-  }
+.social-icons img {
+  width: 60px;
+  height: 60px;
+}
 
+/* Responsywność linków i ikon */
+@media (max-width: 768px) {
   .link-box,
   .promo-link-box,
   .center-link-box {
@@ -96,9 +125,9 @@
     max-width: 350px;
   }
 
-  .social-icon {
-    width: 50px; /* rozmiar taki sam jak desktop */
-    margin: 10px; /* minimalny odstęp od krawędzi */
+  .social-icons img {
+    width: 60px;
+    height: 60px;
   }
 }
 
