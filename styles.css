@@ -48,7 +48,7 @@
   text-decoration: underline;
 }
 
-/* Pozycjonowanie linków na desktop */
+/* Pozycjonowanie linków - desktop */
 .link-box {
   position: fixed;
   top: 5%;
@@ -84,78 +84,44 @@
   height: 60px;
 }
 
-/* === RESPONSYWNOŚĆ MOBILE === */
+/* Responsywność dla mobile */
 @media (max-width: 768px) {
-  /* Linki jeden pod drugim */
-  .link-box {
-    position: fixed;
-    top: 10%;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .center-link-box {
-    position: fixed;
-    top: 22%;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .promo-link-box {
-    position: fixed;
-    top: 34%;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  /* Zmniejszenie filmu, żeby linki nie były przykryte */
-  #bg-video {
-    height: 50vh;
+  /* Wideo w tle */
+  #bg-video, #bg-video-second {
+    object-fit: cover;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
   }
 
-  /* Linki estetyczne i proporcje */
-  .link-box, .promo-link-box, .center-link-box {
-    font-size: 18px;
-    padding: 15px 25px;
+  /* Linki jeden pod drugim u góry */
+  .link-box, .center-link-box, .promo-link-box {
+    position: relative !important;
+    top: auto !important;
+    bottom: auto !important;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 10px auto;
     width: 80%;
     max-width: 350px;
+    font-size: 18px;
+    padding: 15px 25px;
+    z-index: 2;
   }
 
+  /* Ikony social - zachowują rozmiar */
   .social-icons img {
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
   }
 }
 
-/* Dodatkowa poprawka dla bardzo małych ekranów */
 @media (max-width: 480px) {
-  .link-box {
-    top: 10%;
-  }
-
-  .center-link-box {
-    top: 20%;
-  }
-
-  .promo-link-box {
-    top: 30%;
-  }
-
-  #bg-video {
-    height: 45vh;
-  }
-
   .link-box, .promo-link-box, .center-link-box {
     font-size: 16px;
     padding: 10px 20px;
-  }
-
-  .social-icons img {
-    width: 35px;
-    height: 35px;
   }
 }
