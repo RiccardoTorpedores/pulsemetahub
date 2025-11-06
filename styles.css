@@ -11,9 +11,33 @@
   object-position: center center;
 }
 
+/* Wideo na stronie drugiej (video-background) */
+#bg-video-second {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  object-fit: cover;
+  object-position: center center;
+}
+
 /* Responsywność wideo - MOBILE */
 @media (max-width: 768px) {
   #bg-video {
+    object-fit: contain;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    height: auto;
+    max-width: 100vw;
+    max-height: 100vh;
+  }
+
+  #bg-video-second {
     object-fit: contain;
     top: 50%;
     left: 50%;
@@ -98,17 +122,48 @@
   }
 }
 
-/* YouTube Icon - mała i wyśrodkowana */
+/* Przycisk Play with Sound na stronie video-background */
+.play-with-sound {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(169, 169, 169, 0.8);
+  color: #fff;
+  font-size: 22px;
+  padding: 15px 30px;
+  border-radius: 10px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  z-index: 2;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+/* Hover dla przycisku Play with Sound */
+.play-with-sound:hover {
+  text-decoration: underline;
+}
+
+/* Styl dla urządzeń mobilnych */
+@media (max-width: 768px) {
+  .play-with-sound {
+    font-size: 18px;
+    padding: 12px 25px;
+  }
+}
+
+/* YouTube Icon - mała i na dole po lewej */
 .social-icons {
   position: fixed;
   bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 10px; /* Dół po lewej */
+  transform: none;
   z-index: 3;
 }
 
 .social-icons img {
-  width: 60px; /* mała ikona */
+  width: 60px;
   height: auto;
 }
 
