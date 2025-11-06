@@ -25,7 +25,9 @@
 }
 
 /* Linki wspólne style */
-.link-box, .promo-link-box, .center-link-box {
+.link-box,
+.promo-link-box,
+.center-link-box {
   background-color: rgba(169, 169, 169, 0.8);
   padding: 20px 30px;
   border-radius: 10px;
@@ -38,13 +40,17 @@
 }
 
 /* Linki - tekst */
-.link-box a, .promo-link-box a, .center-link-box a {
+.link-box a,
+.promo-link-box a,
+.center-link-box a {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
 }
 
-.link-box a:hover, .promo-link-box a:hover, .center-link-box a:hover {
+.link-box a:hover,
+.promo-link-box a:hover,
+.center-link-box a:hover {
   text-decoration: underline;
 }
 
@@ -84,35 +90,35 @@
   height: 60px;
 }
 
-/* Responsywność dla mobile */
+/* Responsywność linków i ikon */
 @media (max-width: 768px) {
-  /* Wideo w tle */
-  #bg-video, #bg-video-second {
-    object-fit: cover;
+
+  /* Wideo w mobile */
+  #bg-video,
+  #bg-video-second {
+    object-fit: cover; /* wideo pozostaje w tle */
+    width: 100%;
+    height: 100%;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 100%;
-    height: 100%;
-    z-index: -1;
   }
 
-  /* Linki jeden pod drugim u góry */
-  .link-box, .center-link-box, .promo-link-box {
-    position: relative !important;
-    top: auto !important;
-    bottom: auto !important;
-    left: 50%;
-    transform: translateX(-50%);
-    margin: 10px auto;
+  /* Linki ustawione jeden pod drugim u góry */
+  .link-box,
+  .center-link-box,
+  .promo-link-box {
+    position: relative !important;  /* zmienia fixed na relative tylko w mobile */
+    left: auto !important;
+    transform: none !important;
     width: 80%;
     max-width: 350px;
+    margin: 10px auto;  /* odstępy między linkami */
     font-size: 18px;
     padding: 15px 25px;
-    z-index: 2;
   }
 
-  /* Ikony social - zachowują rozmiar */
+  /* Ikona YouTube nie zmienia się */
   .social-icons img {
     width: 60px;
     height: 60px;
@@ -120,7 +126,9 @@
 }
 
 @media (max-width: 480px) {
-  .link-box, .promo-link-box, .center-link-box {
+  .link-box,
+  .promo-link-box,
+  .center-link-box {
     font-size: 16px;
     padding: 10px 20px;
   }
