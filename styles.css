@@ -1,27 +1,33 @@
-/* YouTube icon na dole */
+/* YouTube icon - fixed at bottom center */
 .youtube-icon {
   position: fixed;
-  bottom: 2%; /* dystans od dołu ekranu */
-  right: 2%;  /* dystans od prawej strony */
-  z-index: 3;
+  bottom: 20px; /* odległość od dołu ekranu */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10; /* ponad wideo i linkami */
 }
 
 .youtube-icon img {
-  width: 50px;   /* rozmiar ikony, można zmienić */
-  height: 50px;
-  cursor: pointer;
+  width: 50px;       /* szerokość ikony */
+  height: auto;      /* zachowuje proporcje */
+  max-width: 100%;   /* zabezpieczenie przed rozciąganiem */
+  cursor: pointer;   /* zmienia kursor na „rękę” przy hover */
+  transition: transform 0.2s; /* efekt lekkiego powiększenia */
 }
 
+.youtube-icon img:hover {
+  transform: scale(1.1); /* delikatne powiększenie przy najechaniu */
+}
+
+/* Responsywność na urządzenia mobilne */
 @media (max-width: 768px) {
   .youtube-icon img {
-    width: 40px;
-    height: 40px;
+    width: 40px; /* mniejsza ikona na telefonach */
   }
 }
 
 @media (max-width: 480px) {
   .youtube-icon img {
-    width: 35px;
-    height: 35px;
+    width: 35px; /* jeszcze mniejsza na bardzo małych ekranach */
   }
 }
