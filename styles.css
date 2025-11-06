@@ -1,152 +1,25 @@
-/* === Wideo jako tło === */
-#bg-video,
-#bg-video-second {
-  position: fixed;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  object-fit: cover;
-  object-position: center center;
-}
-
-/* === Responsywność wideo (mobile) === */
+/* === Przeniesienie wszystkich trzech linków na górę — tylko mobile === */
 @media (max-width: 768px) {
-  #bg-video,
-  #bg-video-second {
-    object-fit: contain; /* pokazuje całe wideo bez przycinania */
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: auto;
-    height: auto;
-    max-width: 100vw;
-    max-height: 100vh;
-  }
-}
-
-/* === Linki – wspólne style === */
-.link-box,
-.promo-link-box,
-.center-link-box {
-  background-color: rgba(169, 169, 169, 0.8);
-  padding: 20px 30px;
-  border-radius: 10px;
-  font-size: 22px;
-  text-align: center;
-  font-family: Arial, sans-serif;
-  z-index: 2;
-  width: auto;
-  max-width: 400px;
-}
-
-.link-box a,
-.promo-link-box a,
-.center-link-box a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.link-box a:hover,
-.promo-link-box a:hover,
-.center-link-box a:hover {
-  text-decoration: underline;
-}
-
-/* === Pozycjonowanie linków (desktop) === */
-.link-box {
-  position: fixed;
-  top: 5%;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.center-link-box {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.promo-link-box {
-  position: fixed;
-  bottom: 5%;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-/* === Ikony social === */
-.social-icons {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  margin: 0;
-  z-index: 3;
-}
-
-.social-icons img {
-  width: 60px;
-  height: 60px;
-}
-
-/* === Responsywność dla tabletów === */
-@media (max-width: 768px) {
-  .link-box,
-  .promo-link-box,
-  .center-link-box {
-    font-size: 18px;
-    padding: 15px 25px;
-    width: 80%;
-    max-width: 350px;
-  }
-
-  .promo-link-box {
-    bottom: 30px !important;
-  }
-}
-
-/* === Responsywność dla telefonów – nowy układ pionowy === */
-@media (max-width: 480px) {
-  /* linki układają się pionowo na górze ekranu */
-  body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    height: 100vh;
-    overflow: hidden;
-    padding-top: 20px;
-  }
-
   .link-box,
   .center-link-box,
   .promo-link-box {
-    position: static;      /* usuwa fixed */
-    display: block;
-    margin: 10px auto;     /* odstępy między linkami */
-    width: 80%;
-    max-width: 350px;
+    position: fixed !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: auto !important;
+    max-width: 90vw !important;
   }
 
-  /* upewnia się, że wideo zostaje w tle */
-  #bg-video {
-    position: fixed;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    object-fit: contain;
+  .link-box {
+    top: 5% !important;     /* pierwszy link */
   }
 
-  /* ikony społecznościowe nadal w lewym dolnym rogu */
-  .social-icons {
-    position: fixed;
-    bottom: 10px;
-    left: 10px;
+  .center-link-box {
+    top: 17% !important;    /* drugi link — trochę niżej */
+  }
+
+  .promo-link-box {
+    top: 29% !important;    /* trzeci link — jeszcze niżej */
+    bottom: auto !important;
   }
 }
