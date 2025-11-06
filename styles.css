@@ -94,8 +94,8 @@
 /* Ikony social na dole po lewej */
 .social-icons {
   position: fixed;
-  bottom: 0px;
-  left: 0px;
+  bottom: 0 !important;
+  left: 0 !important;
   z-index: 3;
 }
 
@@ -129,4 +129,5 @@
     padding: 10px 20px;
   }
 }
+
 
