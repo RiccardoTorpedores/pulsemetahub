@@ -99,8 +99,8 @@
 
 /* === KOREKTA OPTYCZNA IKONY TIKTOK === */
 .social-icons img[alt="TikTok Profile"] {
-  width: 54px;  /* dopasowanie do YouTube optycznie */
-  height: 54px;
+  width: 45px;  /* dopasowanie do YouTube optycznie */
+  height: 45px;
 }
 
 /* Opcjonalny efekt hover (lekki powiększenie ikon) */
@@ -150,8 +150,8 @@
 
   /* Korekta TikTok dla mobile */
   .social-icons img[alt="TikTok Profile"] {
-    width: 54px;
-    height: 54px;
+    width: 45px;
+    height: 45px;
   }
 }
 
@@ -164,3 +164,4 @@
     padding: 10px 20px;
   }
 }
+
