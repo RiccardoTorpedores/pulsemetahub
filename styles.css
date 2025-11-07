@@ -76,13 +76,20 @@
   transform: translate(-50%, -50%);
 }
 
-/* Ikony social na dole po lewej */
+/* === IKONY SOCIAL MEDIA === */
 .social-icons {
   position: fixed;
   bottom: 0 !important;
   left: 0 !important;
   margin: 0 !important;
   z-index: 3;
+}
+
+/* Ikony obok siebie */
+.social-icons a {
+  display: inline-block;
+  margin: 0 10px;
+  vertical-align: middle;
 }
 
 .social-icons img {
@@ -92,7 +99,6 @@
 
 /* === RESPONSYWNOŚĆ MOBILE === */
 @media (max-width: 768px) {
-  /* Linki jeden pod drugim na górze */
   .link-box,
   .center-link-box,
   .promo-link-box {
@@ -108,7 +114,6 @@
     padding: 15px 25px;
   }
 
-  /* Wideo widoczne w całości pod linkami */
   #bg-video,
   #bg-video-second {
     position: relative;
@@ -124,14 +129,12 @@
     z-index: 0;
   }
 
-  /* Ikony social pozostają w tym samym miejscu */
   .social-icons img {
     width: 60px;
     height: 60px;
   }
 }
 
-/* Dodatkowa responsywność dla małych ekranów */
 @media (max-width: 480px) {
   .link-box,
   .center-link-box,
