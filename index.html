@@ -3,16 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <!-- Title & Meta -->
   <title>PulseMetaHub — The Heartbeat of Web3 Gaming | Domain for Sale</title>
-  <link rel="stylesheet" href="styles.css" />
-
-  <!-- ✅ SEO meta -->
   <meta name="description" content="PulseMetaHub — The Heartbeat of Web3 Gaming. Premium domena Web3 Gaming dostępna na Afternic. Wesprzyj projekt PulseMetaHub już dziś.">
   <meta name="keywords" content="PulseMetaHub, Web3 Gaming, blockchain gaming, domena na sprzedaż, Afternic, PulseMetaHub.com">
   <meta name="robots" content="index, follow">
   <meta name="author" content="PulseMetaHub">
+  
+  <!-- Canonical -->
+  <link rel="canonical" href="https://pulsemetahub.com">
 
-  <!-- ✅ Open Graph (dla mediów społecznościowych) -->
+  <!-- Open Graph -->
   <meta property="og:title" content="PulseMetaHub — The Heartbeat of Web3 Gaming">
   <meta property="og:description" content="Kup domenę PulseMetaHub.com lub wesprzyj projekt Web3 Gaming.">
   <meta property="og:image" content="https://raw.githubusercontent.com/RiccardoTorpedores/pulsemetahub/main/og-image.jpg">
@@ -20,11 +22,15 @@
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
 
-  <!-- ✅ Favicon -->
+  <!-- Favicon -->
   <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="icon" href="favicon.ico" sizes="any">
 
-  <!-- ✅ Preload video dla wydajności -->
+  <!-- Preload video -->
   <link rel="preload" as="video" href="https://raw.githubusercontent.com/RiccardoTorpedores/pulsemetahub/main/pulsemetahub1.mp4">
+
+  <!-- Theme color (mobile UX) -->
+  <meta name="theme-color" content="#000000">
 
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-CZTYMJWQZQ"></script>
@@ -34,18 +40,36 @@
     gtag('js', new Date());
     gtag('config', 'G-CZTYMJWQZQ');
   </script>
-  <!-- End of Google Analytics -->
 
+  <!-- Schema.org (Product) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "PulseMetaHub.com",
+    "description": "Premium Web3 Gaming domain for sale.",
+    "url": "https://pulsemetahub.com",
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
+    }
+  }
+  </script>
+
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <!-- ✅ Niewidoczny nagłówek H1 dla SEO -->
+  <!-- H1 dla SEO (ukryty) -->
   <h1 style="position:absolute;left:-9999px;">PulseMetaHub — The Heartbeat of Web3 Gaming</h1>
 
-  <video id="bg-video" autoplay muted loop playsinline aria-hidden="true">
+  <!-- Background Video -->
+  <video id="bg-video" autoplay muted loop playsinline poster="thumbnail.jpg" aria-hidden="true">
     <source src="https://raw.githubusercontent.com/RiccardoTorpedores/pulsemetahub/main/pulsemetahub1.mp4" type="video/mp4" />
   </video>
 
+  <!-- Links -->
   <div class="link-box">
     <a href="https://www.afternic.com/domain/pulsemetahub.com" target="_blank" rel="noopener noreferrer">Buy on Afternic</a>
   </div>
@@ -58,12 +82,13 @@
     <a href="https://RiccardoTorpedores.github.io/pulsemetahub/video-background.html" target="_blank" rel="noopener noreferrer">Video Promotion</a>
   </div>
 
+  <!-- Social Icons (z lazy loading i wymiarami) -->
   <div class="social-icons">
     <a href="https://www.youtube.com/@pawerynkowski9372" target="_blank" rel="noopener noreferrer">
-      <img src="yt_icon_red_digital.png" alt="Kanał YouTube PulseMetaHub" />
+      <img src="yt_icon_red_digital.png" alt="Kanał YouTube PulseMetaHub" width="48" height="48" loading="lazy">
     </a>
     <a href="https://www.tiktok.com/@dykw3842iuyk" target="_blank" rel="noopener noreferrer">
-      <img src="TikTok_Symbol_Alternative_1.png" alt="Profil TikTok PulseMetaHub" />
+      <img src="TikTok_Symbol_Alternative_1.png" alt="Profil TikTok PulseMetaHub" width="48" height="48" loading="lazy">
     </a>
   </div>
 
