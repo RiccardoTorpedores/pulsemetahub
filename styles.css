@@ -11,7 +11,6 @@
   object-position: center center;
 }
 
-/* Wideo na stronie drugiej (video-background) */
 #bg-video-second {
   position: fixed;
   top: 0;
@@ -35,8 +34,7 @@
   text-align: center;
   font-family: Arial, sans-serif;
   z-index: 2;
-  width: auto;
-  max-width: 400px;
+  display: inline-block; /* pozwala JS ustawić szerokość */
 }
 
 /* Linki - tekst */
@@ -76,16 +74,6 @@
   transform: translate(-50%, -50%);
 }
 
-/* Desktop: równa szerokość linków */
-@media (min-width: 769px) {
-  .link-box,
-  .center-link-box,
-  .promo-link-box {
-    width: 400px; /* dopasowanie do najdłuższego linku */
-    text-align: center;
-  }
-}
-
 /* Ikony social na dole po lewej */
 .social-icons {
   position: fixed;
@@ -104,23 +92,21 @@
 .social-icons img {
   width: 60px;
   height: 60px;
-  transition: transform 0.2s ease; /* efekt hover opcjonalny */
+  transition: transform 0.2s ease;
 }
 
-/* === KOREKTA OPTYCZNA IKONY TIKTOK === */
+/* Korekta TikTok */
 .social-icons img[alt="TikTok Profile"] {
-  width: 35px;  /* dopasowanie do YouTube optycznie */
+  width: 35px;
   height: 35px;
 }
 
-/* Opcjonalny efekt hover (lekki powiększenie ikon) */
 .social-icons img:hover {
   transform: scale(1.05);
 }
 
 /* === RESPONSYWNOŚĆ MOBILE === */
 @media (max-width: 768px) {
-  /* Linki jeden pod drugim na górze */
   .link-box,
   .center-link-box,
   .promo-link-box {
@@ -136,7 +122,6 @@
     padding: 15px 25px;
   }
 
-  /* Wideo widoczne w całości pod linkami */
   #bg-video,
   #bg-video-second {
     position: relative;
@@ -152,20 +137,17 @@
     z-index: 0;
   }
 
-  /* Ikony social pozostają w tym samym miejscu */
   .social-icons img {
     width: 60px;
     height: 60px;
   }
 
-  /* Korekta TikTok dla mobile */
   .social-icons img[alt="TikTok Profile"] {
     width: 35px;
     height: 35px;
   }
 }
 
-/* Dodatkowa responsywność dla małych ekranów */
 @media (max-width: 480px) {
   .link-box,
   .center-link-box,
