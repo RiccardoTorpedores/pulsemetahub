@@ -4,11 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+  <!-- Title & Meta -->
   <title>PulseMetaHub — The Heartbeat of Web3 Gaming | Domain for Sale</title>
   <meta name="description" content="PulseMetaHub — The Heartbeat of Web3 Gaming. Premium domena Web3 Gaming dostępna na Afternic. Wesprzyj projekt PulseMetaHub już dziś.">
   <meta name="keywords" content="PulseMetaHub, Web3 Gaming, blockchain gaming, domena na sprzedaż, Afternic, PulseMetaHub.com">
   <meta name="robots" content="index, follow">
   <meta name="author" content="PulseMetaHub">
+
+  <!-- Canonical -->
   <link rel="canonical" href="https://pulsemetahub.com">
 
   <!-- Open Graph -->
@@ -38,7 +41,7 @@
     gtag('config', 'G-CZTYMJWQZQ');
   </script>
 
-  <!-- Schema.org -->
+  <!-- Schema.org (Product) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -74,11 +77,6 @@
     <a href="https://zrzutka.pl/u3cdea" target="_blank" rel="noopener noreferrer">Support the Project</a>
   </div>
 
-  <!-- Nowy przycisk lightbox -->
-  <div class="center-link-box">
-    <a href="#" id="about-btn">About PulseMetaHub</a>
-  </div>
-
   <div class="promo-link-box">
     <a href="https://RiccardoTorpedores.github.io/pulsemetahub/video-background.html" target="_blank" rel="noopener noreferrer">Video Promotion</a>
   </div>
@@ -93,36 +91,18 @@
     </a>
   </div>
 
-  <!-- Lightbox -->
+  <!-- Lightbox Trigger -->
+  <a href="#lightbox" class="lightbox-trigger">Click for more info</a>
+
+  <!-- Lightbox Content -->
   <div id="lightbox" class="lightbox">
     <div class="lightbox-content">
-      <span class="close-btn" id="close-lightbox">&times;</span>
+      <a href="#" class="lightbox-close">&times;</a>
       <h2>About PulseMetaHub</h2>
-      <p>PulseMetaHub is the heartbeat of Web3 Gaming. Our platform connects gamers and developers in the blockchain space, offering unique experiences and NFT-based rewards.</p>
-      <p>Join our community and support the project to help shape the future of Web3 gaming.</p>
+      <p>PulseMetaHub is at the forefront of Web3 Gaming, connecting gamers and blockchain technology in a seamless experience.</p>
+      <p>Support the project or buy the premium domain to be part of the next generation of gaming innovation.</p>
     </div>
   </div>
 
-  <!-- JS do lightbox -->
-  <script>
-    const lightbox = document.getElementById('lightbox');
-    const aboutBtn = document.getElementById('about-btn');
-    const closeBtn = document.getElementById('close-lightbox');
-
-    aboutBtn.addEventListener('click', function(e) {
-      e.preventDefault();
-      lightbox.style.display = 'flex';
-    });
-
-    closeBtn.addEventListener('click', function() {
-      lightbox.style.display = 'none';
-    });
-
-    lightbox.addEventListener('click', function(e) {
-      if (e.target === lightbox) {
-        lightbox.style.display = 'none';
-      }
-    });
-  </script>
 </body>
 </html>
