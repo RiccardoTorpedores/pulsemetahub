@@ -81,7 +81,7 @@
     <a href="https://RiccardoTorpedores.github.io/pulsemetahub/video-background.html" target="_blank" rel="noopener noreferrer">Video Promotion</a>
   </div>
 
-  <!-- Nowy przycisk lightbox -->
+  <!-- Lightbox Button -->
   <div class="lightbox-link-box">
     <a href="#" id="open-lightbox">More Info</a>
   </div>
@@ -107,9 +107,8 @@
     </a>
   </div>
 
-  <!-- JS Lightbox + Link Width -->
+  <!-- JS Lightbox + Equal Width -->
   <script>
-    // Lightbox open/close
     const openBtn = document.getElementById('open-lightbox');
     const lightbox = document.getElementById('lightbox');
     const closeBtn = document.getElementById('close-lightbox');
@@ -129,7 +128,6 @@
       }
     });
 
-    // Wyrównanie szerokości linków desktop
     function equalizeLinkWidth() {
       const links = document.querySelectorAll('.link-box, .center-link-box, .promo-link-box, .lightbox-link-box');
       let maxWidth = 0;
