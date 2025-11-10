@@ -5,23 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <title>PulseMetaHub — The Heartbeat of Web3 Gaming | Domain for Sale</title>
-  <meta name="description" content="PulseMetaHub — The Heartbeat of Web3 Gaming. Premium Web3 Gaming domain available on Afternic. Support the PulseMetaHub project today.">
-  <meta name="keywords" content="PulseMetaHub, Web3 Gaming, blockchain gaming, domain for sale, Afternic, PulseMetaHub.com">
+  <meta name="description" content="PulseMetaHub — The Heartbeat of Web3 Gaming. Premium domena Web3 Gaming dostępna na Afternic. Wesprzyj projekt PulseMetaHub już dziś.">
+  <meta name="keywords" content="PulseMetaHub, Web3 Gaming, blockchain gaming, domena na sprzedaż, Afternic, PulseMetaHub.com">
   <meta name="robots" content="index, follow">
   <meta name="author" content="PulseMetaHub">
-
   <link rel="canonical" href="https://pulsemetahub.com">
 
+  <!-- Open Graph -->
   <meta property="og:title" content="PulseMetaHub — The Heartbeat of Web3 Gaming">
-  <meta property="og:description" content="Buy PulseMetaHub.com or support the Web3 Gaming project.">
+  <meta property="og:description" content="Kup domenę PulseMetaHub.com lub wesprzyj projekt Web3 Gaming.">
   <meta property="og:image" content="https://raw.githubusercontent.com/RiccardoTorpedores/pulsemetahub/main/og-image.jpg">
   <meta property="og:url" content="https://pulsemetahub.com">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
 
+  <!-- Favicon -->
   <link rel="icon" href="favicon.png" type="image/png">
   <link rel="icon" href="favicon.ico" sizes="any">
+
+  <!-- Preload video -->
   <link rel="preload" as="video" href="https://raw.githubusercontent.com/RiccardoTorpedores/pulsemetahub/main/pulsemetahub1.mp4">
+
+  <!-- Theme color for mobile browsers -->
   <meta name="theme-color" content="#000000">
 
   <!-- Google Analytics -->
@@ -69,9 +74,9 @@
     <a href="https://zrzutka.pl/u3cdea" target="_blank" rel="noopener noreferrer">Support the Project</a>
   </div>
 
-  <!-- About Button -->
-  <div class="about-link-box">
-    <a href="#" id="open-lightbox">About PulseMetaHub</a>
+  <!-- Nowy przycisk lightbox -->
+  <div class="center-link-box">
+    <a href="#" id="about-btn">About PulseMetaHub</a>
   </div>
 
   <div class="promo-link-box">
@@ -81,43 +86,43 @@
   <!-- Social Icons -->
   <div class="social-icons">
     <a href="https://www.youtube.com/@pawerynkowski9372" target="_blank" rel="noopener noreferrer">
-      <img src="yt_icon_red_digital.png" alt="PulseMetaHub YouTube Channel" />
+      <img src="yt_icon_red_digital.png" alt="Kanał YouTube PulseMetaHub" />
     </a>
     <a href="https://www.tiktok.com/@dykw3842iuyk" target="_blank" rel="noopener noreferrer">
       <img src="TikTok_Symbol_Alternative_1.png" alt="TikTok Profile" />
     </a>
   </div>
 
-  <!-- LIGHTBOX (hidden by default) -->
+  <!-- Lightbox -->
   <div id="lightbox" class="lightbox">
     <div class="lightbox-content">
-      <span id="close-lightbox" class="close">&times;</span>
-      <h2>PulseMetaHub — The Heartbeat of Web3 Gaming</h2>
-      <p><strong>PulseMetaHub</strong> is a premium domain crafted for the next generation of gaming and blockchain ecosystems.</p>
-      <p>The name blends the rhythm of innovation (“Pulse”), the metaverse (“Meta”), and connection (“Hub”). It’s ideal for Web3 startups, NFT communities, or GameFi platforms seeking a strong and memorable identity.</p>
-      <p>This exclusive domain is available for purchase on <a href="https://www.afternic.com/domain/pulsemetahub.com" target="_blank" rel="noopener noreferrer">Afternic</a>. Join the vision — be part of the decentralized gaming revolution.</p>
+      <span class="close-btn" id="close-lightbox">&times;</span>
+      <h2>About PulseMetaHub</h2>
+      <p>PulseMetaHub is the heartbeat of Web3 Gaming. Our platform connects gamers and developers in the blockchain space, offering unique experiences and NFT-based rewards.</p>
+      <p>Join our community and support the project to help shape the future of Web3 gaming.</p>
     </div>
   </div>
 
-  <!-- JS Lightbox -->
+  <!-- JS do lightbox -->
   <script>
     const lightbox = document.getElementById('lightbox');
-    const openBtn = document.getElementById('open-lightbox');
+    const aboutBtn = document.getElementById('about-btn');
     const closeBtn = document.getElementById('close-lightbox');
 
-    openBtn.onclick = (e) => {
+    aboutBtn.addEventListener('click', function(e) {
       e.preventDefault();
-      lightbox.style.display = 'block';
-    };
+      lightbox.style.display = 'flex';
+    });
 
-    closeBtn.onclick = () => {
+    closeBtn.addEventListener('click', function() {
       lightbox.style.display = 'none';
-    };
+    });
 
-    window.onclick = (e) => {
-      if (e.target === lightbox) lightbox.style.display = 'none';
-    };
+    lightbox.addEventListener('click', function(e) {
+      if (e.target === lightbox) {
+        lightbox.style.display = 'none';
+      }
+    });
   </script>
-
 </body>
 </html>
