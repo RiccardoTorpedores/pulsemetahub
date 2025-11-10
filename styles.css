@@ -76,12 +76,13 @@
   transform: translate(-50%, -50%);
 }
 
-/* USTALONA SZEROKOŚĆ LINKÓW NA DESKTOPIE (dla równych tła) */
+/* Desktop: równa szerokość linków */
 @media (min-width: 769px) {
   .link-box,
-  .promo-link-box,
-  .center-link-box {
-    width: 400px; /* dopasowane do najdłuższego tekstu */
+  .center-link-box,
+  .promo-link-box {
+    width: 400px; /* dopasowanie do najdłuższego linku */
+    text-align: center;
   }
 }
 
