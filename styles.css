@@ -1,4 +1,4 @@
-/* === WIDEO TŁO === */
+/* === WIDEO JAKO TŁO === */
 #bg-video {
   position: fixed;
   top: 0;
@@ -11,11 +11,22 @@
   object-position: center center;
 }
 
-/* === LINKI — STYLE WSPÓLNE === */
+#bg-video-second {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  object-fit: cover;
+  object-position: center center;
+}
+
+/* === LINKI WSPÓLNE STYLE === */
 .link-box,
-.center-link-box,
 .promo-link-box,
-.about-link-box {
+.center-link-box {
   background-color: rgba(169, 169, 169, 0.8);
   padding: 20px 30px;
   border-radius: 10px;
@@ -28,26 +39,30 @@
 }
 
 .link-box a,
-.center-link-box a,
 .promo-link-box a,
-.about-link-box a {
+.center-link-box a {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
 }
 
 .link-box a:hover,
-.center-link-box a:hover,
 .promo-link-box a:hover,
-.about-link-box a:hover {
+.center-link-box a:hover {
   text-decoration: underline;
 }
 
-/* === POZYCJE === */
+/* Pozycjonowanie linków na desktop */
 .link-box {
   position: fixed;
   top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.promo-link-box {
+  position: fixed;
+  bottom: 5%;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -59,21 +74,7 @@
   transform: translate(-50%, -50%);
 }
 
-.about-link-box {
-  position: fixed;
-  top: 62%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.promo-link-box {
-  position: fixed;
-  bottom: 5%;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-/* === IKONY === */
+/* Ikony social na dole po lewej */
 .social-icons {
   position: fixed;
   bottom: 0 !important;
@@ -107,45 +108,48 @@
 .lightbox {
   display: none;
   position: fixed;
-  z-index: 10;
-  left: 0;
   top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.85);
+  background-color: rgba(0,0,0,0.7);
+  z-index: 10;
+  justify-content: center;
+  align-items: center;
 }
 
 .lightbox-content {
-  background: rgba(20, 20, 20, 0.95);
-  color: #fff;
-  margin: 10% auto;
-  padding: 30px 40px;
+  background-color: rgba(169, 169, 169, 0.9);
+  padding: 25px 30px;
   border-radius: 10px;
-  width: 90%;
-  max-width: 600px;
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
+  max-width: 500px;
+  color: #fff;
   text-align: left;
-  box-shadow: 0 0 15px rgba(255,255,255,0.2);
+  font-family: Arial, sans-serif;
 }
 
-.close {
-  color: #fff;
-  float: right;
-  font-size: 30px;
+.lightbox-content h2 {
+  margin-top: 0;
+}
+
+.lightbox-content p {
+  margin: 10px 0;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 28px;
   font-weight: bold;
   cursor: pointer;
+  color: #fff;
 }
 
-.close:hover {
-  color: #ccc;
-}
-
-/* === RESPONSYWNOŚĆ === */
+/* === RESPONSYWNOŚĆ MOBILE === */
 @media (max-width: 768px) {
   .link-box,
   .center-link-box,
-  .about-link-box,
   .promo-link-box {
     position: relative !important;
     top: auto !important;
@@ -159,27 +163,40 @@
     padding: 15px 25px;
   }
 
-  #bg-video {
+  #bg-video,
+  #bg-video-second {
     position: relative;
     width: 100%;
     height: auto;
     max-height: 60vh;
     object-fit: contain;
+    top: auto;
+    left: auto;
+    transform: none;
     margin: 0 auto;
     display: block;
     z-index: 0;
   }
 
+  .social-icons img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .social-icons img[alt="TikTok Profile"] {
+    width: 35px;
+    height: 35px;
+  }
+
   .lightbox-content {
+    width: 90%;
     padding: 20px;
-    font-size: 16px;
   }
 }
 
 @media (max-width: 480px) {
   .link-box,
   .center-link-box,
-  .about-link-box,
   .promo-link-box {
     font-size: 16px;
     padding: 10px 20px;
