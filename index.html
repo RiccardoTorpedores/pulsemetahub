@@ -87,3 +87,37 @@
       <img src="TikTok_Symbol_Alternative_1.png" alt="TikTok Profile" />
     </a>
   </div>
+
+  <!-- LIGHTBOX (hidden by default) -->
+  <div id="lightbox" class="lightbox">
+    <div class="lightbox-content">
+      <span id="close-lightbox" class="close">&times;</span>
+      <h2>PulseMetaHub — The Heartbeat of Web3 Gaming</h2>
+      <p><strong>PulseMetaHub</strong> is a premium domain crafted for the next generation of gaming and blockchain ecosystems.</p>
+      <p>The name blends the rhythm of innovation (“Pulse”), the metaverse (“Meta”), and connection (“Hub”). It’s ideal for Web3 startups, NFT communities, or GameFi platforms seeking a strong and memorable identity.</p>
+      <p>This exclusive domain is available for purchase on <a href="https://www.afternic.com/domain/pulsemetahub.com" target="_blank" rel="noopener noreferrer">Afternic</a>. Join the vision — be part of the decentralized gaming revolution.</p>
+    </div>
+  </div>
+
+  <!-- JS Lightbox -->
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const openBtn = document.getElementById('open-lightbox');
+    const closeBtn = document.getElementById('close-lightbox');
+
+    openBtn.onclick = (e) => {
+      e.preventDefault();
+      lightbox.style.display = 'block';
+    };
+
+    closeBtn.onclick = () => {
+      lightbox.style.display = 'none';
+    };
+
+    window.onclick = (e) => {
+      if (e.target === lightbox) lightbox.style.display = 'none';
+    };
+  </script>
+
+</body>
+</html>
