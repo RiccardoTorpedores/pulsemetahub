@@ -3,7 +3,7 @@ html, body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow-x: hidden; /* zapobiega przesuwaniu strony w poziomie */
+  overflow-x: hidden;
   width: 100%;
   height: 100%;
 }
@@ -16,7 +16,7 @@ html, body {
   transform: translateX(-50%);
   width: 100%;
   height: 100%;
-  z-index: -1;
+  z-index: 0;
   object-fit: cover;
   object-position: center center;
 }
@@ -26,13 +26,13 @@ html, body {
 .promo-link-box,
 .center-link-box,
 .lightbox-link-box {
-  background-color: rgba(169, 169, 169, 0.8);
+  background-color: rgba(0,0,0,0.6);
   padding: 20px 30px;
   border-radius: 10px;
   font-size: 22px;
   text-align: center;
   font-family: Arial, sans-serif;
-  z-index: 2;
+  z-index: 10;
   width: auto;
   max-width: 400px;
 }
@@ -53,38 +53,44 @@ html, body {
   text-decoration: underline;
 }
 
-/* Desktop positions */
+/* === Desktop positions === */
 .link-box { position: fixed; top: 5%; left: 50%; transform: translateX(-50%); }
-.promo-link-box { position: fixed; bottom: 5%; left: 50%; transform: translateX(-50%); }
 .center-link-box { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); }
-.lightbox-link-box { position: fixed; top: 65%; left: 50%; transform: translateX(-50%); }
+.lightbox-link-box { position: fixed; top: 67%; left: 50%; transform: translateX(-50%); }
+.promo-link-box { position: fixed; bottom: 5%; left: 50%; transform: translateX(-50%); }
 
-/* Social icons */
+/* === SOCIAL ICONS (desktop) === */
 .social-icons {
   position: fixed;
-  bottom: 0 !important;
-  left: 0 !important;
-  margin: 0 !important;
-  z-index: 3;
+  bottom: 10px;
+  left: 10px;
+  margin: 0;
+  z-index: 20;
 }
 
 .social-icons a {
   display: inline-block;
-  margin: 0 10px;
+  margin-right: 10px;
+  vertical-align: middle;
 }
 
 .social-icons img {
   width: 60px;
   height: 60px;
   transition: transform 0.2s ease;
+  vertical-align: middle;
 }
 
 .social-icons img[alt="TikTok Profile"] {
   width: 35px;
   height: 35px;
+  margin-bottom: 12px; /* wyrównanie optyczne */
+  vertical-align: middle;
 }
 
-.social-icons img:hover { transform: scale(1.05); }
+.social-icons img:hover {
+  transform: scale(1.05);
+}
 
 /* === LIGHTBOX === */
 .lightbox-overlay {
@@ -94,7 +100,7 @@ html, body {
   background: rgba(0,0,0,0.8);
   justify-content: center;
   align-items: center;
-  z-index: 100;
+  z-index: 1000;
 }
 
 .lightbox-content {
@@ -122,10 +128,16 @@ html, body {
 
 /* === MOBILE FIXES === */
 @media (max-width: 768px) {
-  body { overflow-x: hidden; overflow-y: auto; min-height: 100vh; }
+  body {
+    overflow-x: hidden;
+    overflow-y: auto;
+    min-height: 100vh;
+    background: #fff !important;
+  }
 
   #bg-video {
-    position: absolute !important;
+    display: block;
+    position: relative !important;
     width: 100% !important;
     height: auto !important;
     max-height: 60vh !important;
@@ -144,22 +156,32 @@ html, body {
     left: auto !important;
     bottom: auto !important;
     transform: none !important;
-    margin: 15px auto !important;
+    margin: 20px auto !important;
     width: 90% !important;
     max-width: 350px !important;
     font-size: 18px !important;
     padding: 15px 20px !important;
-    box-sizing: border-box;
+    background: #fff !important;
+    color: #000 !important;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   }
 
   .social-icons {
     bottom: 10px !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
+    left: 10px !important;
+    transform: none !important;
   }
 
-  .social-icons img { width: 50px !important; height: 50px !important; }
-  .social-icons img[alt="TikTok Profile"] { width: 35px !important; height: 35px !important; }
+  .social-icons img {
+    width: 50px !important;
+    height: 50px !important;
+  }
+
+  .social-icons img[alt="TikTok Profile"] {
+    width: 30px !important;
+    height: 30px !important;
+    margin-bottom: 8px;
+  }
 }
 
 @media (max-width: 480px) {
