@@ -6,7 +6,6 @@ html, body {
   overflow-x: hidden;
   width: 100%;
   height: 100%;
-  font-family: Arial, sans-serif;
 }
 
 /* === VIDEO BACKGROUND === */
@@ -60,7 +59,7 @@ html, body {
 .center-link-box { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); }
 .lightbox-link-box { position: fixed; top: 65%; left: 50%; transform: translateX(-50%); }
 
-/* Social icons desktop */
+/* Social icons */
 .social-icons {
   position: fixed;
   bottom: 0;
@@ -69,7 +68,10 @@ html, body {
   z-index: 3;
 }
 
-.social-icons a { display: inline-block; margin: 0 10px; }
+.social-icons a {
+  display: inline-block;
+  margin: 0 10px;
+}
 
 .social-icons img {
   width: 60px;
@@ -119,7 +121,7 @@ html, body {
 }
 
 /* === MOBILE FIXES === */
-@media (max-width: 900px) {
+@media (max-width: 768px) {
   body { overflow-x: hidden; overflow-y: auto; min-height: 100vh; }
 
   #bg-video {
@@ -133,19 +135,6 @@ html, body {
     object-fit: cover !important;
   }
 
-  /* All link boxes in one column on mobile */
-  .link-box-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    width: 100%;
-    padding: 0 5%;
-    z-index: 2;
-  }
-
   .link-box,
   .center-link-box,
   .promo-link-box,
@@ -155,18 +144,25 @@ html, body {
     left: auto !important;
     bottom: auto !important;
     transform: none !important;
-    margin: 0 !important;
-    width: 100% !important;
+    margin: 15px auto !important;
+    width: 90% !important;
     max-width: 350px !important;
     font-size: 18px !important;
     padding: 15px 20px !important;
     box-sizing: border-box;
   }
 
-  /* Social icons mobile on bottom left */
+  /* Mobile links spacing */
+  .link-box,
+  .center-link-box,
+  .promo-link-box,
+  .lightbox-link-box {
+    margin-bottom: 15px !important;
+  }
+
   .social-icons {
     bottom: 10px !important;
-    left: 10px !important;
+    left: 0 !important;
     transform: none !important;
   }
 
