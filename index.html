@@ -59,7 +59,6 @@
   }
   </script>
 
-  <!-- Stylesheet -->
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -82,6 +81,22 @@
     <a href="https://RiccardoTorpedores.github.io/pulsemetahub/video-background.html" target="_blank" rel="noopener noreferrer">Video Promotion</a>
   </div>
 
+  <!-- Nowy przycisk lightbox -->
+  <div class="lightbox-link-box">
+    <a href="#" id="open-lightbox">More Info</a>
+  </div>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox-overlay">
+    <div class="lightbox-content">
+      <span class="close-btn" id="close-lightbox">&times;</span>
+      <h2>About PulseMetaHub</h2>
+      <p>PulseMetaHub is at the heart of Web3 Gaming, offering a premium domain and exciting opportunities for blockchain gaming projects.</p>
+      <p>Join our community or purchase the domain to kickstart your Web3 gaming experience today.</p>
+      <p>Support innovation and be part of the next generation of gaming platforms.</p>
+    </div>
+  </div>
+
   <!-- Social Icons -->
   <div class="social-icons">
     <a href="https://www.youtube.com/@pawerynkowski9372" target="_blank" rel="noopener noreferrer">
@@ -92,29 +107,41 @@
     </a>
   </div>
 
-  <!-- JS: Equalize link widths on desktop -->
+  <!-- JS Lightbox + Link Width -->
   <script>
-    function equalizeLinkWidths() {
-      if (window.innerWidth > 768) { // tylko desktop
-        const links = document.querySelectorAll('.link-box, .center-link-box, .promo-link-box');
-        let maxWidth = 0;
+    // Lightbox open/close
+    const openBtn = document.getElementById('open-lightbox');
+    const lightbox = document.getElementById('lightbox');
+    const closeBtn = document.getElementById('close-lightbox');
 
-        links.forEach(link => link.style.width = 'auto');
+    openBtn.addEventListener('click', e => {
+      e.preventDefault();
+      lightbox.style.display = 'flex';
+    });
 
-        links.forEach(link => {
-          const w = link.offsetWidth;
-          if (w > maxWidth) maxWidth = w;
-        });
+    closeBtn.addEventListener('click', () => {
+      lightbox.style.display = 'none';
+    });
 
-        links.forEach(link => link.style.width = maxWidth + 'px');
-      } else {
-        const links = document.querySelectorAll('.link-box, .center-link-box, .promo-link-box');
-        links.forEach(link => link.style.width = '');
+    window.addEventListener('click', e => {
+      if(e.target === lightbox) {
+        lightbox.style.display = 'none';
       }
+    });
+
+    // Wyrównanie szerokości linków desktop
+    function equalizeLinkWidth() {
+      const links = document.querySelectorAll('.link-box, .center-link-box, .promo-link-box, .lightbox-link-box');
+      let maxWidth = 0;
+      links.forEach(link => {
+        link.style.width = 'auto';
+        if(link.offsetWidth > maxWidth) maxWidth = link.offsetWidth;
+      });
+      links.forEach(link => link.style.width = maxWidth + 'px');
     }
 
-    window.addEventListener('load', equalizeLinkWidths);
-    window.addEventListener('resize', equalizeLinkWidths);
+    window.addEventListener('load', equalizeLinkWidth);
+    window.addEventListener('resize', equalizeLinkWidth);
   </script>
 
 </body>
