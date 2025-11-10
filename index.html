@@ -81,20 +81,8 @@
     <a href="https://RiccardoTorpedores.github.io/pulsemetahub/video-background.html" target="_blank" rel="noopener noreferrer">Video Promotion</a>
   </div>
 
-  <!-- Nowy przycisk lightbox -->
   <div class="lightbox-link-box">
-    <a href="#" id="open-lightbox">More Info</a>
-  </div>
-
-  <!-- Lightbox -->
-  <div id="lightbox" class="lightbox-overlay">
-    <div class="lightbox-content">
-      <span class="close-btn" id="close-lightbox">&times;</span>
-      <h2>About PulseMetaHub</h2>
-      <p>PulseMetaHub is at the heart of Web3 Gaming, offering a premium domain and exciting opportunities for blockchain gaming projects.</p>
-      <p>Join our community or purchase the domain to kickstart your Web3 gaming experience today.</p>
-      <p>Support innovation and be part of the next generation of gaming platforms.</p>
-    </div>
+    <a href="#" id="open-lightbox">Read Project Info</a>
   </div>
 
   <!-- Social Icons -->
@@ -107,42 +95,16 @@
     </a>
   </div>
 
-  <!-- JS Lightbox + Link Width -->
-  <script>
-    // Lightbox open/close
-    const openBtn = document.getElementById('open-lightbox');
-    const lightbox = document.getElementById('lightbox');
-    const closeBtn = document.getElementById('close-lightbox');
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <div class="lightbox-content">
+      <span class="close">&times;</span>
+      <h2>About PulseMetaHub</h2>
+      <p>PulseMetaHub is the heartbeat of Web3 gaming, connecting players and developers in the blockchain space.</p>
+      <p>Get exclusive insights, participate in early projects, and support the development of the next-generation Web3 gaming ecosystem.</p>
+    </div>
+  </div>
 
-    openBtn.addEventListener('click', e => {
-      e.preventDefault();
-      lightbox.style.display = 'flex';
-    });
-
-    closeBtn.addEventListener('click', () => {
-      lightbox.style.display = 'none';
-    });
-
-    window.addEventListener('click', e => {
-      if(e.target === lightbox) {
-        lightbox.style.display = 'none';
-      }
-    });
-
-    // Wyrównanie szerokości linków desktop
-    function equalizeLinkWidth() {
-      const links = document.querySelectorAll('.link-box, .center-link-box, .promo-link-box, .lightbox-link-box');
-      let maxWidth = 0;
-      links.forEach(link => {
-        link.style.width = 'auto';
-        if(link.offsetWidth > maxWidth) maxWidth = link.offsetWidth;
-      });
-      links.forEach(link => link.style.width = maxWidth + 'px');
-    }
-
-    window.addEventListener('load', equalizeLinkWidth);
-    window.addEventListener('resize', equalizeLinkWidth);
-  </script>
-
+  <script src="scripts.js"></script>
 </body>
 </html>
