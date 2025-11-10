@@ -1,4 +1,4 @@
-/* === WIDEO JAKO TŁO === */
+/* === WIDEO TŁO === */
 #bg-video {
   position: fixed;
   top: 0;
@@ -27,7 +27,6 @@
   max-width: 400px;
 }
 
-/* Tekst linków */
 .link-box a,
 .center-link-box a,
 .promo-link-box a,
@@ -45,7 +44,7 @@
   text-decoration: underline;
 }
 
-/* Pozycje linków (desktop) */
+/* === POZYCJE === */
 .link-box {
   position: fixed;
   top: 5%;
@@ -74,7 +73,7 @@
   transform: translateX(-50%);
 }
 
-/* Ikony social */
+/* === IKONY === */
 .social-icons {
   position: fixed;
   bottom: 0 !important;
@@ -114,7 +113,6 @@
   width: 100%;
   height: 100%;
   background: rgba(0,0,0,0.85);
-  overflow-y: auto;
 }
 
 .lightbox-content {
@@ -143,7 +141,7 @@
   color: #ccc;
 }
 
-/* === RESPONSYWNOŚĆ MOBILE === */
+/* === RESPONSYWNOŚĆ === */
 @media (max-width: 768px) {
   .link-box,
   .center-link-box,
@@ -167,22 +165,9 @@
     height: auto;
     max-height: 60vh;
     object-fit: contain;
-    top: auto;
-    left: auto;
-    transform: none;
     margin: 0 auto;
     display: block;
     z-index: 0;
-  }
-
-  .social-icons img {
-    width: 60px;
-    height: 60px;
-  }
-
-  .social-icons img[alt="TikTok Profile"] {
-    width: 35px;
-    height: 35px;
   }
 
   .lightbox-content {
