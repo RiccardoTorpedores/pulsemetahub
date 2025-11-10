@@ -6,7 +6,6 @@ html, body {
   overflow-x: hidden;
   width: 100%;
   height: 100%;
-  font-family: Arial, sans-serif;
 }
 
 /* === VIDEO BACKGROUND === */
@@ -22,7 +21,13 @@ html, body {
   object-position: center center;
 }
 
-/* === LINKS BOXES === */
+/* === LINKS CONTAINER === */
+.links-container {
+  position: relative;
+  z-index: 2;
+}
+
+/* === LINK BOXES === */
 .link-box,
 .promo-link-box,
 .center-link-box,
@@ -32,7 +37,7 @@ html, body {
   border-radius: 10px;
   font-size: 22px;
   text-align: center;
-  z-index: 2;
+  font-family: Arial, sans-serif;
   width: auto;
   max-width: 400px;
 }
@@ -59,7 +64,7 @@ html, body {
 .center-link-box { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); }
 .lightbox-link-box { position: fixed; top: 65%; left: 50%; transform: translateX(-50%); }
 
-/* Social icons */
+/* === SOCIAL ICONS === */
 .social-icons {
   position: fixed;
   bottom: 0;
@@ -68,10 +73,7 @@ html, body {
   z-index: 3;
 }
 
-.social-icons a {
-  display: inline-block;
-  margin: 0 10px;
-}
+.social-icons a { display: inline-block; margin: 0 10px; }
 
 .social-icons img {
   width: 60px;
@@ -79,10 +81,7 @@ html, body {
   transition: transform 0.2s ease;
 }
 
-.social-icons img[alt="TikTok Profile"] {
-  width: 35px;
-  height: 35px;
-}
+.social-icons img[alt="TikTok Profile"] { width: 35px; height: 35px; }
 
 .social-icons img:hover { transform: scale(1.05); }
 
@@ -103,6 +102,7 @@ html, body {
   border-radius: 12px;
   max-width: 600px;
   text-align: left;
+  font-family: Arial, sans-serif;
   color: #000;
   position: relative;
 }
@@ -121,13 +121,13 @@ html, body {
 
 /* === MOBILE FIXES === */
 @media (max-width: 768px) {
-  body, html { height: auto; }
+  body { overflow-x: hidden; overflow-y: auto; min-height: 100vh; }
 
   #bg-video {
     position: relative !important;
     width: 100% !important;
     height: auto !important;
-    max-height: none !important;
+    max-height: 50vh !important;
     top: 0;
     left: 0;
     transform: none !important;
@@ -135,27 +135,27 @@ html, body {
   }
 
   .links-container {
-    position: relative !important;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 20px auto 40px auto;
-    width: 100%;
-    padding: 0 10px;
-    box-sizing: border-box;
+    margin-top: 10px;
+    padding: 10px;
   }
 
   .link-box,
   .center-link-box,
   .promo-link-box,
   .lightbox-link-box {
-    width: 100% !important;
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+    margin: 10px 0 !important;
+    width: 90% !important;
     max-width: 350px !important;
     font-size: 18px !important;
     padding: 15px 20px !important;
-    margin: 10px 0;
-    text-align: center;
-    background-color: rgba(169, 169, 169, 0.9);
   }
 
   .social-icons {
