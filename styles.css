@@ -11,6 +11,7 @@
   object-position: center center;
 }
 
+/* Wideo na stronie drugiej */
 #bg-video-second {
   position: fixed;
   top: 0;
@@ -34,10 +35,9 @@
   text-align: center;
   font-family: Arial, sans-serif;
   z-index: 2;
-  width: auto;
-  max-width: 400px;
 }
 
+/* Linki - tekst */
 .link-box a,
 .promo-link-box a,
 .center-link-box a {
@@ -74,6 +74,15 @@
   transform: translate(-50%, -50%);
 }
 
+/* Stała szerokość linków na desktop, dla równych boxów */
+@media (min-width: 769px) {
+  .link-box,
+  .promo-link-box,
+  .center-link-box {
+    width: 400px; /* ustawione według najdłuższego tekstu */
+  }
+}
+
 /* Ikony social na dole po lewej */
 .social-icons {
   position: fixed;
@@ -95,6 +104,7 @@
   transition: transform 0.2s ease;
 }
 
+/* Korekta TikTok */
 .social-icons img[alt="TikTok Profile"] {
   width: 35px;
   height: 35px;
@@ -102,48 +112,6 @@
 
 .social-icons img:hover {
   transform: scale(1.05);
-}
-
-/* === LIGHTBOX === */
-.lightbox {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.7);
-  z-index: 10;
-  justify-content: center;
-  align-items: center;
-}
-
-.lightbox-content {
-  background-color: rgba(169, 169, 169, 0.9);
-  padding: 25px 30px;
-  border-radius: 10px;
-  max-width: 500px;
-  color: #fff;
-  text-align: left;
-  font-family: Arial, sans-serif;
-}
-
-.lightbox-content h2 {
-  margin-top: 0;
-}
-
-.lightbox-content p {
-  margin: 10px 0;
-}
-
-.close-btn {
-  position: absolute;
-  top: 10px;
-  right: 20px;
-  font-size: 28px;
-  font-weight: bold;
-  cursor: pointer;
-  color: #fff;
 }
 
 /* === RESPONSYWNOŚĆ MOBILE === */
@@ -187,11 +155,6 @@
     width: 35px;
     height: 35px;
   }
-
-  .lightbox-content {
-    width: 90%;
-    padding: 20px;
-  }
 }
 
 @media (max-width: 480px) {
@@ -201,4 +164,69 @@
     font-size: 16px;
     padding: 10px 20px;
   }
+}
+
+/* === LIGHTBOX === */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+}
+
+.lightbox:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.lightbox-content {
+  position: relative;
+  width: 90%;
+  max-width: 500px;
+  margin: 10% auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  color: #000;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: bold;
+  color: #000;
+}
+
+.lightbox-close:hover {
+  color: #333;
+}
+
+.lightbox-trigger {
+  display: block;
+  position: fixed;
+  bottom: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(169, 169, 169, 0.8);
+  padding: 15px 25px;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  z-index: 2;
+}
+
+.lightbox-trigger:hover {
+  text-decoration: underline;
 }
