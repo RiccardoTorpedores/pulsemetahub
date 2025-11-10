@@ -21,18 +21,31 @@ html, body {
   object-position: center center;
 }
 
-/* === LINK BOXES (Desktop Style) === */
+/* === LINKS CONTAINER === */
+.links-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+  position: fixed;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+}
+
+/* === LINK BOXES === */
 .link-box,
 .promo-link-box,
 .center-link-box,
 .lightbox-link-box {
-  background-color: rgba(255,255,255,0.1); /* przezroczyste */
+  background-color: rgba(169, 169, 169, 0.7);
   padding: 20px 30px;
   border-radius: 10px;
   font-size: 22px;
   text-align: center;
   font-family: Arial, sans-serif;
-  z-index: 2;
+  margin: 10px 0;
   width: auto;
 }
 
@@ -52,12 +65,6 @@ html, body {
   text-decoration: underline;
 }
 
-/* Desktop positions */
-.link-box { position: fixed; top: 5%; left: 50%; transform: translateX(-50%); }
-.promo-link-box { position: fixed; bottom: 5%; left: 50%; transform: translateX(-50%); }
-.center-link-box { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); }
-.lightbox-link-box { position: fixed; top: 65%; left: 50%; transform: translateX(-50%); }
-
 /* Social icons */
 .social-icons {
   position: fixed;
@@ -75,12 +82,15 @@ html, body {
 .social-icons img {
   width: 60px;
   height: 60px;
+  transition: transform 0.2s ease;
 }
 
 .social-icons img[alt="TikTok Profile"] {
   width: 35px;
   height: 35px;
 }
+
+.social-icons img:hover { transform: scale(1.05); }
 
 /* === LIGHTBOX === */
 .lightbox-overlay {
@@ -119,7 +129,7 @@ html, body {
 /* === MOBILE FIXES === */
 @media (max-width: 768px) {
   #bg-video {
-    position: absolute !important;
+    position: relative !important;
     width: 100% !important;
     height: auto !important;
     max-height: 60vh !important;
@@ -129,34 +139,38 @@ html, body {
     object-fit: cover !important;
   }
 
-  /* linki pod wideo w jednej kolumnie */
+  .links-container {
+    position: relative !important;
+    top: auto !important;
+    transform: none !important;
+    margin-top: 60vh; /* pod filmem */
+    width: 100%;
+    padding: 0 10px;
+  }
+
   .link-box,
   .center-link-box,
   .promo-link-box,
   .lightbox-link-box {
     position: relative !important;
-    top: auto !important;
-    left: auto !important;
-    bottom: auto !important;
-    transform: none !important;
-    margin: 10px auto !important;
-    width: 90% !important;
+    width: 100% !important;
     max-width: 350px !important;
     font-size: 18px !important;
-    padding: 15px !important;
-    display: block;
-    text-align: center;
-    background-color: rgba(255,255,255,0.2);
+    padding: 15px 20px !important;
+    box-sizing: border-box;
+    margin: 10px 0;
+    background-color: #aaa; /* kontrast na mobile */
   }
 
-  /* social icons */
   .social-icons {
     bottom: 10px !important;
-    left: 10px !important;
+    left: 0 !important;
+    transform: none !important;
+    margin-left: 10px;
   }
 
-  .social-icons img { width: 50px; height: 50px; }
-  .social-icons img[alt="TikTok Profile"] { width: 35px; height: 35px; }
+  .social-icons img { width: 50px !important; height: 50px !important; }
+  .social-icons img[alt="TikTok Profile"] { width: 35px !important; height: 35px !important; }
 }
 
 @media (max-width: 480px) {
@@ -165,6 +179,6 @@ html, body {
   .promo-link-box,
   .lightbox-link-box {
     font-size: 16px !important;
-    padding: 10px !important;
+    padding: 10px 15px !important;
   }
 }
