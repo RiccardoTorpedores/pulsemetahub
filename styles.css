@@ -19,6 +19,7 @@ html, body {
   z-index: 0;
   object-fit: cover;
   object-position: center center;
+  pointer-events: none; /* ⬅️ nie blokuje kliknięć na mobile */
 }
 
 /* === LINK BOXES === */
@@ -84,13 +85,11 @@ html, body {
 .social-icons img[alt="TikTok Profile"] {
   width: 35px;
   height: 35px;
-  margin-bottom: 12px; /* wyrównanie optyczne */
+  margin-bottom: 12px;
   vertical-align: middle;
 }
 
-.social-icons img:hover {
-  transform: scale(1.05);
-}
+.social-icons img:hover { transform: scale(1.05); }
 
 /* === LIGHTBOX === */
 .lightbox-overlay {
@@ -127,7 +126,7 @@ html, body {
 }
 
 /* === MOBILE FIXES === */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   body {
     overflow-x: hidden;
     overflow-y: auto;
@@ -136,15 +135,13 @@ html, body {
   }
 
   #bg-video {
-    display: block;
     position: relative !important;
     width: 100% !important;
     height: auto !important;
     max-height: 60vh !important;
-    top: 0;
-    left: 0;
     transform: none !important;
     object-fit: cover !important;
+    z-index: 0;
   }
 
   .link-box,
@@ -162,6 +159,8 @@ html, body {
     font-size: 18px !important;
     padding: 15px 20px !important;
     background: #fff !important;
+    color: #000 !important;
+    z-index: 10 !important;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   }
 
@@ -169,6 +168,8 @@ html, body {
     bottom: 10px !important;
     left: 10px !important;
     transform: none !important;
+    position: fixed !important;
+    z-index: 50 !important;
   }
 
   .social-icons img {
@@ -181,27 +182,17 @@ html, body {
     height: 30px !important;
     margin-bottom: 8px;
   }
-}
 
-@media (max-width: 480px) {
-  .link-box,
-  .center-link-box,
-  .promo-link-box,
-  .lightbox-link-box {
-    font-size: 16px !important;
-    padding: 10px 15px !important;
-  }
-}
-
-/* ✅ FINALNA NADPISKA — wymusza czarny tekst na mobile */
-@media (max-width: 768px) {
+  /* 🔥 PEWNE NADPISANIE TEKSTU LINKÓW */
   .link-box a,
   .center-link-box a,
   .promo-link-box a,
   .lightbox-link-box a {
     color: #000 !important;
-    text-decoration: none !important;
     font-weight: bold !important;
+    text-decoration: none !important;
+    position: relative !important;
+    z-index: 20 !important;
   }
 
   .link-box a:hover,
