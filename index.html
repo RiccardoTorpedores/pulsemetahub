@@ -26,12 +26,6 @@
   <link rel="icon" href="favicon.png" type="image/png">
   <link rel="icon" href="favicon.ico" sizes="any">
 
-  <!-- Preload video -->
-  <link rel="preload" as="video" href="https://raw.githubusercontent.com/RiccardoTorpedores/pulsemetahub/main/pulsemetahub1.mp4">
-
-  <!-- Theme color for mobile browsers -->
-  <meta name="theme-color" content="#000000">
-
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-CZTYMJWQZQ"></script>
   <script>
@@ -106,7 +100,7 @@
     </a>
   </div>
 
-  <!-- JS Lightbox + Equal Width -->
+  <!-- JS Lightbox -->
   <script>
     const openBtn = document.getElementById('open-lightbox');
     const lightbox = document.getElementById('lightbox');
@@ -126,19 +120,6 @@
         lightbox.style.display = 'none';
       }
     });
-
-    function equalizeLinkWidth() {
-      const links = document.querySelectorAll('.link-box, .center-link-box, .promo-link-box, .lightbox-link-box');
-      let maxWidth = 0;
-      links.forEach(link => {
-        link.style.width = 'auto';
-        if(link.offsetWidth > maxWidth) maxWidth = link.offsetWidth;
-      });
-      links.forEach(link => link.style.width = maxWidth + 'px');
-    }
-
-    window.addEventListener('load', equalizeLinkWidth);
-    window.addEventListener('resize', equalizeLinkWidth);
   </script>
 
 </body>
