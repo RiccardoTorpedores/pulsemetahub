@@ -14,8 +14,7 @@
 /* === LINKI WSPÓLNE STYLE === */
 .link-box,
 .promo-link-box,
-.center-link-box,
-.lightbox-link-box {
+.center-link-box {
   background-color: rgba(169, 169, 169, 0.8);
   padding: 20px 30px;
   border-radius: 10px;
@@ -23,14 +22,14 @@
   text-align: center;
   font-family: Arial, sans-serif;
   z-index: 2;
-  width: 400px; /* stała szerokość dla wszystkich linków */
+  width: 400px; /* stała szerokość zgodna z najdłuższym linkiem */
+  box-sizing: border-box;
 }
 
 /* Linki - tekst */
 .link-box a,
 .promo-link-box a,
-.center-link-box a,
-.lightbox-link-box a {
+.center-link-box a {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
@@ -38,8 +37,7 @@
 
 .link-box a:hover,
 .promo-link-box a:hover,
-.center-link-box a:hover,
-.lightbox-link-box a:hover {
+.center-link-box a:hover {
   text-decoration: underline;
 }
 
@@ -61,13 +59,6 @@
 .promo-link-box {
   position: fixed;
   bottom: 5%;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.lightbox-link-box {
-  position: fixed;
-  top: 70%;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -107,24 +98,22 @@
   display: none;
   position: fixed;
   z-index: 10;
-  left: 0;
   top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.8);
+  background: rgba(0,0,0,0.7);
   justify-content: center;
   align-items: center;
 }
 
 .lightbox-content {
-  background-color: #222;
-  color: #fff;
+  background: #fff;
   padding: 30px;
-  border-radius: 12px;
-  max-width: 500px;
+  max-width: 600px;
   width: 90%;
+  border-radius: 10px;
   text-align: center;
-  font-family: Arial, sans-serif;
 }
 
 .lightbox-content .close {
@@ -139,18 +128,18 @@
 @media (max-width: 768px) {
   .link-box,
   .center-link-box,
-  .promo-link-box,
-  .lightbox-link-box {
+  .promo-link-box {
     position: relative !important;
     top: auto !important;
     left: auto !important;
     bottom: auto !important;
     transform: none !important;
     margin: 10px auto;
-    width: 90%;
+    width: 80%;
     max-width: 350px;
     font-size: 18px;
     padding: 15px 25px;
+    box-sizing: border-box;
   }
 
   #bg-video {
@@ -159,20 +148,28 @@
     height: auto;
     max-height: 60vh;
     object-fit: contain;
-    top: auto;
-    left: auto;
     transform: none;
     margin: 0 auto;
     display: block;
     z-index: 0;
   }
+
+  .social-icons img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .social-icons img[alt="TikTok Profile"] {
+    width: 35px;
+    height: 35px;
+  }
 }
 
+/* Dodatkowa responsywność dla małych ekranów */
 @media (max-width: 480px) {
   .link-box,
   .center-link-box,
-  .promo-link-box,
-  .lightbox-link-box {
+  .promo-link-box {
     font-size: 16px;
     padding: 10px 20px;
   }
