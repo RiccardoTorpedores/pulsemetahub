@@ -3,7 +3,7 @@ html, body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow-x: hidden;
+  overflow-x: hidden; /* zapobiega przesuwaniu strony w poziomie */
   width: 100%;
   height: 100%;
 }
@@ -21,12 +21,6 @@ html, body {
   object-position: center center;
 }
 
-/* === LINKS CONTAINER === */
-.links-container {
-  position: relative;
-  z-index: 2;
-}
-
 /* === LINK BOXES === */
 .link-box,
 .promo-link-box,
@@ -38,6 +32,7 @@ html, body {
   font-size: 22px;
   text-align: center;
   font-family: Arial, sans-serif;
+  z-index: 2;
   width: auto;
   max-width: 400px;
 }
@@ -46,7 +41,7 @@ html, body {
 .promo-link-box a,
 .center-link-box a,
 .lightbox-link-box a {
-  color: #fff;
+  color: rgba(200, 200, 200, 0.7); /* jaśniejszy, bardziej przeźroczysty szary */
   text-decoration: none;
   font-weight: bold;
 }
@@ -55,6 +50,7 @@ html, body {
 .promo-link-box a:hover,
 .center-link-box a:hover,
 .lightbox-link-box a:hover {
+  color: rgba(255, 255, 255, 0.9); /* prawie biały na hover */
   text-decoration: underline;
 }
 
@@ -64,16 +60,19 @@ html, body {
 .center-link-box { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); }
 .lightbox-link-box { position: fixed; top: 65%; left: 50%; transform: translateX(-50%); }
 
-/* === SOCIAL ICONS === */
+/* Social icons */
 .social-icons {
   position: fixed;
-  bottom: 0;
-  left: 0;
-  margin: 0;
+  bottom: 0 !important;
+  left: 0 !important;
+  margin: 0 !important;
   z-index: 3;
 }
 
-.social-icons a { display: inline-block; margin: 0 10px; }
+.social-icons a {
+  display: inline-block;
+  margin: 0 10px;
+}
 
 .social-icons img {
   width: 60px;
@@ -81,7 +80,10 @@ html, body {
   transition: transform 0.2s ease;
 }
 
-.social-icons img[alt="TikTok Profile"] { width: 35px; height: 35px; }
+.social-icons img[alt="TikTok Profile"] {
+  width: 35px;
+  height: 35px;
+}
 
 .social-icons img:hover { transform: scale(1.05); }
 
@@ -124,22 +126,14 @@ html, body {
   body { overflow-x: hidden; overflow-y: auto; min-height: 100vh; }
 
   #bg-video {
-    position: relative !important;
+    position: absolute !important;
     width: 100% !important;
     height: auto !important;
-    max-height: 50vh !important;
+    max-height: 60vh !important;
     top: 0;
     left: 0;
     transform: none !important;
     object-fit: cover !important;
-  }
-
-  .links-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 10px;
-    padding: 10px;
   }
 
   .link-box,
@@ -151,16 +145,17 @@ html, body {
     left: auto !important;
     bottom: auto !important;
     transform: none !important;
-    margin: 10px 0 !important;
+    margin: 15px auto !important;
     width: 90% !important;
     max-width: 350px !important;
     font-size: 18px !important;
     padding: 15px 20px !important;
+    box-sizing: border-box;
   }
 
   .social-icons {
     bottom: 10px !important;
-    left: 10px !important;
+    left: 0 !important; /* zmiana na lewą stronę */
     transform: none !important;
   }
 
