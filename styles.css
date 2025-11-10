@@ -3,7 +3,9 @@ html, body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow-x: hidden; /* uniemożliwia poziome przewijanie na mobile */
+  overflow-x: hidden; /* zapobiega przesuwaniu strony w poziomie */
+  width: 100%;
+  height: 100%;
 }
 
 /* === VIDEO BACKGROUND === */
@@ -120,19 +122,17 @@ html, body {
 
 /* === MOBILE FIXES === */
 @media (max-width: 768px) {
-  body { overflow-x: hidden; overflow-y: auto; } /* brak przewijania w poziomie */
+  body { overflow-x: hidden; overflow-y: auto; min-height: 100vh; }
 
   #bg-video {
-    position: relative !important;
-    width: 100vw !important;
-    height: 100vh !important;
-    max-width: 100vw !important;
-    max-height: 100vh !important;
-    object-fit: cover !important;
-    top: auto !important;
-    left: auto !important;
+    position: absolute !important;
+    width: 100% !important;
+    height: auto !important;
+    max-height: 60vh !important;
+    top: 0;
+    left: 0;
     transform: none !important;
-    display: block !important;
+    object-fit: cover !important;
   }
 
   .link-box,
@@ -144,7 +144,7 @@ html, body {
     left: auto !important;
     bottom: auto !important;
     transform: none !important;
-    margin: 10px auto !important;
+    margin: 15px auto !important;
     width: 90% !important;
     max-width: 350px !important;
     font-size: 18px !important;
