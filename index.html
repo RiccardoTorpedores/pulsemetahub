@@ -59,6 +59,7 @@
   }
   </script>
 
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -91,18 +92,30 @@
     </a>
   </div>
 
-  <!-- Lightbox Trigger -->
-  <a href="#lightbox" class="lightbox-trigger">Click for more info</a>
+  <!-- JS: Equalize link widths on desktop -->
+  <script>
+    function equalizeLinkWidths() {
+      if (window.innerWidth > 768) { // tylko desktop
+        const links = document.querySelectorAll('.link-box, .center-link-box, .promo-link-box');
+        let maxWidth = 0;
 
-  <!-- Lightbox Content -->
-  <div id="lightbox" class="lightbox">
-    <div class="lightbox-content">
-      <a href="#" class="lightbox-close">&times;</a>
-      <h2>About PulseMetaHub</h2>
-      <p>PulseMetaHub is at the forefront of Web3 Gaming, connecting gamers and blockchain technology in a seamless experience.</p>
-      <p>Support the project or buy the premium domain to be part of the next generation of gaming innovation.</p>
-    </div>
-  </div>
+        links.forEach(link => link.style.width = 'auto');
+
+        links.forEach(link => {
+          const w = link.offsetWidth;
+          if (w > maxWidth) maxWidth = w;
+        });
+
+        links.forEach(link => link.style.width = maxWidth + 'px');
+      } else {
+        const links = document.querySelectorAll('.link-box, .center-link-box, .promo-link-box');
+        links.forEach(link => link.style.width = '');
+      }
+    }
+
+    window.addEventListener('load', equalizeLinkWidths);
+    window.addEventListener('resize', equalizeLinkWidths);
+  </script>
 
 </body>
 </html>
