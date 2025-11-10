@@ -162,8 +162,25 @@ html, body {
     font-size: 18px !important;
     padding: 15px 20px !important;
     background: #fff !important;
-    color: #000 !important;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+
+  /* 🔹 poprawiony kolor tekstu */
+  .link-box a,
+  .promo-link-box a,
+  .center-link-box a,
+  .lightbox-link-box a {
+    color: #000 !important;
+    text-decoration: none !important;
+    font-weight: bold !important;
+  }
+
+  .link-box a:hover,
+  .promo-link-box a:hover,
+  .center-link-box a:hover,
+  .lightbox-link-box a:hover {
+    color: #333 !important;
+    text-decoration: underline !important;
   }
 
   .social-icons {
