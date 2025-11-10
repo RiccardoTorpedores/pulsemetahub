@@ -81,17 +81,19 @@
     <a href="https://RiccardoTorpedores.github.io/pulsemetahub/video-background.html" target="_blank" rel="noopener noreferrer">Video Promotion</a>
   </div>
 
+  <!-- Nowy przycisk lightbox -->
   <div class="lightbox-link-box">
-    <a href="#" id="lightbox-button">Read More</a>
+    <a href="#" id="open-lightbox">More Info</a>
   </div>
 
   <!-- Lightbox -->
-  <div id="lightbox" class="lightbox">
+  <div id="lightbox" class="lightbox-overlay">
     <div class="lightbox-content">
-      <span class="close">&times;</span>
+      <span class="close-btn" id="close-lightbox">&times;</span>
       <h2>About PulseMetaHub</h2>
-      <p>PulseMetaHub is the ultimate destination for Web3 gaming enthusiasts. Discover innovative blockchain-based games, interact with a vibrant community, and support the future of decentralized gaming.</p>
-      <p>Our mission is to connect gamers with the next generation of Web3 experiences. Explore, invest, and participate in shaping the gaming ecosystem of tomorrow.</p>
+      <p>PulseMetaHub is at the heart of Web3 Gaming, offering a premium domain and exciting opportunities for blockchain gaming projects.</p>
+      <p>Join our community or purchase the domain to kickstart your Web3 gaming experience today.</p>
+      <p>Support innovation and be part of the next generation of gaming platforms.</p>
     </div>
   </div>
 
@@ -105,26 +107,41 @@
     </a>
   </div>
 
-  <!-- Lightbox JS -->
+  <!-- JS Lightbox + Link Width -->
   <script>
+    // Lightbox open/close
+    const openBtn = document.getElementById('open-lightbox');
     const lightbox = document.getElementById('lightbox');
-    const btn = document.getElementById('lightbox-button');
-    const span = document.getElementsByClassName('close')[0];
+    const closeBtn = document.getElementById('close-lightbox');
 
-    btn.onclick = function(e) {
+    openBtn.addEventListener('click', e => {
       e.preventDefault();
-      lightbox.style.display = "block";
-    }
+      lightbox.style.display = 'flex';
+    });
 
-    span.onclick = function() {
-      lightbox.style.display = "none";
-    }
+    closeBtn.addEventListener('click', () => {
+      lightbox.style.display = 'none';
+    });
 
-    window.onclick = function(event) {
-      if (event.target == lightbox) {
-        lightbox.style.display = "none";
+    window.addEventListener('click', e => {
+      if(e.target === lightbox) {
+        lightbox.style.display = 'none';
       }
+    });
+
+    // Wyrównanie szerokości linków desktop
+    function equalizeLinkWidth() {
+      const links = document.querySelectorAll('.link-box, .center-link-box, .promo-link-box, .lightbox-link-box');
+      let maxWidth = 0;
+      links.forEach(link => {
+        link.style.width = 'auto';
+        if(link.offsetWidth > maxWidth) maxWidth = link.offsetWidth;
+      });
+      links.forEach(link => link.style.width = maxWidth + 'px');
     }
+
+    window.addEventListener('load', equalizeLinkWidth);
+    window.addEventListener('resize', equalizeLinkWidth);
   </script>
 
 </body>
