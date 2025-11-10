@@ -4,35 +4,26 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Title & Meta -->
   <title>PulseMetaHub — The Heartbeat of Web3 Gaming | Domain for Sale</title>
-  <meta name="description" content="PulseMetaHub — The Heartbeat of Web3 Gaming. Premium domena Web3 Gaming dostępna na Afternic. Wesprzyj projekt PulseMetaHub już dziś.">
-  <meta name="keywords" content="PulseMetaHub, Web3 Gaming, blockchain gaming, domena na sprzedaż, Afternic, PulseMetaHub.com">
+  <meta name="description" content="PulseMetaHub — The Heartbeat of Web3 Gaming. Premium Web3 Gaming domain available on Afternic. Support the PulseMetaHub project today.">
+  <meta name="keywords" content="PulseMetaHub, Web3 Gaming, blockchain gaming, domain for sale, Afternic, PulseMetaHub.com">
   <meta name="robots" content="index, follow">
   <meta name="author" content="PulseMetaHub">
 
-  <!-- Canonical -->
   <link rel="canonical" href="https://pulsemetahub.com">
 
-  <!-- Open Graph -->
   <meta property="og:title" content="PulseMetaHub — The Heartbeat of Web3 Gaming">
-  <meta property="og:description" content="Kup domenę PulseMetaHub.com lub wesprzyj projekt Web3 Gaming.">
+  <meta property="og:description" content="Buy PulseMetaHub.com or support the Web3 Gaming project.">
   <meta property="og:image" content="https://raw.githubusercontent.com/RiccardoTorpedores/pulsemetahub/main/og-image.jpg">
   <meta property="og:url" content="https://pulsemetahub.com">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
 
-  <!-- Favicon -->
   <link rel="icon" href="favicon.png" type="image/png">
   <link rel="icon" href="favicon.ico" sizes="any">
-
-  <!-- Preload video -->
   <link rel="preload" as="video" href="https://raw.githubusercontent.com/RiccardoTorpedores/pulsemetahub/main/pulsemetahub1.mp4">
-
-  <!-- Theme color for mobile browsers -->
   <meta name="theme-color" content="#000000">
 
-  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-CZTYMJWQZQ"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -41,7 +32,6 @@
     gtag('config', 'G-CZTYMJWQZQ');
   </script>
 
-  <!-- Schema.org (Product) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -54,7 +44,7 @@
       "priceCurrency": "USD",
       "price": "600",
       "availability": "https://schema.org/InStock",
-    "url": "https://www.afternic.com/domain/pulsemetahub.com"
+      "url": "https://www.afternic.com/domain/pulsemetahub.com"
     }
   }
   </script>
@@ -62,8 +52,6 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-
- 
 
   <!-- Background Video -->
   <video id="bg-video" autoplay muted loop playsinline aria-hidden="true">
@@ -79,26 +67,52 @@
     <a href="https://zrzutka.pl/u3cdea" target="_blank" rel="noopener noreferrer">Support the Project</a>
   </div>
 
+  <!-- New About Button -->
+  <div class="about-link-box">
+    <a href="#" id="open-lightbox">About PulseMetaHub</a>
+  </div>
+
   <div class="promo-link-box">
     <a href="https://RiccardoTorpedores.github.io/pulsemetahub/video-background.html" target="_blank" rel="noopener noreferrer">Video Promotion</a>
   </div>
 
-  <!-- Social Icons (lazy loading, bez zmian w rozmiarze) -->
+  <!-- Social Icons -->
   <div class="social-icons">
-  <a href="https://www.youtube.com/@pawerynkowski9372" target="_blank" rel="noopener noreferrer">
-    <img src="yt_icon_red_digital.png" alt="Kanał YouTube PulseMetaHub" />
-  </a>
-  <a href="https://www.tiktok.com/@dykw3842iuyk" target="_blank" rel="noopener noreferrer">
-    <img src="TikTok_Symbol_Alternative_1.png" alt="TikTok Profile" />
-  </a>
-</div>
+    <a href="https://www.youtube.com/@pawerynkowski9372" target="_blank" rel="noopener noreferrer">
+      <img src="yt_icon_red_digital.png" alt="PulseMetaHub YouTube Channel" />
+    </a>
+    <a href="https://www.tiktok.com/@dykw3842iuyk" target="_blank" rel="noopener noreferrer">
+      <img src="TikTok_Symbol_Alternative_1.png" alt="TikTok Profile" />
+    </a>
+  </div>
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox" class="lightbox">
+    <div class="lightbox-content">
+      <span id="close-lightbox" class="close">&times;</span>
+      <h2>PulseMetaHub.com — The Heartbeat of Web3 Gaming</h2>
+      <p><strong>PulseMetaHub</strong> is a premium domain crafted for the next generation of gaming and blockchain ecosystems. The name blends the rhythm of innovation (“Pulse”), the metaverse (“Meta”), and connection (“Hub”).</p>
+      <p>Perfect for Web3 startups, NFT communities, or GameFi platforms seeking a strong and memorable identity. PulseMetaHub embodies creativity, technology, and the spirit of collaboration in decentralized gaming.</p>
+      <p>This unique domain is available for purchase on <a href="https://www.afternic.com/domain/pulsemetahub.com" target="_blank" rel="noopener noreferrer">Afternic</a>. Join the vision — be part of the next Web3 wave.</p>
+    </div>
+  </div>
+
+  <!-- JS Lightbox -->
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    document.getElementById('open-lightbox').onclick = (e) => {
+      e.preventDefault();
+      lightbox.style.display = 'block';
+    };
+    document.getElementById('close-lightbox').onclick = () => {
+      lightbox.style.display = 'none';
+    };
+    window.onclick = (e) => {
+      if (e.target === lightbox) {
+        lightbox.style.display = 'none';
+      }
+    };
+  </script>
 
 </body>
 </html>
-
-
-
-
-
-
-
