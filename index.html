@@ -23,13 +23,9 @@
   <meta name="twitter:card" content="summary_large_image">
 
   <!-- Favicon -->
-  <link rel="icon" href="favicon.png" type="image/png">
   <link rel="icon" href="favicon.ico" sizes="any">
 
-  <!-- Preload video -->
-  <link rel="preload" as="video" href="https://raw.githubusercontent.com/RiccardoTorpedores/pulsemetahub/main/pulsemetahub1.mp4">
-
-  <!-- Theme color for mobile browsers -->
+  <!-- Theme color -->
   <meta name="theme-color" content="#000000">
 
   <!-- Google Analytics -->
@@ -41,7 +37,7 @@
     gtag('config', 'G-CZTYMJWQZQ');
   </script>
 
-  <!-- Schema.org (Product) -->
+  <!-- Schema.org -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -59,12 +55,14 @@
   }
   </script>
 
+  <!-- Styles -->
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
 
   <!-- Background Video -->
-  <video id="bg-video" autoplay muted loop playsinline aria-hidden="true">
+  <video id="bg-video" autoplay muted loop playsinline aria-hidden="true" poster="fallback.jpg">
     <source src="https://raw.githubusercontent.com/RiccardoTorpedores/pulsemetahub/main/pulsemetahub1.mp4" type="video/mp4" />
   </video>
 
@@ -100,7 +98,7 @@
   <!-- Social Icons -->
   <div class="social-icons">
     <a href="https://www.youtube.com/@pawerynkowski9372" target="_blank" rel="noopener noreferrer">
-      <img src="yt_icon_red_digital.png" alt="Kanał YouTube PulseMetaHub" />
+      <img src="yt_icon_red_digital.png" alt="YouTube PulseMetaHub" />
     </a>
     <a href="https://www.tiktok.com/@dykw3842iuyk" target="_blank" rel="noopener noreferrer">
       <img src="TikTok_Symbol_Alternative_1.png" alt="TikTok Profile" />
@@ -117,28 +115,19 @@
       e.preventDefault();
       lightbox.style.display = 'flex';
     });
-
-    closeBtn.addEventListener('click', () => {
-      lightbox.style.display = 'none';
-    });
-
-    window.addEventListener('click', e => {
-      if(e.target === lightbox) {
-        lightbox.style.display = 'none';
-      }
-    });
+    closeBtn.addEventListener('click', () => lightbox.style.display = 'none');
+    window.addEventListener('click', e => { if (e.target === lightbox) lightbox.style.display = 'none'; });
 
     function equalizeLinkWidth() {
       const links = document.querySelectorAll('.link-box, .center-link-box, .promo-link-box, .lightbox-link-box');
       let maxWidth = 0;
       links.forEach(link => {
         link.style.width = 'auto';
-        if(link.offsetWidth > maxWidth) maxWidth = link.offsetWidth;
+        if (link.offsetWidth > maxWidth) maxWidth = link.offsetWidth;
       });
       links.forEach(link => link.style.width = maxWidth + 'px');
     }
-
-    window.addEventListener('load', equalizeLinkWidth);
+    window.addEventListener('load', () => setTimeout(equalizeLinkWidth, 100));
     window.addEventListener('resize', equalizeLinkWidth);
   </script>
 
