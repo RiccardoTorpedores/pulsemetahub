@@ -78,22 +78,7 @@
   </div>
 
   <div class="promo-link-box">
-    <a href="https://RiccardoTorpedores.github.io/pulsemetahub/video-background.html" target="_blank" rel="noopener noreferrer">Video Promotion</a>
-  </div>
-
-  <!-- Lightbox Button -->
-  <div class="lightbox-link-box">
-    <a href="#" id="open-lightbox">About PulseMetaHub</a>
-  </div>
-
-  <!-- Lightbox -->
-  <div id="lightbox" class="lightbox">
-    <div class="lightbox-content">
-      <span id="close-lightbox" class="close">&times;</span>
-      <h2>Welcome to PulseMetaHub</h2>
-      <p>PulseMetaHub is the central hub for Web3 gaming enthusiasts, providing insights, community events, and premium content related to blockchain gaming.</p>
-      <p>Support the project or purchase the domain to become part of the future of Web3 gaming. Explore the possibilities and join the PulseMetaHub community today.</p>
-    </div>
+    <a href="#" id="lightbox-trigger">Video Promotion</a>
   </div>
 
   <!-- Social Icons -->
@@ -106,14 +91,23 @@
     </a>
   </div>
 
-  <!-- JS in HTML -->
-  <script>
-    // Lightbox
-    const lightbox = document.getElementById('lightbox');
-    const openBtn = document.getElementById('open-lightbox');
-    const closeBtn = document.getElementById('close-lightbox');
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <div class="lightbox-content">
+      <span class="close">&times;</span>
+      <h2>PulseMetaHub Video Promotion</h2>
+      <p>Discover the heartbeat of Web3 gaming with PulseMetaHub. Explore cutting-edge blockchain gaming projects and join the next level of interactive experiences.</p>
+      <p>Support our community and stay updated with exclusive content. Your engagement helps shape the future of Web3 gaming.</p>
+    </div>
+  </div>
 
-    openBtn.addEventListener('click', function(e){
+  <script>
+    // Lightbox functionality
+    const lightbox = document.getElementById('lightbox');
+    const trigger = document.getElementById('lightbox-trigger');
+    const closeBtn = document.querySelector('.lightbox .close');
+
+    trigger.addEventListener('click', function(e){
       e.preventDefault();
       lightbox.style.display = 'flex';
     });
@@ -123,7 +117,7 @@
     });
 
     window.addEventListener('click', function(e){
-      if(e.target === lightbox){
+      if(e.target == lightbox){
         lightbox.style.display = 'none';
       }
     });
