@@ -165,24 +165,6 @@ html, body {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   }
 
-  /* 🔹 poprawiony kolor tekstu */
-  .link-box a,
-  .promo-link-box a,
-  .center-link-box a,
-  .lightbox-link-box a {
-    color: #000 !important;
-    text-decoration: none !important;
-    font-weight: bold !important;
-  }
-
-  .link-box a:hover,
-  .promo-link-box a:hover,
-  .center-link-box a:hover,
-  .lightbox-link-box a:hover {
-    color: #333 !important;
-    text-decoration: underline !important;
-  }
-
   .social-icons {
     bottom: 10px !important;
     left: 10px !important;
@@ -208,5 +190,25 @@ html, body {
   .lightbox-link-box {
     font-size: 16px !important;
     padding: 10px 15px !important;
+  }
+}
+
+/* ✅ FINALNA NADPISKA — wymusza czarny tekst na mobile */
+@media (max-width: 768px) {
+  .link-box a,
+  .center-link-box a,
+  .promo-link-box a,
+  .lightbox-link-box a {
+    color: #000 !important;
+    text-decoration: none !important;
+    font-weight: bold !important;
+  }
+
+  .link-box a:hover,
+  .center-link-box a:hover,
+  .promo-link-box a:hover,
+  .lightbox-link-box a:hover {
+    color: #333 !important;
+    text-decoration: underline !important;
   }
 }
