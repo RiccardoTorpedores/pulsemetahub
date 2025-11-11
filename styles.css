@@ -64,6 +64,7 @@ html, body {
 @media (max-width: 768px) {
   body { overflow-x: hidden; overflow-y: auto; min-height: 100vh; }
 
+  /* Pozycjonowanie video */
   #bg-video {
     position: absolute !important;
     width: 100% !important;
@@ -75,6 +76,7 @@ html, body {
     object-fit: cover !important;
   }
 
+  /* Linki na mobile - wyrównanie do białego tła pod wideo */
   .link-box,
   .center-link-box,
   .promo-link-box,
@@ -90,9 +92,10 @@ html, body {
     font-size: 18px !important;
     padding: 15px 20px !important;
     box-sizing: border-box;
-    background-color: #ffffff !important; /* Białe tło na mobile */
+    background-color: #ffffff !important; /* Tło białe dla linków na mobile */
   }
 
+  /* Ikony na dole */
   .social-icons {
     bottom: 10px !important;
     left: 0 !important;
