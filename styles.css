@@ -126,6 +126,7 @@ html, body {
 @media (max-width: 768px) {
   body { overflow-x: hidden; overflow-y: auto; min-height: 100vh; }
 
+  /* === VIDEO BACKGROUND === */
   #bg-video {
     position: absolute !important;
     width: 100% !important;
@@ -155,6 +156,7 @@ html, body {
     box-sizing: border-box;
     display: block !important;
     text-align: center !important;
+    background-color: white !important; /* Tło białe dla linków na mobile */
   }
 
   /* === SOCIAL ICONS === */
