@@ -95,6 +95,14 @@ html, body {
     background-color: #ffffff !important; /* Tło białe dla linków na mobile */
   }
 
+  /* Linki na białym tle, poprawka */
+  .link-box,
+  .center-link-box,
+  .promo-link-box,
+  .lightbox-link-box {
+    background-color: #ffffff !important; /* Białe tło pod wideo na mobile */
+  }
+
   /* Ikony na dole */
   .social-icons {
     bottom: 10px !important;
