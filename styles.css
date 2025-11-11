@@ -35,7 +35,6 @@ html, body {
   z-index: 2;
   width: auto;
   max-width: 400px;
-  margin: 10px auto;
 }
 
 .link-box a,
@@ -138,7 +137,7 @@ html, body {
     object-fit: cover !important;
   }
 
-  /* === LINK BOXES === */
+  /* === LINK BOXES - White Background Below Video on Mobile === */
   .link-box,
   .center-link-box,
   .promo-link-box,
@@ -154,9 +153,24 @@ html, body {
     font-size: 18px !important;
     padding: 15px 20px !important;
     box-sizing: border-box;
-    background-color: white !important; /* Tło białe pod linkami */
-    color: rgba(200, 200, 200, 0.7) !important; /* Szare, przezroczyste linki */
-    z-index: 10 !important; /* Zapewnienie, że nie będą nakładać się na inne elementy */
+    background-color: white !important; /* Tło białe dla kontenera */
+    z-index: 10 !important; /* Zapewnia, że linki nie będą zasłonięte przez inne elementy */
+  }
+
+  /* === MOBILE: Linki są szare i przezroczyste na białym tle */
+  .link-box a,
+  .promo-link-box a,
+  .center-link-box a,
+  .lightbox-link-box a {
+    color: rgba(200, 200, 200, 0.7) !important; /* Szare linki */
+  }
+
+  .link-box a:hover,
+  .promo-link-box a:hover,
+  .center-link-box a:hover,
+  .lightbox-link-box a:hover {
+    color: rgba(255, 255, 255, 0.9) !important; /* Prawie biały na hover */
+    text-decoration: underline;
   }
 
   /* === SOCIAL ICONS === */
