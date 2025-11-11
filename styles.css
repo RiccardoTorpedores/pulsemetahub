@@ -136,16 +136,12 @@ html, body {
     object-fit: cover !important;
   }
 
-  /* Move link boxes below the video */
+  /* Linki poniżej filmu na urządzeniach mobilnych */
   .link-box,
-  .center-link-box,
   .promo-link-box,
+  .center-link-box,
   .lightbox-link-box {
     position: relative !important;
-    top: auto !important;
-    left: auto !important;
-    bottom: auto !important;
-    transform: none !important;
     margin: 15px auto !important;
     width: 90% !important;
     max-width: 350px !important;
@@ -154,38 +150,38 @@ html, body {
     box-sizing: border-box;
   }
 
-  /* Move all link boxes below the video on mobile */
+  /* Przenosimy linki poniżej wideo */
   .link-box {
     position: absolute;
-    top: 65vh; /* Move below video */
+    top: 70vh; /* Ustawiamy poniżej wideo */
     left: 50%;
     transform: translateX(-50%);
   }
 
   .promo-link-box {
     position: absolute;
-    bottom: 15vh; /* Move below video */
+    bottom: 15vh; /* Ustawiamy poniżej wideo */
     left: 50%;
     transform: translateX(-50%);
   }
 
   .center-link-box {
     position: absolute;
-    top: 75vh; /* Move below video */
+    top: 75vh; /* Ustawiamy poniżej wideo */
     left: 50%;
     transform: translateX(-50%);
   }
 
   .lightbox-link-box {
     position: absolute;
-    top: 85vh; /* Move below video */
+    top: 85vh; /* Ustawiamy poniżej wideo */
     left: 50%;
     transform: translateX(-50%);
   }
 
   .social-icons {
     bottom: 10px !important;
-    left: 0 !important; /* zmiana na lewą stronę */
+    left: 0 !important;
     transform: none !important;
   }
 
