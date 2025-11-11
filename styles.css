@@ -54,13 +54,35 @@ html, body {
   text-decoration: underline;
 }
 
-/* === Desktop positions === */
-.link-box { position: fixed; top: 5%; left: 50%; transform: translateX(-50%); }
-.promo-link-box { position: fixed; bottom: 5%; left: 50%; transform: translateX(-50%); }
-.center-link-box { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); }
-.lightbox-link-box { position: fixed; top: 65%; left: 50%; transform: translateX(-50%); }
+/* === DESKTOP === */
 
-/* === Social icons === */
+/* Desktop positions */
+.link-box { 
+  position: fixed; 
+  top: 5%; 
+  left: 50%; 
+  transform: translateX(-50%); 
+}
+.promo-link-box { 
+  position: fixed; 
+  bottom: 5%; 
+  left: 50%; 
+  transform: translateX(-50%); 
+}
+.center-link-box { 
+  position: fixed; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+}
+.lightbox-link-box { 
+  position: fixed; 
+  top: 65%; 
+  left: 50%; 
+  transform: translateX(-50%); 
+}
+
+/* === SOCIAL ICONS === */
 .social-icons {
   position: fixed;
   bottom: 0 !important;
@@ -121,11 +143,17 @@ html, body {
   cursor: pointer;
 }
 
-/* === MOBILE FIXES === */
-@media (max-width: 768px) {
-  body { overflow-x: hidden; overflow-y: auto; min-height: 100vh; }
+/* === MOBILE === */
 
-  /* Fix video on mobile */
+/* Mobile Fixes */
+@media (max-width: 768px) {
+  body { 
+    overflow-x: hidden; 
+    overflow-y: auto; 
+    min-height: 100vh; 
+  }
+
+  /* Video Adjustments */
   #bg-video {
     position: absolute !important;
     width: 100% !important;
@@ -137,38 +165,40 @@ html, body {
     object-fit: cover !important;
   }
 
-  /* Mobile link boxes */
+  /* Link Boxes (moved under video) */
   .link-box,
   .center-link-box,
   .promo-link-box,
   .lightbox-link-box {
     position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    bottom: auto !important;
+    transform: none !important;
     margin: 15px auto !important;
     width: 90% !important;
     max-width: 350px !important;
     font-size: 18px !important;
     padding: 15px 20px !important;
     box-sizing: border-box;
-    top: auto !important;
-    left: auto !important;
-    bottom: auto !important;
-    transform: none !important;
   }
 
-  /* Move link boxes below video */
-  .link-box { top: auto !important; bottom: 20vh !important; }
-  .promo-link-box { bottom: 10vh !important; }
-  .center-link-box { top: 60% !important; transform: translate(-50%, -50%) !important; }
-
-  /* Social icons adjustments */
+  /* Social Icons (adjust position) */
   .social-icons {
     bottom: 10px !important;
-    left: 0 !important;
+    left: 0 !important; /* zmiana na lewą stronę */
     transform: none !important;
   }
 
-  .social-icons img { width: 50px !important; height: 50px !important; }
-  .social-icons img[alt="TikTok Profile"] { width: 35px !important; height: 35px !important; }
+  .social-icons img { 
+    width: 50px !important; 
+    height: 50px !important; 
+  }
+
+  .social-icons img[alt="TikTok Profile"] { 
+    width: 35px !important; 
+    height: 35px !important; 
+  }
 }
 
 @media (max-width: 480px) {
