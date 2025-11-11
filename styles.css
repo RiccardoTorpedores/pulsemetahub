@@ -54,13 +54,13 @@ html, body {
   text-decoration: underline;
 }
 
-/* Desktop positions */
+/* === Desktop positions === */
 .link-box { position: fixed; top: 5%; left: 50%; transform: translateX(-50%); }
 .promo-link-box { position: fixed; bottom: 5%; left: 50%; transform: translateX(-50%); }
 .center-link-box { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); }
 .lightbox-link-box { position: fixed; top: 65%; left: 50%; transform: translateX(-50%); }
 
-/* Social icons */
+/* === Social icons === */
 .social-icons {
   position: fixed;
   bottom: 0 !important;
@@ -125,6 +125,7 @@ html, body {
 @media (max-width: 768px) {
   body { overflow-x: hidden; overflow-y: auto; min-height: 100vh; }
 
+  /* Fix video on mobile */
   #bg-video {
     position: absolute !important;
     width: 100% !important;
@@ -154,11 +155,12 @@ html, body {
     transform: none !important;
   }
 
-  /* Move links below video */
-  .link-box { top: auto !important; bottom: 15vh !important; }
+  /* Move link boxes below video */
+  .link-box { top: auto !important; bottom: 20vh !important; }
   .promo-link-box { bottom: 10vh !important; }
   .center-link-box { top: 60% !important; transform: translate(-50%, -50%) !important; }
 
+  /* Social icons adjustments */
   .social-icons {
     bottom: 10px !important;
     left: 0 !important;
