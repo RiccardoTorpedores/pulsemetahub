@@ -1,0 +1,168 @@
+/* === WIDEO JAKO TŁO === */
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  object-fit: cover;
+  object-position: center center;
+}
+
+/* Wideo na stronie drugiej (video-background) */
+#bg-video-second {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  object-fit: cover;
+  object-position: center center;
+}
+
+/* === LINKI WSPÓLNE STYLE === */
+.link-box,
+.promo-link-box,
+.center-link-box {
+  background-color: rgba(169, 169, 169, 0.8);
+  padding: 20px 30px;
+  border-radius: 10px;
+  font-size: 22px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  z-index: 2;
+  width: auto;
+  max-width: 400px;
+}
+
+/* Linki - tekst */
+.link-box a,
+.promo-link-box a,
+.center-link-box a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.link-box a:hover,
+.promo-link-box a:hover,
+.center-link-box a:hover {
+  text-decoration: underline;
+}
+
+/* Pozycjonowanie linków na desktop */
+.link-box {
+  position: fixed;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.promo-link-box {
+  position: fixed;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.center-link-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Ikony social na dole po lewej */
+.social-icons {
+  position: fixed;
+  bottom: 0 !important;
+  left: 0 !important;
+  margin: 0 !important;
+  z-index: 3;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin: 0 10px;
+  vertical-align: middle;
+}
+
+.social-icons img {
+  width: 60px;
+  height: 60px;
+  transition: transform 0.2s ease; /* efekt hover opcjonalny */
+}
+
+/* === KOREKTA OPTYCZNA IKONY TIKTOK === */
+.social-icons img[alt="TikTok Profile"] {
+  width: 35px;  /* dopasowanie do YouTube optycznie */
+  height: 35px;
+}
+
+/* Opcjonalny efekt hover (lekki powiększenie ikon) */
+.social-icons img:hover {
+  transform: scale(1.05);
+}
+
+/* === RESPONSYWNOŚĆ MOBILE === */
+@media (max-width: 768px) {
+  /* Linki jeden pod drugim na górze */
+  .link-box,
+  .center-link-box,
+  .promo-link-box {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+    margin: 10px auto;
+    width: 80%;
+    max-width: 350px;
+    font-size: 18px;
+    padding: 15px 25px;
+  }
+
+  /* Wideo widoczne w całości pod linkami */
+  #bg-video,
+  #bg-video-second {
+    position: relative;
+    width: 100%;
+    height: auto;
+    max-height: 60vh;
+    object-fit: contain;
+    top: auto;
+    left: auto;
+    transform: none;
+    margin: 0 auto;
+    display: block;
+    z-index: 0;
+  }
+
+  /* Ikony social pozostają w tym samym miejscu */
+  .social-icons img {
+    width: 60px;
+    height: 60px;
+  }
+
+  /* Korekta TikTok dla mobile */
+  .social-icons img[alt="TikTok Profile"] {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+/* Dodatkowa responsywność dla małych ekranów */
+@media (max-width: 480px) {
+  .link-box,
+  .center-link-box,
+  .promo-link-box {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+}
+
+
