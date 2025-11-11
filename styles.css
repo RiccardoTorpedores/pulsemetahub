@@ -26,7 +26,7 @@ html, body {
 .promo-link-box,
 .center-link-box,
 .lightbox-link-box {
-  background-color: rgba(169, 169, 169, 0.8); /* szary, przezroczysty */
+  background-color: rgba(169, 169, 169, 0.8); /* szary półprzezroczysty */
   padding: 20px 30px;
   border-radius: 10px;
   font-size: 22px;
@@ -41,7 +41,7 @@ html, body {
 .promo-link-box a,
 .center-link-box a,
 .lightbox-link-box a {
-  color: rgba(200, 200, 200, 0.7); /* szary, przezroczysty */
+  color: rgba(200, 200, 200, 0.7); /* jaśniejszy, bardziej przeźroczysty szary */
   text-decoration: none;
   font-weight: bold;
 }
@@ -60,72 +60,10 @@ html, body {
 .center-link-box { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); }
 .lightbox-link-box { position: fixed; top: 65%; left: 50%; transform: translateX(-50%); }
 
-/* === SOCIAL ICONS === */
-.social-icons {
-  position: fixed;
-  bottom: 0 !important;
-  left: 0 !important;
-  margin: 0 !important;
-  z-index: 3;
-}
-
-.social-icons a {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-.social-icons img {
-  width: 60px;
-  height: 60px;
-  transition: transform 0.2s ease;
-}
-
-.social-icons img[alt="TikTok Profile"] {
-  width: 35px;
-  height: 35px;
-}
-
-.social-icons img:hover { transform: scale(1.05); }
-
-/* === LIGHTBOX === */
-.lightbox-overlay {
-  display: none;
-  position: fixed;
-  top:0; left:0; width:100%; height:100%;
-  background: rgba(0,0,0,0.8);
-  justify-content: center;
-  align-items: center;
-  z-index: 100;
-}
-
-.lightbox-content {
-  background: #fff;
-  padding: 30px;
-  border-radius: 12px;
-  max-width: 600px;
-  text-align: left;
-  font-family: Arial, sans-serif;
-  color: #000;
-  position: relative;
-}
-
-.lightbox-content h2 { margin-top: 0; }
-.lightbox-content p { margin-bottom: 15px; }
-
-.close-btn {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 28px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
 /* === MOBILE FIXES === */
 @media (max-width: 768px) {
   body { overflow-x: hidden; overflow-y: auto; min-height: 100vh; }
 
-  /* === VIDEO BACKGROUND === */
   #bg-video {
     position: absolute !important;
     width: 100% !important;
@@ -137,7 +75,6 @@ html, body {
     object-fit: cover !important;
   }
 
-  /* === LINK BOXES - White Background Below Video on Mobile === */
   .link-box,
   .center-link-box,
   .promo-link-box,
@@ -153,27 +90,9 @@ html, body {
     font-size: 18px !important;
     padding: 15px 20px !important;
     box-sizing: border-box;
-    background-color: white !important; /* Tło białe dla kontenera */
-    z-index: 10 !important; /* Zapewnia, że linki nie będą zasłonięte przez inne elementy */
+    background-color: #ffffff !important; /* Białe tło na mobile */
   }
 
-  /* === MOBILE: Linki są szare i przezroczyste na białym tle */
-  .link-box a,
-  .promo-link-box a,
-  .center-link-box a,
-  .lightbox-link-box a {
-    color: rgba(200, 200, 200, 0.7) !important; /* Szare linki */
-  }
-
-  .link-box a:hover,
-  .promo-link-box a:hover,
-  .center-link-box a:hover,
-  .lightbox-link-box a:hover {
-    color: rgba(255, 255, 255, 0.9) !important; /* Prawie biały na hover */
-    text-decoration: underline;
-  }
-
-  /* === SOCIAL ICONS === */
   .social-icons {
     bottom: 10px !important;
     left: 0 !important;
@@ -184,6 +103,7 @@ html, body {
   .social-icons img[alt="TikTok Profile"] { width: 35px !important; height: 35px !important; }
 }
 
+/* === MOBILE SPECIFIC LINK STYLES === */
 @media (max-width: 480px) {
   .link-box,
   .center-link-box,
