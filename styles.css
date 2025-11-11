@@ -160,21 +160,21 @@ html, body {
 
   .promo-link-box {
     position: absolute;
-    bottom: 15vh; /* Ustawiamy poniżej wideo */
+    top: 77vh; /* Ustawiamy poniżej wideo */
     left: 50%;
     transform: translateX(-50%);
   }
 
   .center-link-box {
     position: absolute;
-    top: 75vh; /* Ustawiamy poniżej wideo */
+    top: 84vh; /* Ustawiamy poniżej wideo */
     left: 50%;
     transform: translateX(-50%);
   }
 
   .lightbox-link-box {
     position: absolute;
-    top: 85vh; /* Ustawiamy poniżej wideo */
+    top: 91vh; /* Ustawiamy poniżej wideo */
     left: 50%;
     transform: translateX(-50%);
   }
