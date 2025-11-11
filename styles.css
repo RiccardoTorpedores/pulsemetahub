@@ -3,7 +3,7 @@ html, body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow-x: hidden;
+  overflow-x: hidden; /* zapobiega przesuwaniu strony w poziomie */
   width: 100%;
   height: 100%;
 }
@@ -157,6 +157,7 @@ html, body {
     display: block !important;
     text-align: center !important;
     background-color: white !important; /* Tło białe dla linków na mobile */
+    z-index: 10 !important; /* Zapewnienie, że nie będą nakładać się na inne elementy */
   }
 
   /* === SOCIAL ICONS === */
