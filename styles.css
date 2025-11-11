@@ -26,7 +26,7 @@ html, body {
 .promo-link-box,
 .center-link-box,
 .lightbox-link-box {
-  background-color: rgba(169, 169, 169, 0.8);
+  background-color: rgba(169, 169, 169, 0.8); /* szary, przezroczysty */
   padding: 20px 30px;
   border-radius: 10px;
   font-size: 22px;
@@ -42,7 +42,7 @@ html, body {
 .promo-link-box a,
 .center-link-box a,
 .lightbox-link-box a {
-  color: rgba(200, 200, 200, 0.7);
+  color: rgba(200, 200, 200, 0.7); /* szary, przezroczysty */
   text-decoration: none;
   font-weight: bold;
 }
@@ -51,7 +51,7 @@ html, body {
 .promo-link-box a:hover,
 .center-link-box a:hover,
 .lightbox-link-box a:hover {
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.9); /* prawie biały na hover */
   text-decoration: underline;
 }
 
@@ -154,9 +154,8 @@ html, body {
     font-size: 18px !important;
     padding: 15px 20px !important;
     box-sizing: border-box;
-    display: block !important;
-    text-align: center !important;
-    background-color: white !important; /* Tło białe dla linków na mobile */
+    background-color: white !important; /* Tło białe pod linkami */
+    color: rgba(200, 200, 200, 0.7) !important; /* Szare, przezroczyste linki */
     z-index: 10 !important; /* Zapewnienie, że nie będą nakładać się na inne elementy */
   }
 
