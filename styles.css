@@ -136,6 +136,7 @@ html, body {
     object-fit: cover !important;
   }
 
+  /* Move link boxes below the video */
   .link-box,
   .center-link-box,
   .promo-link-box,
@@ -153,16 +154,33 @@ html, body {
     box-sizing: border-box;
   }
 
-  /* Now move the link boxes under the video on mobile */
-  .link-box,
-  .center-link-box,
-  .promo-link-box,
-  .lightbox-link-box {
+  /* Move all link boxes below the video on mobile */
+  .link-box {
     position: absolute;
-    top: 60vh; /* Przesuń je poniżej filmu */
+    top: 65vh; /* Move below video */
     left: 50%;
     transform: translateX(-50%);
-    margin: 15px auto !important;
+  }
+
+  .promo-link-box {
+    position: absolute;
+    bottom: 15vh; /* Move below video */
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .center-link-box {
+    position: absolute;
+    top: 75vh; /* Move below video */
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .lightbox-link-box {
+    position: absolute;
+    top: 85vh; /* Move below video */
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   .social-icons {
