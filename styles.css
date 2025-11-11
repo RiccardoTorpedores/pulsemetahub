@@ -3,7 +3,7 @@ html, body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow-x: hidden; /* zapobiega przesuwaniu strony w poziomie */
+  overflow-x: hidden;
   width: 100%;
   height: 100%;
 }
@@ -35,13 +35,14 @@ html, body {
   z-index: 2;
   width: auto;
   max-width: 400px;
+  margin: 10px auto;
 }
 
 .link-box a,
 .promo-link-box a,
 .center-link-box a,
 .lightbox-link-box a {
-  color: rgba(200, 200, 200, 0.7); /* jaśniejszy, bardziej przeźroczysty szary */
+  color: rgba(200, 200, 200, 0.7);
   text-decoration: none;
   font-weight: bold;
 }
@@ -50,37 +51,15 @@ html, body {
 .promo-link-box a:hover,
 .center-link-box a:hover,
 .lightbox-link-box a:hover {
-  color: rgba(255, 255, 255, 0.9); /* prawie biały na hover */
+  color: rgba(255, 255, 255, 0.9);
   text-decoration: underline;
 }
 
-/* === DESKTOP === */
-
-/* Desktop positions */
-.link-box { 
-  position: fixed; 
-  top: 5%; 
-  left: 50%; 
-  transform: translateX(-50%); 
-}
-.promo-link-box { 
-  position: fixed; 
-  bottom: 5%; 
-  left: 50%; 
-  transform: translateX(-50%); 
-}
-.center-link-box { 
-  position: fixed; 
-  top: 50%; 
-  left: 50%; 
-  transform: translate(-50%, -50%); 
-}
-.lightbox-link-box { 
-  position: fixed; 
-  top: 65%; 
-  left: 50%; 
-  transform: translateX(-50%); 
-}
+/* === DESKTOP POSITIONS === */
+.link-box { position: fixed; top: 5%; left: 50%; transform: translateX(-50%); }
+.promo-link-box { position: fixed; bottom: 5%; left: 50%; transform: translateX(-50%); }
+.center-link-box { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+.lightbox-link-box { position: fixed; top: 65%; left: 50%; transform: translateX(-50%); }
 
 /* === SOCIAL ICONS === */
 .social-icons {
@@ -143,17 +122,10 @@ html, body {
   cursor: pointer;
 }
 
-/* === MOBILE === */
-
-/* Mobile Fixes */
+/* === MOBILE FIXES === */
 @media (max-width: 768px) {
-  body { 
-    overflow-x: hidden; 
-    overflow-y: auto; 
-    min-height: 100vh; 
-  }
+  body { overflow-x: hidden; overflow-y: auto; min-height: 100vh; }
 
-  /* Video Adjustments */
   #bg-video {
     position: absolute !important;
     width: 100% !important;
@@ -165,7 +137,7 @@ html, body {
     object-fit: cover !important;
   }
 
-  /* Link Boxes (moved under video) */
+  /* === LINK BOXES === */
   .link-box,
   .center-link-box,
   .promo-link-box,
@@ -181,24 +153,19 @@ html, body {
     font-size: 18px !important;
     padding: 15px 20px !important;
     box-sizing: border-box;
+    display: block !important;
+    text-align: center !important;
   }
 
-  /* Social Icons (adjust position) */
+  /* === SOCIAL ICONS === */
   .social-icons {
     bottom: 10px !important;
-    left: 0 !important; /* zmiana na lewą stronę */
+    left: 0 !important;
     transform: none !important;
   }
 
-  .social-icons img { 
-    width: 50px !important; 
-    height: 50px !important; 
-  }
-
-  .social-icons img[alt="TikTok Profile"] { 
-    width: 35px !important; 
-    height: 35px !important; 
-  }
+  .social-icons img { width: 50px !important; height: 50px !important; }
+  .social-icons img[alt="TikTok Profile"] { width: 35px !important; height: 35px !important; }
 }
 
 @media (max-width: 480px) {
