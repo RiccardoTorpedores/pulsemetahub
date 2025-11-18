@@ -1,0 +1,22 @@
+
+/* Pozycjonowanie linków na desktop */
+.link-box {
+  position: fixed;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.promo-link-box {
+  position: fixed;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.center-link-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

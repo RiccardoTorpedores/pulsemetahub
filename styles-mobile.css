@@ -1,0 +1,53 @@
+
+/* Responsywność mobile */
+@media (max-width: 768px) {
+  .link-box,
+  .center-link-box,
+  .promo-link-box {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+    margin: 10px auto;
+    width: 80%;
+    max-width: 350px;
+    font-size: 18px;
+    padding: 15px 25px;
+  }
+
+  #bg-video,
+  #bg-video-second {
+    position: relative;
+    width: 100%;
+    height: auto;
+    max-height: 60vh;
+    object-fit: contain;
+    top: auto;
+    left: auto;
+    transform: none;
+    margin: 0 auto;
+    display: block;
+    z-index: 0;
+  }
+
+  .social-icons img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .social-icons img[alt="TikTok Profile"] {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+/* Dodatkowa responsywność dla małych ekranów */
+@media (max-width: 480px) {
+  .link-box,
+  .center-link-box,
+  .promo-link-box {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+}
