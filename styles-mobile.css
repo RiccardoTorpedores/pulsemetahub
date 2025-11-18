@@ -1,6 +1,5 @@
-
-/* Responsywność mobile */
 @media (max-width: 768px) {
+  /* Linki jeden pod drugim na górze */
   .link-box,
   .center-link-box,
   .promo-link-box {
@@ -16,6 +15,7 @@
     padding: 15px 25px;
   }
 
+  /* Wideo widoczne w całości pod linkami */
   #bg-video,
   #bg-video-second {
     position: relative;
@@ -31,18 +31,19 @@
     z-index: 0;
   }
 
+  /* Ikony social */
   .social-icons img {
     width: 60px;
     height: 60px;
   }
 
+  /* Korekta TikTok na mobile */
   .social-icons img[alt="TikTok Profile"] {
     width: 35px;
     height: 35px;
   }
 }
 
-/* Dodatkowa responsywność dla małych ekranów */
 @media (max-width: 480px) {
   .link-box,
   .center-link-box,
