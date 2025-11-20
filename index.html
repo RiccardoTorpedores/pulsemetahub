@@ -31,6 +31,17 @@
   <!-- Theme color for mobile browsers -->
   <meta name="theme-color" content="#000000">
 
+  <!-- Block internal traffic in GA4 -->
+  <script>
+    // Sprawdź czy lokalnie ustawiono flagę "internalTraffic"
+    if (!localStorage.getItem('internalTraffic')) {
+      localStorage.setItem('internalTraffic', 'true');
+      window['ga-disable-G-CZTYMJWQZQ'] = true; // Twój GA4 Measurement ID
+    } else {
+      window['ga-disable-G-CZTYMJWQZQ'] = true;
+    }
+  </script>
+
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-CZTYMJWQZQ"></script>
   <script>
