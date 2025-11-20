@@ -85,3 +85,18 @@
 .social-icons img:hover {
   transform: scale(1.05);
 }
+
+/* === HypeStat widget === */
+.hypestat-desktop {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 9999;
+}
+
+/* Ukryj widget na mobile */
+@media (max-width: 768px) {
+  .hypestat-desktop {
+    display: none;
+  }
+}
