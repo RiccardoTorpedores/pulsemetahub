@@ -31,17 +31,6 @@
   <!-- Theme color for mobile browsers -->
   <meta name="theme-color" content="#000000">
 
-  <!-- Block internal traffic in GA4 -->
-  <script>
-    // Sprawdź czy lokalnie ustawiono flagę "internalTraffic"
-    if (!localStorage.getItem('internalTraffic')) {
-      localStorage.setItem('internalTraffic', 'true');
-      window['ga-disable-G-CZTYMJWQZQ'] = true; // Twój GA4 Measurement ID
-    } else {
-      window['ga-disable-G-CZTYMJWQZQ'] = true;
-    }
-  </script>
-
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-CZTYMJWQZQ"></script>
   <script>
@@ -51,35 +40,15 @@
     gtag('config', 'G-CZTYMJWQZQ');
   </script>
 
-  <!-- Schema.org (Product) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    "name": "PulseMetaHub.com",
-    "description": "Premium Web3 Gaming domain for sale.",
-    "url": "https://pulsemetahub.com",
-    "image": "og-image.jpg",
-    "offers": {
-      "@type": "Offer",
-      "url": "https://www.afternic.com/domain/pulsemetahub.com",
-      "price": "1000",
-      "priceCurrency": "USD",
-      "availability": "https://schema.org/InStock"
-    }
-  }
-  </script>
-
   <!-- Stylesheets -->
   <link rel="stylesheet" href="styles-base.css">
   <link rel="stylesheet" href="styles-desktop.css" media="screen and (min-width: 769px)">
   <link rel="stylesheet" href="styles-mobile.css" media="screen and (max-width: 768px)">
-
 </head>
 <body>
 
-  <!-- HypeStat Widget – widoczny tylko na desktop -->
-  <div class="hypestat-desktop">
+  <!-- HypeStat Widget – ukryty -->
+  <div class="hypestat-desktop" style="display:none;">
     <a href="https://hypestat.com/info/pulsemetahub.com" rel="nofollow" title="Powered by HypeStat.com" target="_blank">
       <img src="https://hypestat.com/widget.php?w=200&h=210&pl=10&pt=20&c1=1f1f1f&c2=394457&gd=vertical&f=arial&fs=9&fc=e3e3e3&f2=arial&fs2=10&fc2=e89b68&bc=1a1a1a&wt=gbsdcaryw&url=pulsemetahub.com"
            alt="pulsemetahub.com" />
@@ -91,17 +60,17 @@
     <source src="https://raw.githubusercontent.com/RiccardoTorpedores/pulsemetahub/main/pulsemetahub1.mp4" type="video/mp4" />
   </video>
 
-  <!-- Links -->
-  <div class="link-box">
-    <a href="https://www.afternic.com/domain/pulsemetahub.com" target="_blank" rel="noopener noreferrer">Buy on Afternic</a>
-  </div>
-
-  <div class="center-link-box">
-    <a href="https://zrzutka.pl/u3cdea" target="_blank" rel="noopener noreferrer">Support the Project</a>
-  </div>
-
-  <div class="promo-link-box">
-    <a href="https://RiccardoTorpedores.github.io/pulsemetahub/video-background.html" target="_blank" rel="noopener noreferrer">Video Promotion</a>
+  <!-- Links Wrapper (Desktop) -->
+  <div class="links-desktop-wrapper">
+    <div class="link-box">
+      <a href="https://www.afternic.com/domain/pulsemetahub.com" target="_blank" rel="noopener noreferrer">Buy on Afternic</a>
+    </div>
+    <div class="center-link-box">
+      <a href="https://zrzutka.pl/u3cdea" target="_blank" rel="noopener noreferrer">Support the Project</a>
+    </div>
+    <div class="promo-link-box">
+      <a href="https://RiccardoTorpedores.github.io/pulsemetahub/video-background.html" target="_blank" rel="noopener noreferrer">Video Promotion</a>
+    </div>
   </div>
 
   <!-- Social Icons -->
