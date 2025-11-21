@@ -2,38 +2,44 @@
 /*  STYLES DESKTOP - PulseMetaHub  */
 /* =============================== */
 
-/* --- Linki na desktop --- */
-.link-box,
-.center-link-box,
-.promo-link-box {
-  position: static !important;   /* wyłącza fixed */
-  transform: none !important;
-  margin: 20px auto !important;  /* odstęp między linkami */
-  display: block;
-  text-align: center;
+/* --- Ustawienie linków w kolumnę na desktop --- */
+@media (min-width: 769px) {
+  /* Kontener body w kolumnę */
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* odstęp między linkami */
+  }
+
+  /* Boxy linków - jednakowa szerokość według najdłuższego */
+  .link-box,
+  .center-link-box,
+  .promo-link-box {
+    position: static !important;
+    transform: none !important;
+    display: inline-block;       /* potrzebne dla width: max-content */
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px 30px;
+    font-size: 22px;
+    border-radius: 10px;
+    background-color: rgba(169,169,169,0.8);
+    font-family: Arial, sans-serif;
+    z-index: 2;
+
+    width: max-content;          /* dopasowanie do najdłuższego tekstu */
+    min-width: 0;                /* zabezpieczenie przed dziwnym zachowaniem */
+  }
+
+  /* Ukrycie widgetu HypeStat na desktop */
+  .hypestat-desktop {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    width: 0 !important;
+    height: 0 !important;
+    overflow: hidden !important;
+    pointer-events: none !important;
+  }
 }
-
-/* --- Flex kontener dla linków --- */
-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-}
-
-/* --- HypeStat widget ukryty --- */
-.hypestat-desktop {
-  display: none !important;
-  visibility: hidden !important;
-  opacity: 0 !important;
-  width: 0 !important;
-  height: 0 !important;
-  overflow: hidden !important;
-  pointer-events: none !important;
-}
-
-/* --- Możesz zostawić poniżej inne style desktopowe, jeśli masz --- */
-/* np. style dodatkowe dla linków, ikon social itd. */
-
-/* --- Jeśli chcesz przywrócić wcześniejsze ustawienia fixed, 
-     wystarczy usunąć sekcję powyżej z position: static --- */
