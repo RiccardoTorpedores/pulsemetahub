@@ -39,7 +39,6 @@
   max-width: 400px;
 }
 
-/* Linki - tekst */
 .link-box a,
 .promo-link-box a,
 .center-link-box a {
@@ -54,7 +53,7 @@
   text-decoration: underline;
 }
 
-/* Ikony social na dole po lewej */
+/* === IKONY SOCIAL === */
 .social-icons {
   position: fixed;
   bottom: 0 !important;
@@ -75,28 +74,30 @@
   transition: transform 0.2s ease;
 }
 
-/* === KOREKTA OPTYCZNA IKONY TIKTOK === */
+/* Korekta TikTok */
 .social-icons img[alt="TikTok Profile"] {
   width: 35px;
   height: 35px;
 }
 
-/* Efekt hover */
 .social-icons img:hover {
   transform: scale(1.05);
 }
 
-/* === HypeStat widget === */
+/* === HypeStat widget (UKRYTY NA DESKTOP) === */
 .hypestat-desktop {
-  position: fixed;
-  top: 10px;
-  left: 10px;
-  z-index: 9999;
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  width: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+  pointer-events: none !important;
 }
 
-/* Ukryj widget na mobile */
+/* Ukryty także na mobile — zachowanie bez zmian */
 @media (max-width: 768px) {
   .hypestat-desktop {
-    display: none;
+    display: none !important;
   }
 }
