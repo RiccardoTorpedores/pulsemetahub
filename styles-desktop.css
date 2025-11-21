@@ -1,22 +1,23 @@
 @media (min-width: 769px) {
 
-  /* --- Kontener linków w kolumnę --- */
+  /* --- Kontener linków w rzędzie --- */
   .links-desktop-wrapper {
-    display: table;
-    margin: 20px auto; /* centrowanie */
+    display: flex;
+    justify-content: center; /* wyśrodkowanie wszystkich linków */
+    gap: 20px; /* odstęp między linkami */
+    margin: 20px 0; /* margines od góry i dołu */
   }
 
-  /* --- Każdy link jako wiersz tabeli - wszystkie tej samej szerokości --- */
+  /* --- Każdy link ma jednakową szerokość --- */
   .link-box,
   .center-link-box,
   .promo-link-box {
-    display: table-row;
-    text-align: center;
-    margin: 5px 0;  /* odstęp między linkami */
+    flex: 1; /* wszystkie linki mają równą szerokość */
+    text-align: center; /* wyśrodkowanie tekstu w linku */
     padding: 20px 30px;
     font-size: 22px;
     border-radius: 10px;
-    background-color: rgba(169,169,169,0.8);
+    background-color: rgba(169, 169, 169, 0.8);
     font-family: Arial, sans-serif;
     z-index: 2;
   }
