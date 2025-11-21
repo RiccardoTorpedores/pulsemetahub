@@ -1,21 +1,39 @@
-/* Pozycjonowanie linków na desktop */
-.link-box {
-  position: fixed;
-  top: 5%;
-  left: 50%;
-  transform: translateX(-50%);
-}
+/* =============================== */
+/*  STYLES DESKTOP - PulseMetaHub  */
+/* =============================== */
 
+/* --- Linki na desktop --- */
+.link-box,
+.center-link-box,
 .promo-link-box {
-  position: fixed;
-  bottom: 5%;
-  left: 50%;
-  transform: translateX(-50%);
+  position: static !important;   /* wyłącza fixed */
+  transform: none !important;
+  margin: 20px auto !important;  /* odstęp między linkami */
+  display: block;
+  text-align: center;
 }
 
-.center-link-box {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+/* --- Flex kontener dla linków --- */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
+
+/* --- HypeStat widget ukryty --- */
+.hypestat-desktop {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  width: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+  pointer-events: none !important;
+}
+
+/* --- Możesz zostawić poniżej inne style desktopowe, jeśli masz --- */
+/* np. style dodatkowe dla linków, ikon social itd. */
+
+/* --- Jeśli chcesz przywrócić wcześniejsze ustawienia fixed, 
+     wystarczy usunąć sekcję powyżej z position: static --- */
