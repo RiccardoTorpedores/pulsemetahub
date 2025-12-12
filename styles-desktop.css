@@ -63,8 +63,8 @@
     position: fixed;
     bottom: 20px;
     right: 20px;
-    width: 7cm;
-    height: 7cm;
+    width: 7cm;   /* zmieniona szerokość */
+    height: 4cm;  /* zmieniona wysokość */
     background-color: rgba(169, 169, 169, 0.5); /* tło jak linki */
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
