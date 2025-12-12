@@ -81,17 +81,19 @@
     text-decoration: underline;
   }
 
-  /* === Social Icons === */
+  /* === Social Icons — LEWY DOLNY RÓG === */
   .social-icons {
-    position: relative;
-    text-align: center;
-    margin: 20px auto 10px auto;
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    margin: 0;
+    text-align: left;
     z-index: 2;
   }
 
   .social-icons a {
     display: inline-block;
-    margin: 0 5px;
+    margin: 0 5px 5px 0;
     vertical-align: middle;
   }
 
@@ -132,9 +134,3 @@
       font-size: 14px;
     }
   }
-
-  /* === Ukrycie HypeStat na mobile === */
-  .hypestat-desktop {
-    display: none !important;
-  }
-}
