@@ -1,5 +1,6 @@
 @media (max-width: 768px) {
-  /* Linki jeden pod drugim na górze */
+
+  /* === Linki — jeden pod drugim === */
   .link-box,
   .center-link-box,
   .promo-link-box {
@@ -13,42 +14,91 @@
     max-width: 350px;
     font-size: 18px;
     padding: 15px 25px;
+    z-index: 2;
+    text-align: center;
   }
 
-  /* Wideo widoczne w całości pod linkami */
-  #bg-video,
-  #bg-video-second {
-    position: relative;
+  .link-box a,
+  .center-link-box a,
+  .promo-link-box a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .link-box a:hover,
+  .center-link-box a:hover,
+  .promo-link-box a:hover {
+    text-decoration: underline;
+  }
+
+  /* === Wideo — MOBILE scrollable === */
+  #bg-video {
+    position: absolute !important;
     width: 100%;
     height: auto;
     max-height: 60vh;
-    object-fit: contain;
-    top: auto;
-    left: auto;
+    object-fit: cover;
+    top: 0;
+    left: 0;
     transform: none;
     margin: 0 auto;
     display: block;
-    z-index: 0;
+    z-index: -1;
   }
 
-  /* Ikony social */
+  /* === Social Icons === */
   .social-icons img {
     width: 60px;
     height: 60px;
+    margin: 0 5px;
   }
 
-  /* Korekta TikTok na mobile */
   .social-icons img[alt="TikTok Profile"] {
     width: 35px;
     height: 35px;
   }
-}
 
-@media (max-width: 480px) {
-  .link-box,
-  .center-link-box,
-  .promo-link-box {
+  /* === Info Section — scrollable content === */
+  .info-section-mobile {
+    position: relative;
+    margin-top: 40px;
+    background: rgba(0,0,0,0.85);
+    color: white;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+    z-index: 2;
+  }
+
+  .info-section-mobile h2 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .info-section-mobile p {
     font-size: 16px;
-    padding: 10px 20px;
+    max-width: 700px;
+    margin: 0 auto 20px auto;
+    text-align: center;
+    line-height: 1.5;
+  }
+
+  /* Najmniejsze ekrany */
+  @media (max-width: 480px) {
+    .link-box,
+    .center-link-box,
+    .promo-link-box {
+      font-size: 16px;
+      padding: 10px 20px;
+    }
+
+    .info-section-mobile h2 {
+      font-size: 20px;
+    }
+
+    .info-section-mobile p {
+      font-size: 14px;
+    }
   }
 }
