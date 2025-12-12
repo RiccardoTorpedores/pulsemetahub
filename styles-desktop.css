@@ -63,8 +63,8 @@
     position: fixed;
     bottom: 20px;
     right: 20px;
-    width: 6cm;
-    height: 6cm;
+    width: 8cm;
+    height: 8cm;
     background-color: rgba(169, 169, 169, 0.5); /* tło jak linki */
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
@@ -74,7 +74,7 @@
     text-align: center;
     font-family: Arial, sans-serif;
     font-size: 14px;
-    color: #000;
+    color: #fff; /* zmiana koloru tekstu na biały */
     z-index: 3; /* nad wideo i linkami */
     padding: 10px;
   }
