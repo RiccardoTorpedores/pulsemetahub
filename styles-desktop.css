@@ -38,7 +38,7 @@
     padding: 20px 30px;
     font-size: 22px;
     border-radius: 10px;
-    background-color: rgba(169, 169, 169, 0.5);
+    background-color: rgba(169, 169, 169, 0.5); /* tło i przezroczystość */
     font-family: Arial, sans-serif;
     z-index: 2;
   }
@@ -63,10 +63,10 @@
     position: fixed;
     bottom: 20px;
     right: 20px;
-    width: 5cm;
-    height: 5cm;
-    background: rgba(220, 220, 220, 0.9);
-    border-radius: 8px;
+    width: 6cm;
+    height: 6cm;
+    background-color: rgba(169, 169, 169, 0.5); /* tło jak linki */
+    border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     flex-direction: column;
     align-items: center;
