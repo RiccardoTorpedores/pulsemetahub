@@ -1,24 +1,32 @@
 @media (max-width: 768px) {
 
+  /* === Wideo — MOBILE scrollable === */
+  #bg-video,
+  #bg-video-second {
+    position: relative; /* naturalny flow, scroll */
+    width: 100%;
+    height: auto;
+    max-height: 60vh;
+    object-fit: cover;
+    margin: 0 auto;
+    display: block;
+    z-index: -1;
+  }
+
   /* === Linki — jeden pod drugim === */
   .link-box,
   .center-link-box,
   .promo-link-box {
-    position: relative !important;
-    top: auto !important;
-    left: auto !important;
-    bottom: auto !important;
-    transform: none !important;
     margin: 10px auto;
     width: 80%;
     max-width: 350px;
     font-size: 18px;
     padding: 15px 25px;
-    z-index: 2;
     text-align: center;
     background-color: rgba(169, 169, 169, 0.5);
     border-radius: 10px;
     font-family: Arial, sans-serif;
+    z-index: 2;
   }
 
   .link-box a,
@@ -35,30 +43,12 @@
     text-decoration: underline;
   }
 
-  /* === Wideo — MOBILE scrollable === */
-  #bg-video,
-  #bg-video-second {
-    position: absolute !important;
-    width: 100%;
-    height: auto;
-    max-height: 60vh;
-    object-fit: cover;
-    top: 0;
-    left: 0;
-    transform: none;
-    margin: 0 auto;
-    display: block;
-    z-index: -1;
-  }
-
   /* === Social Icons === */
   .social-icons {
-    position: relative !important;
-    bottom: auto !important;
-    left: auto !important;
-    margin: 10px auto;
+    position: relative;
     text-align: center;
-    z-index: 3;
+    margin: 20px auto 10px auto;
+    z-index: 2;
   }
 
   .social-icons a {
@@ -82,22 +72,21 @@
     transform: scale(1.05);
   }
 
-  /* === Info Section — scrollable content === */
+  /* === Info Section — pod linkami === */
   .info-section-mobile {
-    position: relative;
-    margin: 40px auto;
-    padding: 30px 20px;
+    margin: 30px auto;
+    padding: 25px 20px;
     max-width: 90%;
     background: rgba(220, 220, 220, 0.9); /* jasne szare tło */
-    color: #000000; /* czarny tekst dla kontrastu */
+    color: #000;
     font-family: Arial, sans-serif;
-    border-radius: 12px; /* lekko zaokrąglone rogi */
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3); /* lekki cień dla efektu „podniesienia” */
-    text-align: center; /* wyśrodkowanie tekstu poziome */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; /* wyśrodkowanie pionowe w sekcji */
+    justify-content: center; /* tekst wyśrodkowany w ramce */
     z-index: 2;
   }
 
