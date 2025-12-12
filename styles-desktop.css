@@ -63,19 +63,20 @@
     position: fixed;
     bottom: 20px;
     right: 20px;
-    width: 4cm;
-    height: 4cm;
+    width: 5cm;
+    height: 5cm;
     background: rgba(220, 220, 220, 0.9);
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    align-items: center; /* wyśrodkowanie pionowe tekstu */
-    justify-content: center; /* wyśrodkowanie poziome */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     font-family: Arial, sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     color: #000;
     z-index: 3; /* nad wideo i linkami */
-    padding: 5px;
+    padding: 10px;
   }
 
   .info-section-mobile h2 {
@@ -84,7 +85,9 @@
   }
 
   .info-section-mobile p {
-    display: none; /* ukrycie dodatkowego opisu na desktop */
+    display: block;   /* pokazuje opis na desktop */
+    font-size: 14px;
+    margin: 5px 0 0 0;
   }
 
   /* --- Social icons --- */
