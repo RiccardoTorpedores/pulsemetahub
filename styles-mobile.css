@@ -32,9 +32,12 @@
     z-index: 2;
   }
 
+  /* === H1 i H2 – te same style === */
+  .info-section-mobile h1,
   .info-section-mobile h2 {
     font-size: 24px;
     margin-bottom: 15px;
+    font-weight: 600;
   }
 
   .info-section-mobile p {
@@ -126,6 +129,7 @@
       padding: 20px 15px;
     }
 
+    .info-section-mobile h1,
     .info-section-mobile h2 {
       font-size: 20px;
     }
@@ -134,3 +138,4 @@
       font-size: 14px;
     }
   }
+}
