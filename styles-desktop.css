@@ -79,12 +79,20 @@
     padding: 10px;
   }
 
-  /* --- H1 i H2 – te same style --- */
-  .info-section-mobile h1,
-  .info-section-mobile h2 {
-    font-size: 16px;
+  /* --- H1 — osobny styl --- */
+  .info-section-mobile h1 {
+    font-size: 16px;   /* zmieniaj według potrzeby */
     margin: 0;
     font-weight: 600;
+    line-height: 1.2;
+  }
+
+  /* --- H2 — osobny styl --- */
+  .info-section-mobile h2 {
+    font-size: 14px;   /* zmieniaj według potrzeby */
+    margin: 2px 0 0 0;
+    font-weight: 500;
+    line-height: 1.2;
   }
 
   .info-section-mobile p {
