@@ -1,4 +1,11 @@
- 100%;
+/* === MOBILE STYLES === */
+@media (max-width: 768px) {
+
+  /* === Wideo — MOBILE scrollable === */
+  #bg-video,
+  #bg-video-second {
+    position: relative; /* naturalny flow, scroll */
+    width: 100%;
     height: auto;
     max-height: 60vh;
     object-fit: cover;
@@ -25,17 +32,16 @@
     z-index: 2;
   }
 
-  /* === H1 — osobny styl === */
+  /* --- OSOBNE SEKCJE DLA H1 I H2 --- */
   .info-section-mobile h1 {
-    font-size: 24px;   /* zmieniaj według potrzeby */
+    font-size: 24px; /* zmieniaj według potrzeby */
     margin-bottom: 10px;
     font-weight: 600;
     line-height: 1.2;
   }
 
-  /* === H2 — osobny styl === */
   .info-section-mobile h2 {
-    font-size: 20px;   /* zmieniaj według potrzeby */
+    font-size: 20px; /* zmieniaj według potrzeby */
     margin-bottom: 15px;
     font-weight: 500;
     line-height: 1.2;
