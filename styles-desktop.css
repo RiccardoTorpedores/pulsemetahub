@@ -13,18 +13,15 @@
     object-position: center center;
   }
 
-  /* --- Linki w rzędzie, wyśrodkowane --- */
+  /* --- Linki w rzędzie, wyśrodkowane NA GÓRZE --- */
   .links-desktop-wrapper {
     display: flex;
     justify-content: center;
     flex-direction: row;
     gap: 20px;
-    margin: 20px 0;
+    margin: 20px auto 0 auto;
     position: relative;
-    top: auto;
-    left: auto;
-    bottom: auto;
-    transform: none;
+    z-index: 3;
   }
 
   /* --- Ramka info w prawym dolnym rogu --- */
