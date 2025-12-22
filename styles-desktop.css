@@ -1,18 +1,21 @@
+/* === DESKTOP STYLES === */
 @media (min-width: 769px) {
 
+  /* --- Wideo jako tło (przewija się razem z treścią) --- */
   #bg-video,
   #bg-video-second {
-    position: fixed;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    position: relative; /* zmiana z fixed na relative */
     width: 100%;
-    height: 100%;
-    z-index: -1;
+    height: auto;
+    max-height: 60vh; /* możesz zmienić wysokość jeśli chcesz */
     object-fit: cover;
     object-position: center center;
+    margin: 0 auto;
+    display: block;
+    z-index: -1;
   }
 
+  /* --- Linki w rzędzie, wyśrodkowane --- */
   .links-desktop-wrapper {
     display: flex;
     justify-content: center;
@@ -35,7 +38,7 @@
     padding: 20px 30px;
     font-size: 22px;
     border-radius: 10px;
-    background-color: rgba(169, 169, 169, 0.5);
+    background-color: rgba(169, 169, 169, 0.5); /* tło i przezroczystość */
     font-family: Arial, sans-serif;
     z-index: 2;
   }
@@ -54,13 +57,14 @@
     text-decoration: underline;
   }
 
+  /* --- Ramka z tekstem w prawym dolnym rogu --- */
   .info-section-mobile {
     display: flex;
     position: fixed;
     bottom: 20px;
     right: 20px;
-    width: 7cm;
-    height: 4cm;
+    width: 7cm;   /* szerokość ramki */
+    height: 4cm;  /* wysokość ramki */
     background-color: rgba(169, 169, 169, 0.5);
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
@@ -75,6 +79,7 @@
     padding: 10px;
   }
 
+  /* --- H1 — osobny styl --- */
   .info-section-mobile h1 {
     font-size: 16px;
     margin: 0;
@@ -82,6 +87,7 @@
     line-height: 1.2;
   }
 
+  /* --- H2 — osobny styl --- */
   .info-section-mobile h2 {
     font-size: 14px;
     margin: 2px 0 0 0;
@@ -95,6 +101,7 @@
     margin: 5px 0 0 0;
   }
 
+  /* --- Social icons --- */
   .social-icons {
     position: fixed;
     bottom: 0;
@@ -124,23 +131,8 @@
     transform: scale(1.05);
   }
 
+  /* --- HypeStat widget (ukryty na desktop) --- */
   .hypestat-desktop {
     display: none !important;
   }
-}
-
-/* =========================== */
-/* DODANE: SCROLL POD STRONĄ  */
-/* =========================== */
-.scroll-spacer {
-  height: 100vh;
-}
-
-.scroll-text {
-  position: relative;
-}
-
-.scroll-text-inner {
-  max-width: 900px;
-  margin: 0 auto;
 }
