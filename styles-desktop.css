@@ -1,22 +1,16 @@
-/* === DESKTOP STYLES === */
 @media (min-width: 769px) {
 
   /* --- Wideo jako tło --- */
-  .video-container {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-  }
-
   #bg-video {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
     height: 100%;
     z-index: -1;
+    object-fit: cover;
+    object-position: center center;
   }
 
   /* --- Linki w rzędzie, wyśrodkowane --- */
@@ -27,26 +21,16 @@
     gap: 20px;
     margin: 20px 0;
     position: relative;
-    z-index: 2;
+    top: auto;
+    left: auto;
+    bottom: auto;
+    transform: none;
   }
 
-  .link-box,
-  .center-link-box,
-  .promo-link-box {
-    flex: 1;
-    max-width: 400px;
-    text-align: center;
-    padding: 20px 30px;
-    font-size: 22px;
-    border-radius: 10px;
-    background-color: rgba(169, 169, 169, 0.5);
-    font-family: Arial, sans-serif;
-  }
-
-  /* --- Ramka z tekstem w prawym dolnym rogu --- */
+  /* --- Ramka info w prawym dolnym rogu --- */
   .info-section-mobile {
     display: flex;
-    position: absolute;
+    position: fixed;
     bottom: 20px;
     right: 20px;
     width: 7cm;
@@ -61,7 +45,7 @@
     font-family: Arial, sans-serif;
     font-size: 14px;
     color: #fff;
-    z-index: 2;
+    z-index: 3;
     padding: 10px;
   }
 
@@ -69,34 +53,33 @@
     font-size: 16px;
     margin: 0;
     font-weight: 600;
+    line-height: 1.2;
   }
 
   .info-section-mobile h2 {
     font-size: 14px;
     margin: 2px 0 0 0;
     font-weight: 500;
+    line-height: 1.2;
   }
 
   .info-section-mobile p {
+    display: block;
     font-size: 14px;
     margin: 5px 0 0 0;
   }
 
-  /* --- Scrollable Text Section --- */
-  .scroll-text {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 50px 20px 100px 20px;
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    color: #000;
+  /* --- Social icons --- */
+  .social-icons {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    z-index: 3;
   }
 
-  .scroll-text h1, .scroll-text h2 {
-    color: #000;
-  }
-
-  .scroll-text ul {
-    margin: 10px 0 20px 20px;
+  /* --- HypeStat widget (ukryty) --- */
+  .hypestat-desktop {
+    display: none !important;
   }
 }
