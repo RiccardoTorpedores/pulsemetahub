@@ -1,25 +1,7 @@
 /* === WIDEO JAKO TŁO === */
 #bg-video {
-  position: fixed;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
   width: 100%;
   height: 100%;
-  z-index: -1;
-  object-fit: cover;
-  object-position: center center;
-}
-
-/* Wideo na stronie drugiej (video-background) */
-#bg-video-second {
-  position: fixed;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  height: 100%;
-  z-index: -1;
   object-fit: cover;
   object-position: center center;
 }
@@ -56,15 +38,16 @@
 /* === IKONY SOCIAL === */
 .social-icons {
   position: fixed;
-  bottom: 0 !important;
-  left: 0 !important;
-  margin: 0 !important;
+  bottom: 10px;
+  left: 10px;
+  margin: 0;
+  text-align: left;
   z-index: 3;
 }
 
 .social-icons a {
   display: inline-block;
-  margin: 0 10px;
+  margin: 0 5px 5px 0;
   vertical-align: middle;
 }
 
@@ -84,7 +67,7 @@
   transform: scale(1.05);
 }
 
-/* === HypeStat widget (UKRYTY NA DESKTOP) === */
+/* === HypeStat widget (UKRYTY) === */
 .hypestat-desktop {
   display: none !important;
   visibility: hidden !important;
@@ -93,26 +76,4 @@
   height: 0 !important;
   overflow: hidden !important;
   pointer-events: none !important;
-}
-
-@media (max-width: 768px) {
-  .hypestat-desktop {
-    display: none !important;
-  }
-}
-
-/* =========================== */
-/* DODANE: SCROLL POD STRONĄ  */
-/* =========================== */
-.scroll-spacer {
-  height: 100vh;
-}
-
-.scroll-text {
-  position: relative;
-}
-
-.scroll-text-inner {
-  max-width: 900px;
-  margin: 0 auto;
 }
