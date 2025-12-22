@@ -1,17 +1,25 @@
+/* === MOBILE STYLES === */
 @media (max-width: 768px) {
 
-  #bg-video,
-  #bg-video-second {
+  /* --- Wideo — MOBILE scrollable --- */
+  .video-container {
     position: relative;
     width: 100%;
     height: auto;
+    overflow: hidden;
+  }
+
+  #bg-video {
+    width: 100%;
+    height: auto;
     max-height: 60vh;
-    object-fit: cover;
-    margin: 0 auto;
     display: block;
+    margin: 0 auto;
+    object-fit: cover;
     z-index: -1;
   }
 
+  /* --- Info Section — RAMKA POD WIDEO --- */
   .info-section-mobile {
     margin: 20px auto 30px auto;
     padding: 25px 20px;
@@ -33,14 +41,12 @@
     font-size: 24px;
     margin-bottom: 10px;
     font-weight: 600;
-    line-height: 1.2;
   }
 
   .info-section-mobile h2 {
     font-size: 20px;
     margin-bottom: 15px;
     font-weight: 500;
-    line-height: 1.2;
   }
 
   .info-section-mobile p {
@@ -50,6 +56,7 @@
     max-width: 700px;
   }
 
+  /* --- Linki pod ramką --- */
   .links-desktop-wrapper {
     display: flex;
     flex-direction: column;
@@ -69,53 +76,25 @@
     background-color: rgba(169, 169, 169, 0.5);
     border-radius: 10px;
     font-family: Arial, sans-serif;
-    z-index: 2;
   }
 
-  .link-box a,
-  .center-link-box a,
-  .promo-link-box a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
+  /* --- Scrollable Text Section --- */
+  .scroll-text {
+    padding: 30px 15px 100px 15px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #000;
   }
 
-  .link-box a:hover,
-  .center-link-box a:hover,
-  .promo-link-box a:hover {
-    text-decoration: underline;
+  .scroll-text h1, .scroll-text h2 {
+    color: #000;
   }
 
-  .social-icons {
-    position: fixed;
-    bottom: 10px;
-    left: 10px;
-    margin: 0;
-    text-align: left;
-    z-index: 2;
+  .scroll-text ul {
+    margin: 10px 0 20px 20px;
   }
 
-  .social-icons a {
-    display: inline-block;
-    margin: 0 5px 5px 0;
-    vertical-align: middle;
-  }
-
-  .social-icons img {
-    width: 60px;
-    height: 60px;
-    transition: transform 0.2s ease;
-  }
-
-  .social-icons img[alt="TikTok Profile"] {
-    width: 35px;
-    height: 35px;
-  }
-
-  .social-icons img:hover {
-    transform: scale(1.05);
-  }
-
+  /* --- Najmniejsze ekrany <480px --- */
   @media (max-width: 480px) {
     .link-box,
     .center-link-box,
@@ -140,20 +119,4 @@
       font-size: 14px;
     }
   }
-}
-
-/* =========================== */
-/* DODANE: SCROLL POD STRONĄ  */
-/* =========================== */
-.scroll-spacer {
-  height: 100vh;
-}
-
-.scroll-text {
-  position: relative;
-}
-
-.scroll-text-inner {
-  max-width: 900px;
-  margin: 0 auto;
 }
