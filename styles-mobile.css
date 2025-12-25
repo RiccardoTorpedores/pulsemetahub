@@ -1,4 +1,7 @@
-0.3);
+
+    font-family: Arial, sans-serif;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -28,14 +31,14 @@
     max-width: 700px;
   }
 
-  /* === LINKI — POD RAMKĄ === */
+  /* === LINKI — pod ramką info z odstępem === */
   .links-desktop-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    margin-top: 0; /* uniesione w górę */
-    margin-bottom: 10px;
+    margin-top: 10px; /* odstęp od ramki info */
+    margin-bottom: 20px;
   }
 
   .link-box,
@@ -52,7 +55,7 @@
     z-index: 2;
   }
 
-  /* === SOCIAL ICONS — FIXED === */
+  /* === SOCIAL ICONS — zawsze fixed === */
   .social-icons {
     position: fixed;
     bottom: 10px;
@@ -85,7 +88,7 @@
     }
 
     .info-section-mobile {
-      padding: 20px 15px;
+      padding: 18px 15px;
     }
 
     .info-section-mobile h1 {
