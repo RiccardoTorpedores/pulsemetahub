@@ -1,102 +1,121 @@
-/* === WIDEO JAKO TŁO === */
-#bg-video {
-  position: fixed;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  object-fit: cover;
-  object-position: center center;
+/* === RESET & GLOBAL === */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-/* === LINKI WSPÓLNE STYLE === */
+body {
+  font-family: Arial, sans-serif;
+  background: #000;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* === HERO VIDEO SECTION === */
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#bg-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Dark overlay for readability */
+.video-container::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* === LINKS – BASE LOOK ONLY === */
 .link-box,
-.promo-link-box,
-.center-link-box {
-  background-color: rgba(169, 169, 169, 0.8);
+.center-link-box,
+.promo-link-box {
+  background-color: rgba(20, 20, 20, 0.75);
   padding: 20px 30px;
   border-radius: 10px;
   font-size: 22px;
   text-align: center;
   font-family: Arial, sans-serif;
   z-index: 2;
-  width: auto;
-  max-width: 400px;
+  border: 1px solid rgba(255,255,255,0.2);
+  backdrop-filter: blur(6px);
 }
 
 .link-box a,
-.promo-link-box a,
-.center-link-box a {
+.center-link-box a,
+.promo-link-box a {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
 }
 
-.link-box a:hover,
-.promo-link-box a:hover,
-.center-link-box a:hover {
-  text-decoration: underline;
+/* === INFO BOX – BASE STYLE ONLY === */
+.info-section-mobile {
+  background-color: rgba(20, 20, 20, 0.65);
+  color: #fff;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.15);
 }
 
-/* === IKONY SOCIAL === */
+/* === SCROLL CONTENT (BELOW HERO) === */
+.scroll-text {
+  max-width: 900px;
+  margin: 80px auto;
+  padding: 40px;
+  background: rgba(255,255,255,0.95);
+  color: #000;
+  border-radius: 14px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.scroll-text h1,
+.scroll-text h2 {
+  margin-top: 30px;
+  font-weight: 600;
+}
+
+.scroll-text ul {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+/* === SOCIAL ICONS – ALWAYS FIXED === */
 .social-icons {
   position: fixed;
-  bottom: 0 !important;
-  left: 0 !important;
-  margin: 0 !important;
-  z-index: 3;
+  bottom: 15px;
+  left: 15px;
+  z-index: 999;
 }
 
 .social-icons a {
   display: inline-block;
-  margin: 0 10px;
-  vertical-align: middle;
+  margin-right: 10px;
 }
 
 .social-icons img {
   width: 60px;
   height: 60px;
-  transition: transform 0.2s ease;
 }
 
-/* Korekta TikTok */
 .social-icons img[alt="TikTok Profile"] {
   width: 35px;
   height: 35px;
 }
 
-.social-icons img:hover {
-  transform: scale(1.05);
-}
-
-/* === HypeStat widget (UKRYTY NA DESKTOP) === */
+/* === HypeStat – hidden === */
 .hypestat-desktop {
   display: none !important;
-  visibility: hidden !important;
-  opacity: 0 !important;
-  width: 0 !important;
-  height: 0 !important;
-  overflow: hidden !important;
-  pointer-events: none !important;
-}
-
-/* === SCROLLABLE TEXT === */
-.scroll-text {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 20px;
-  font-family: Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  color: #000;
-}
-.scroll-text h1, .scroll-text h2 {
-  margin-top: 30px;
-  font-weight: 600;
-}
-.scroll-text ul {
-  margin-left: 20px;
-  margin-bottom: 20px;
 }
