@@ -1,20 +1,4 @@
-@media (max-width: 768px) {
-
-  /* === Wideo — MOBILE scrollable === */
-  #bg-video {
-    position: relative;
-    width: 100%;
-    height: auto;
-    max-height: 60vh;
-    object-fit: cover;
-    margin: 0 auto;
-    display: block;
-    z-index: -1;
-  }
-
-  /* === Info Section — RAMKA POD WIDEO === */
-  .info-section-mobile {
-    margin: 20px auto 30px auto;
+ODSTĘP */
     padding: 25px 20px;
     max-width: 90%;
     background: rgba(220, 220, 220, 0.9);
@@ -51,7 +35,7 @@
     max-width: 700px;
   }
 
-  /* === Linki — POD RAMKĄ === */
+  /* === LINKI — POD RAMKĄ === */
   .links-desktop-wrapper {
     display: flex;
     flex-direction: column;
@@ -74,26 +58,21 @@
     z-index: 2;
   }
 
-  /* === Social Icons — LEWY DOLNY RÓG === */
+  /* === SOCIAL ICONS — FIXED === */
   .social-icons {
     position: fixed;
     bottom: 10px;
     left: 10px;
     margin: 0;
-    text-align: left;
     z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 10px;
   }
 
-  .social-icons a {
-    display: inline-block;
-    margin: 0 5px 5px 0;
-    vertical-align: middle;
-  }
-
-  .social-icons img {
+  .social-icons img[alt="PulseMetaHub YouTube Channel"] {
     width: 60px;
     height: 60px;
-    transition: transform 0.2s ease;
   }
 
   .social-icons img[alt="TikTok Profile"] {
@@ -101,12 +80,9 @@
     height: 35px;
   }
 
-  .social-icons img:hover {
-    transform: scale(1.05);
-  }
-
-  /* === Najmniejsze ekrany — <480px === */
+  /* === <480px === */
   @media (max-width: 480px) {
+
     .link-box,
     .center-link-box,
     .promo-link-box {
