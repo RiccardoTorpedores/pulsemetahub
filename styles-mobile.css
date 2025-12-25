@@ -1,11 +1,4 @@
-ODSTĘP */
-    padding: 25px 20px;
-    max-width: 90%;
-    background: rgba(220, 220, 220, 0.9);
-    color: #000;
-    font-family: Arial, sans-serif;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+0.3);
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -41,7 +34,8 @@ ODSTĘP */
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    margin-bottom: 20px;
+    margin-top: 0; /* uniesione w górę */
+    margin-bottom: 10px;
   }
 
   .link-box,
