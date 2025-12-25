@@ -1,4 +1,4 @@
-/* === RESET & GLOBAL === */
+/* === RESET === */
 *,
 *::before,
 *::after {
@@ -10,11 +10,10 @@
 body {
   font-family: Arial, sans-serif;
   background: #000;
-  color: #fff;
   overflow-x: hidden;
 }
 
-/* === HERO VIDEO SECTION === */
+/* === VIDEO CONTAINER (DESKTOP HERO) === */
 .video-container {
   position: relative;
   width: 100%;
@@ -28,29 +27,19 @@ body {
   object-fit: cover;
 }
 
-/* Dark overlay for readability */
-.video-container::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.45);
-  z-index: 1;
-  pointer-events: none;
-}
-
-/* === LINKS – BASE LOOK ONLY === */
+/* === LINKI – PRZYWRÓCONE DO ORYGINAŁU === */
 .link-box,
 .center-link-box,
 .promo-link-box {
-  background-color: rgba(20, 20, 20, 0.75);
+  background-color: rgba(169, 169, 169, 0.8);
   padding: 20px 30px;
   border-radius: 10px;
   font-size: 22px;
   text-align: center;
   font-family: Arial, sans-serif;
   z-index: 2;
-  border: 1px solid rgba(255,255,255,0.2);
-  backdrop-filter: blur(6px);
+  width: auto;
+  max-width: 400px;
 }
 
 .link-box a,
@@ -61,15 +50,21 @@ body {
   font-weight: bold;
 }
 
-/* === INFO BOX – BASE STYLE ONLY === */
-.info-section-mobile {
-  background-color: rgba(20, 20, 20, 0.65);
-  color: #fff;
-  border-radius: 12px;
-  border: 1px solid rgba(255,255,255,0.15);
+.link-box a:hover,
+.center-link-box a:hover,
+.promo-link-box a:hover {
+  text-decoration: underline;
 }
 
-/* === SCROLL CONTENT (BELOW HERO) === */
+/* === INFO BOX – BEZ ZMIAN W STYLU === */
+.info-section-mobile {
+  background-color: rgba(169, 169, 169, 0.5);
+  color: #fff;
+  border-radius: 10px;
+  font-family: Arial, sans-serif;
+}
+
+/* === SCROLL TEXT === */
 .scroll-text {
   max-width: 900px;
   margin: 80px auto;
@@ -92,20 +87,27 @@ body {
   margin-bottom: 20px;
 }
 
-/* === SOCIAL ICONS – ALWAYS FIXED === */
+/* === SOCIAL ICONS – IDEALNIE W JEDNEJ LINII === */
 .social-icons {
   position: fixed;
-  bottom: 15px;
-  left: 15px;
+  bottom: 10px;
+  left: 10px;
   z-index: 999;
+  display: flex;
+  align-items: center; /* KLUCZOWE */
+  gap: 10px;
 }
 
 .social-icons a {
-  display: inline-block;
-  margin-right: 10px;
+  display: flex;
+  align-items: center;
 }
 
 .social-icons img {
+  display: block;
+}
+
+.social-icons img[alt="PulseMetaHub YouTube Channel"] {
   width: 60px;
   height: 60px;
 }
