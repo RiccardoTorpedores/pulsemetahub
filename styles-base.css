@@ -1,105 +1,102 @@
 /* === WIDEO JAKO TŁO === */
 #bg-video {
-  position: fixed;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  object-fit: cover;
-  object-position: center center;
+    position: relative; /* desktop będzie nadpisane w desktop.css */
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center center;
+    z-index: -1;
 }
 
 /* === LINKI WSPÓLNE STYLE === */
 .link-box, .promo-link-box, .center-link-box {
-  background-color: rgba(169, 169, 169, 0.8);
-  padding: 20px 30px;
-  border-radius: 10px;
-  font-size: 22px;
-  text-align: center;
-  font-family: Arial, sans-serif;
-  z-index: 2;
-  width: auto;
-  max-width: 400px;
+    background-color: rgba(169, 169, 169, 0.8);
+    padding: 20px 30px;
+    border-radius: 10px;
+    font-size: 22px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    z-index: 2;
+    width: auto;
+    max-width: 400px;
 }
 
 .link-box a, .promo-link-box a, .center-link-box a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .link-box a:hover, .promo-link-box a:hover, .center-link-box a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 /* === IKONY SOCIAL === */
 .social-icons {
-  position: fixed;
-  bottom: 0 !important;
-  left: 0 !important;
-  margin: 0 !important;
-  z-index: 3;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    z-index: 3;
 }
 
 .social-icons a {
-  display: inline-block;
-  margin: 0 10px;
-  vertical-align: middle;
+    display: inline-block;
+    margin: 0 10px;
+    vertical-align: middle;
 }
 
 .social-icons img {
-  width: 60px;
-  height: 60px;
-  transition: transform 0.2s ease;
+    width: 60px;
+    height: 60px;
+    transition: transform 0.2s ease;
 }
 
 /* Korekta TikTok */
 .social-icons img[alt="TikTok Profile"] {
-  width: 35px;
-  height: 35px;
+    width: 35px;
+    height: 35px;
 }
 
 .social-icons img:hover {
-  transform: scale(1.05);
+    transform: scale(1.05);
 }
 
 /* === HypeStat widget (UKRYTY NA DESKTOP) === */
 .hypestat-desktop {
-  display: none !important;
-  visibility: hidden !important;
-  opacity: 0 !important;
-  width: 0 !important;
-  height: 0 !important;
-  overflow: hidden !important;
-  pointer-events: none !important;
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    width: 0 !important;
+    height: 0 !important;
+    overflow: hidden !important;
+    pointer-events: none !important;
 }
 
 /* === SCROLLABLE TEXT === */
 .scroll-text {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 20px;
-  font-family: Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  color: #000;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #000;
 }
 
 .scroll-text h1, .scroll-text h2 {
-  margin-top: 30px;
-  font-weight: 600;
+    margin-top: 30px;
+    font-weight: 600;
 }
 
 .scroll-text ul {
-  margin-left: 20px;
-  margin-bottom: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
 }
 
-/* === BEZPIECZNA ZMIANA DLA DESKTOP === */
-@media (min-width: 769px) {
-  #bg-video {
-    position: relative !important; /* Scrolluje z treścią na desktop */
-  }
+/* === INFO SECTION MOBILE === */
+.info-section-mobile {
+    font-family: Arial, sans-serif;
+    color: #000;
+    z-index: 2;
 }
