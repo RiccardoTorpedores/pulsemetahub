@@ -1,129 +1,40 @@
-@media (max-width: 768px) {
 
-  /* === Wideo — MOBILE scrollable === */
-  #bg-video {
     position: relative;
-    width: 100%;
-    height: auto;
-    max-height: 60vh;
-    object-fit: cover;
-    margin: 0 auto;
-    display: block;
-    z-index: -1;
   }
 
-  /* === Info Section — RAMKA POD WIDEO === */
+  /* Ramka info w prawym dolnym rogu */
   .info-section-mobile {
-    margin: 20px auto 30px auto;
-    padding: 25px 20px;
-    max-width: 90%;
-    background: rgba(220, 220, 220, 0.9);
-    color: #000;
-    font-family: Arial, sans-serif;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-    text-align: center;
     display: flex;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 7cm;
+    height: 4cm;
+    background-color: rgba(169, 169, 169, 0.5);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    z-index: 2;
-  }
-
-  .info-section-mobile h1 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    font-weight: 600;
-    line-height: 1.2;
-  }
-
-  .info-section-mobile h2 {
-    font-size: 20px;
-    margin-bottom: 15px;
-    font-weight: 500;
-    line-height: 1.2;
-  }
-
-  .info-section-mobile p {
-    font-size: 16px;
-    line-height: 1.5;
-    margin-bottom: 12px;
-    max-width: 700px;
-  }
-
-  /* === Linki — POD RAMKĄ === */
-  .links-desktop-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 20px;
-  }
-
-  .link-box, .center-link-box, .promo-link-box {
-    width: 80%;
-    max-width: 350px;
-    font-size: 18px;
-    padding: 15px 25px;
     text-align: center;
-    background-color: rgba(169, 169, 169, 0.5);
-    border-radius: 10px;
     font-family: Arial, sans-serif;
-    z-index: 2;
+    font-size: 14px;
+    color: #fff;
+    z-index: 3;
+    padding: 10px;
   }
 
-  /* === Social Icons — LEWY DOLNY RÓG === */
+  /* Social icons */
   .social-icons {
     position: fixed;
-    bottom: 10px;
-    left: 10px;
+    bottom: 0;
+    left: 0;
     margin: 0;
-    text-align: left;
-    z-index: 2;
+    z-index: 3;
   }
 
-  .social-icons a {
-    display: inline-block;
-    margin: 0 5px 5px 0;
-    vertical-align: middle;
-  }
-
-  .social-icons img {
-    width: 60px;
-    height: 60px;
-    transition: transform 0.2s ease;
-  }
-
-  .social-icons img[alt="TikTok Profile"] {
-    width: 35px;
-    height: 35px;
-  }
-
-  .social-icons img:hover {
-    transform: scale(1.05);
-  }
-
-  /* === Najmniejsze ekrany — <480px === */
-  @media (max-width: 480px) {
-    .link-box, .center-link-box, .promo-link-box {
-      font-size: 16px;
-      padding: 10px 20px;
-    }
-
-    .info-section-mobile {
-      padding: 20px 15px;
-    }
-
-    .info-section-mobile h1 {
-      font-size: 20px;
-    }
-
-    .info-section-mobile h2 {
-      font-size: 18px;
-    }
-
-    .info-section-mobile p {
-      font-size: 14px;
-    }
+  /* HypeStat widget */
+  .hypestat-desktop {
+    display: none !important;
   }
 }
