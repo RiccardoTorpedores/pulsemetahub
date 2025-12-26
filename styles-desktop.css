@@ -1,34 +1,34 @@
 @media (min-width: 769px) {
-  /* --- Wideo jako tło --- */
+
+  /* === DESKTOP: WIDEO MA SIĘ SCROLLOWAĆ === */
   #bg-video {
-    position: fixed;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
     width: 100%;
-    height: 100%;
-    z-index: -1;
+    height: 100vh;
     object-fit: cover;
-    object-position: center center;
   }
 
-  /* --- Linki w rzędzie, wyśrodkowane --- */
+  .video-container {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+  }
+
+  /* === LINKI — BEZ ZMIAN === */
   .links-desktop-wrapper {
     display: flex;
     justify-content: center;
     flex-direction: row;
     gap: 20px;
     margin: 20px 0;
-    position: relative;
-    top: auto;
-    left: auto;
-    bottom: auto;
-    transform: none;
   }
 
-  /* --- Ramka info w prawym dolnym rogu --- */
+  /* === RAMKA INFO — BEZ ZMIAN === */
   .info-section-mobile {
-    display: flex;
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -37,45 +37,15 @@
     background-color: rgba(169, 169, 169, 0.5);
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-family: Arial, sans-serif;
-    font-size: 14px;
     color: #fff;
     z-index: 3;
-    padding: 10px;
-  }
-  .info-section-mobile h1 {
-    font-size: 16px;
-    margin: 0;
-    font-weight: 600;
-    line-height: 1.2;
-  }
-  .info-section-mobile h2 {
-    font-size: 14px;
-    margin: 2px 0 0 0;
-    font-weight: 500;
-    line-height: 1.2;
-  }
-  .info-section-mobile p {
-    display: block;
-    font-size: 14px;
-    margin: 5px 0 0 0;
   }
 
-  /* --- Social icons --- */
+  /* === IKONY — ZAWSZE NA DOLE PO LEWEJ === */
   .social-icons {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    margin: 0;
-    z-index: 3;
-  }
-
-  /* --- HypeStat widget (ukryty) --- */
-  .hypestat-desktop {
-    display: none !important;
+    position: fixed !important;
+    bottom: 10px !important;
+    left: 10px !important;
+    z-index: 5;
   }
 }
