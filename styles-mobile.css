@@ -72,11 +72,11 @@
         z-index: 2;
     }
 
-    /* === Scrollable Text — przesunięcie startu === */
+    /* === Scrollable Text — przesunięcie startu i dolny margines === */
     .scroll-text {
         max-width: 900px;
-        margin: 100px auto 0 auto;  /* <-- przesunięcie całego bloku w dół */
-        padding: 0 20px 20px 20px;  /* zachowanie bocznych i dolnego paddingu */
+        margin: 100px auto 80px auto;  /* <-- start niżej + dolny margines dla social icons */
+        padding: 0 20px 20px 20px;      /* boczne i dolne paddingi */
         font-family: Arial, sans-serif;
         font-size: 16px;
         line-height: 1.5;
