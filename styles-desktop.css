@@ -23,6 +23,13 @@
         z-index: 2;
     }
 
+    /* === JEDYNA ZMIANA: równa szerokość linków (DESKTOP ONLY) === */
+    .link-box,
+    .center-link-box,
+    .promo-link-box {
+        width: 320px;
+    }
+
     /* === Ramka info w prawym dolnym rogu nad wideo === */
     .info-section-mobile {
         display: flex;
