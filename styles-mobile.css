@@ -75,7 +75,7 @@
     /* === Scrollable Text — przesunięcie startu === */
     .scroll-text {
         max-width: 900px;
-        margin: 60px auto 0 auto;  /* <-- przesunięcie całego bloku w dół */
+        margin: 100px auto 0 auto;  /* <-- przesunięcie całego bloku w dół */
         padding: 0 20px 20px 20px;  /* zachowanie bocznych i dolnego paddingu */
         font-family: Arial, sans-serif;
         font-size: 16px;
